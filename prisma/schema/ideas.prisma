@@ -1,0 +1,40 @@
+model Idea{
+    id String @id  @default(uuid())
+    title String
+    problem String
+    solution String
+    photo String 
+    description String
+    createdAt DateTime @default(now())
+    userId String
+    isPaid Boolean @default(false)
+    price Decimal?
+    feedback String?
+    vote Vote[]
+    purchase Purchase[]
+    comments Comments[]
+    highlighted Boolean @default(false)
+    upvotes Int @default(0)
+    downvotes Int @default(0)
+
+    editedAt DateTime?
+    rejectedAt DateTime?
+    acceptedAt DateTime?
+
+    user User @relation(fields: [userId],references: [id])
+    watchList WatchList[]
+    status IdeaStatus @default(UNDERREVIEW)
+    categoryId String
+    category Category @relation(fields: [categoryId],references: [id])
+}
+
+model WatchList{
+  id String @id @default(uuid())
+  userId String
+  ideaId String
+  listedAt DateTime @default(now())
+  user User @relation(fields: [userId],references: [id])
+  idea Idea @relation(fields: [ideaId],references: [id])
+
+  @@unique([userId,ideaId])
+}
