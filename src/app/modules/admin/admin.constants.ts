@@ -1,0 +1,4 @@
+const excludedField = [
+    "userSubscribed",
+    "userRole"
+]
