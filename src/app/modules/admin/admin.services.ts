@@ -1,3 +1,4 @@
+//import { UserStatus } from './../../../generated/prisma/enums';
 import { Category, IdeaStatus, Role, UserStatus } from './../../../generated/prisma/browser';
 import { prisma } from "../../lib/prisma"
 import { QueryBuilder } from '../../utils/QueryBuilder';
@@ -25,10 +26,14 @@ const deleteCategory = async(categoryId:string)=>{
 
 const ViewMembers = async(query:IQueryParams,userStatus:string)=>{
     let role
+    let status = undefined
     query.userRole === 'USER'?role=Role.USER:query.userRole === 'ADMIN'?role=Role.ADMIN:undefined
+    if(query.userStatus === 'ACTIVE') status = UserStatus.ACTIVE
+    if(query.userStatus === 'INACTIVE') status = UserStatus.INACTIVE
+    if(query.userStatus === 'BLOCKED') status = UserStatus.BLOCKED
     
     console.log('THIS IS THE USER Role',query.userRole,role)
-    console.log('THIS IS THE SUBSCRIBED',query.userSubscribed)
+    console.log('THIS IS THE status',query.userStatus)
     const result = await new QueryBuilder(prisma.user, query)
       .search()
       .filter()
@@ -44,7 +49,7 @@ const ViewMembers = async(query:IQueryParams,userStatus:string)=>{
       .sort()
       .paginate()
       .where({
-       // status: query.userStatus?query.userStatus:undefined,
+        status:status,
         isSubscribed:query.userSubscribed === 'subscribed'? true:undefined,
         role:role
      }).

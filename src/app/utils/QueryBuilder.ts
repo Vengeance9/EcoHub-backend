@@ -122,6 +122,7 @@ export class QueryBuilder<
       "include",
       "userRole",
       "userSubscribed",
+      "userStatus"
     ];
 
     const filterParams: Record<string, unknown> = {};
