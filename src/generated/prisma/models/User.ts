@@ -508,6 +508,11 @@ export type UserUncheckedUpdateManyInput = {
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
+export type UserScalarRelationFilter = {
+  is?: Prisma.UserWhereInput
+  isNot?: Prisma.UserWhereInput
+}
+
 export type UserCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
   name?: Prisma.SortOrder
@@ -559,93 +564,32 @@ export type UserMinOrderByAggregateInput = {
   updatedAt?: Prisma.SortOrder
 }
 
-export type UserScalarRelationFilter = {
-  is?: Prisma.UserWhereInput
-  isNot?: Prisma.UserWhereInput
-}
-
-export type StringFieldUpdateOperationsInput = {
-  set?: string
-}
-
-export type BoolFieldUpdateOperationsInput = {
-  set?: boolean
-}
-
-export type EnumRoleFieldUpdateOperationsInput = {
-  set?: $Enums.Role
-}
-
-export type EnumUserStatusFieldUpdateOperationsInput = {
-  set?: $Enums.UserStatus
-}
-
-export type NullableDateTimeFieldUpdateOperationsInput = {
-  set?: Date | string | null
-}
-
-export type NullableStringFieldUpdateOperationsInput = {
-  set?: string | null
-}
-
-export type DateTimeFieldUpdateOperationsInput = {
-  set?: Date | string
-}
-
-export type UserCreateNestedOneWithoutSessionsInput = {
-  create?: Prisma.XOR<Prisma.UserCreateWithoutSessionsInput, Prisma.UserUncheckedCreateWithoutSessionsInput>
-  connectOrCreate?: Prisma.UserCreateOrConnectWithoutSessionsInput
+export type UserCreateNestedOneWithoutAdminInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutAdminInput, Prisma.UserUncheckedCreateWithoutAdminInput>
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutAdminInput
   connect?: Prisma.UserWhereUniqueInput
 }
 
-export type UserUpdateOneRequiredWithoutSessionsNestedInput = {
-  create?: Prisma.XOR<Prisma.UserCreateWithoutSessionsInput, Prisma.UserUncheckedCreateWithoutSessionsInput>
-  connectOrCreate?: Prisma.UserCreateOrConnectWithoutSessionsInput
-  upsert?: Prisma.UserUpsertWithoutSessionsInput
+export type UserUpdateOneRequiredWithoutAdminNestedInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutAdminInput, Prisma.UserUncheckedCreateWithoutAdminInput>
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutAdminInput
+  upsert?: Prisma.UserUpsertWithoutAdminInput
   connect?: Prisma.UserWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutSessionsInput, Prisma.UserUpdateWithoutSessionsInput>, Prisma.UserUncheckedUpdateWithoutSessionsInput>
+  update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutAdminInput, Prisma.UserUpdateWithoutAdminInput>, Prisma.UserUncheckedUpdateWithoutAdminInput>
 }
 
-export type UserCreateNestedOneWithoutAccountsInput = {
-  create?: Prisma.XOR<Prisma.UserCreateWithoutAccountsInput, Prisma.UserUncheckedCreateWithoutAccountsInput>
-  connectOrCreate?: Prisma.UserCreateOrConnectWithoutAccountsInput
-  connect?: Prisma.UserWhereUniqueInput
-}
-
-export type UserUpdateOneRequiredWithoutAccountsNestedInput = {
-  create?: Prisma.XOR<Prisma.UserCreateWithoutAccountsInput, Prisma.UserUncheckedCreateWithoutAccountsInput>
-  connectOrCreate?: Prisma.UserCreateOrConnectWithoutAccountsInput
-  upsert?: Prisma.UserUpsertWithoutAccountsInput
-  connect?: Prisma.UserWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutAccountsInput, Prisma.UserUpdateWithoutAccountsInput>, Prisma.UserUncheckedUpdateWithoutAccountsInput>
-}
-
-export type UserCreateNestedOneWithoutVoteInput = {
-  create?: Prisma.XOR<Prisma.UserCreateWithoutVoteInput, Prisma.UserUncheckedCreateWithoutVoteInput>
-  connectOrCreate?: Prisma.UserCreateOrConnectWithoutVoteInput
+export type UserCreateNestedOneWithoutCommentInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutCommentInput, Prisma.UserUncheckedCreateWithoutCommentInput>
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutCommentInput
   connect?: Prisma.UserWhereUniqueInput
 }
 
-export type UserUpdateOneRequiredWithoutVoteNestedInput = {
-  create?: Prisma.XOR<Prisma.UserCreateWithoutVoteInput, Prisma.UserUncheckedCreateWithoutVoteInput>
-  connectOrCreate?: Prisma.UserCreateOrConnectWithoutVoteInput
-  upsert?: Prisma.UserUpsertWithoutVoteInput
+export type UserUpdateOneRequiredWithoutCommentNestedInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutCommentInput, Prisma.UserUncheckedCreateWithoutCommentInput>
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutCommentInput
+  upsert?: Prisma.UserUpsertWithoutCommentInput
   connect?: Prisma.UserWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutVoteInput, Prisma.UserUpdateWithoutVoteInput>, Prisma.UserUncheckedUpdateWithoutVoteInput>
-}
-
-export type UserCreateNestedOneWithoutPurchaseInput = {
-  create?: Prisma.XOR<Prisma.UserCreateWithoutPurchaseInput, Prisma.UserUncheckedCreateWithoutPurchaseInput>
-  connectOrCreate?: Prisma.UserCreateOrConnectWithoutPurchaseInput
-  connect?: Prisma.UserWhereUniqueInput
-}
-
-export type UserUpdateOneRequiredWithoutPurchaseNestedInput = {
-  create?: Prisma.XOR<Prisma.UserCreateWithoutPurchaseInput, Prisma.UserUncheckedCreateWithoutPurchaseInput>
-  connectOrCreate?: Prisma.UserCreateOrConnectWithoutPurchaseInput
-  upsert?: Prisma.UserUpsertWithoutPurchaseInput
-  connect?: Prisma.UserWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutPurchaseInput, Prisma.UserUpdateWithoutPurchaseInput>, Prisma.UserUncheckedUpdateWithoutPurchaseInput>
+  update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutCommentInput, Prisma.UserUpdateWithoutCommentInput>, Prisma.UserUncheckedUpdateWithoutCommentInput>
 }
 
 export type UserCreateNestedOneWithoutIdeaInput = {
@@ -676,32 +620,628 @@ export type UserUpdateOneRequiredWithoutWatchlistNestedInput = {
   update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutWatchlistInput, Prisma.UserUpdateWithoutWatchlistInput>, Prisma.UserUncheckedUpdateWithoutWatchlistInput>
 }
 
-export type UserCreateNestedOneWithoutCommentInput = {
-  create?: Prisma.XOR<Prisma.UserCreateWithoutCommentInput, Prisma.UserUncheckedCreateWithoutCommentInput>
-  connectOrCreate?: Prisma.UserCreateOrConnectWithoutCommentInput
+export type UserCreateNestedOneWithoutPurchaseInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutPurchaseInput, Prisma.UserUncheckedCreateWithoutPurchaseInput>
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutPurchaseInput
   connect?: Prisma.UserWhereUniqueInput
 }
 
-export type UserUpdateOneRequiredWithoutCommentNestedInput = {
-  create?: Prisma.XOR<Prisma.UserCreateWithoutCommentInput, Prisma.UserUncheckedCreateWithoutCommentInput>
-  connectOrCreate?: Prisma.UserCreateOrConnectWithoutCommentInput
-  upsert?: Prisma.UserUpsertWithoutCommentInput
+export type UserUpdateOneRequiredWithoutPurchaseNestedInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutPurchaseInput, Prisma.UserUncheckedCreateWithoutPurchaseInput>
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutPurchaseInput
+  upsert?: Prisma.UserUpsertWithoutPurchaseInput
   connect?: Prisma.UserWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutCommentInput, Prisma.UserUpdateWithoutCommentInput>, Prisma.UserUncheckedUpdateWithoutCommentInput>
+  update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutPurchaseInput, Prisma.UserUpdateWithoutPurchaseInput>, Prisma.UserUncheckedUpdateWithoutPurchaseInput>
 }
 
-export type UserCreateNestedOneWithoutAdminInput = {
-  create?: Prisma.XOR<Prisma.UserCreateWithoutAdminInput, Prisma.UserUncheckedCreateWithoutAdminInput>
-  connectOrCreate?: Prisma.UserCreateOrConnectWithoutAdminInput
+export type UserCreateNestedOneWithoutSessionsInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutSessionsInput, Prisma.UserUncheckedCreateWithoutSessionsInput>
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutSessionsInput
   connect?: Prisma.UserWhereUniqueInput
 }
 
-export type UserUpdateOneRequiredWithoutAdminNestedInput = {
-  create?: Prisma.XOR<Prisma.UserCreateWithoutAdminInput, Prisma.UserUncheckedCreateWithoutAdminInput>
-  connectOrCreate?: Prisma.UserCreateOrConnectWithoutAdminInput
-  upsert?: Prisma.UserUpsertWithoutAdminInput
+export type UserUpdateOneRequiredWithoutSessionsNestedInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutSessionsInput, Prisma.UserUncheckedCreateWithoutSessionsInput>
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutSessionsInput
+  upsert?: Prisma.UserUpsertWithoutSessionsInput
   connect?: Prisma.UserWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutAdminInput, Prisma.UserUpdateWithoutAdminInput>, Prisma.UserUncheckedUpdateWithoutAdminInput>
+  update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutSessionsInput, Prisma.UserUpdateWithoutSessionsInput>, Prisma.UserUncheckedUpdateWithoutSessionsInput>
+}
+
+export type UserCreateNestedOneWithoutAccountsInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutAccountsInput, Prisma.UserUncheckedCreateWithoutAccountsInput>
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutAccountsInput
+  connect?: Prisma.UserWhereUniqueInput
+}
+
+export type UserUpdateOneRequiredWithoutAccountsNestedInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutAccountsInput, Prisma.UserUncheckedCreateWithoutAccountsInput>
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutAccountsInput
+  upsert?: Prisma.UserUpsertWithoutAccountsInput
+  connect?: Prisma.UserWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutAccountsInput, Prisma.UserUpdateWithoutAccountsInput>, Prisma.UserUncheckedUpdateWithoutAccountsInput>
+}
+
+export type EnumRoleFieldUpdateOperationsInput = {
+  set?: $Enums.Role
+}
+
+export type EnumUserStatusFieldUpdateOperationsInput = {
+  set?: $Enums.UserStatus
+}
+
+export type UserCreateNestedOneWithoutVoteInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutVoteInput, Prisma.UserUncheckedCreateWithoutVoteInput>
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutVoteInput
+  connect?: Prisma.UserWhereUniqueInput
+}
+
+export type UserUpdateOneRequiredWithoutVoteNestedInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutVoteInput, Prisma.UserUncheckedCreateWithoutVoteInput>
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutVoteInput
+  upsert?: Prisma.UserUpsertWithoutVoteInput
+  connect?: Prisma.UserWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutVoteInput, Prisma.UserUpdateWithoutVoteInput>, Prisma.UserUncheckedUpdateWithoutVoteInput>
+}
+
+export type UserCreateWithoutAdminInput = {
+  id?: string
+  name: string
+  email: string
+  password: string
+  emailVerified?: boolean
+  role?: $Enums.Role
+  status?: $Enums.UserStatus
+  needPasswordChange?: boolean
+  isDeleted?: boolean
+  deletedAt?: Date | string | null
+  image?: string | null
+  isSubscribed?: boolean
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  sessions?: Prisma.SessionCreateNestedManyWithoutUserInput
+  accounts?: Prisma.AccountCreateNestedManyWithoutUserInput
+  Idea?: Prisma.IdeaCreateNestedManyWithoutUserInput
+  comment?: Prisma.CommentsCreateNestedManyWithoutUserInput
+  vote?: Prisma.VoteCreateNestedManyWithoutUserInput
+  purchase?: Prisma.PurchaseCreateNestedManyWithoutUserInput
+  watchlist?: Prisma.WatchListCreateNestedManyWithoutUserInput
+}
+
+export type UserUncheckedCreateWithoutAdminInput = {
+  id?: string
+  name: string
+  email: string
+  password: string
+  emailVerified?: boolean
+  role?: $Enums.Role
+  status?: $Enums.UserStatus
+  needPasswordChange?: boolean
+  isDeleted?: boolean
+  deletedAt?: Date | string | null
+  image?: string | null
+  isSubscribed?: boolean
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  sessions?: Prisma.SessionUncheckedCreateNestedManyWithoutUserInput
+  accounts?: Prisma.AccountUncheckedCreateNestedManyWithoutUserInput
+  Idea?: Prisma.IdeaUncheckedCreateNestedManyWithoutUserInput
+  comment?: Prisma.CommentsUncheckedCreateNestedManyWithoutUserInput
+  vote?: Prisma.VoteUncheckedCreateNestedManyWithoutUserInput
+  purchase?: Prisma.PurchaseUncheckedCreateNestedManyWithoutUserInput
+  watchlist?: Prisma.WatchListUncheckedCreateNestedManyWithoutUserInput
+}
+
+export type UserCreateOrConnectWithoutAdminInput = {
+  where: Prisma.UserWhereUniqueInput
+  create: Prisma.XOR<Prisma.UserCreateWithoutAdminInput, Prisma.UserUncheckedCreateWithoutAdminInput>
+}
+
+export type UserUpsertWithoutAdminInput = {
+  update: Prisma.XOR<Prisma.UserUpdateWithoutAdminInput, Prisma.UserUncheckedUpdateWithoutAdminInput>
+  create: Prisma.XOR<Prisma.UserCreateWithoutAdminInput, Prisma.UserUncheckedCreateWithoutAdminInput>
+  where?: Prisma.UserWhereInput
+}
+
+export type UserUpdateToOneWithWhereWithoutAdminInput = {
+  where?: Prisma.UserWhereInput
+  data: Prisma.XOR<Prisma.UserUpdateWithoutAdminInput, Prisma.UserUncheckedUpdateWithoutAdminInput>
+}
+
+export type UserUpdateWithoutAdminInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  password?: Prisma.StringFieldUpdateOperationsInput | string
+  emailVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
+  status?: Prisma.EnumUserStatusFieldUpdateOperationsInput | $Enums.UserStatus
+  needPasswordChange?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isDeleted?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  isSubscribed?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  sessions?: Prisma.SessionUpdateManyWithoutUserNestedInput
+  accounts?: Prisma.AccountUpdateManyWithoutUserNestedInput
+  Idea?: Prisma.IdeaUpdateManyWithoutUserNestedInput
+  comment?: Prisma.CommentsUpdateManyWithoutUserNestedInput
+  vote?: Prisma.VoteUpdateManyWithoutUserNestedInput
+  purchase?: Prisma.PurchaseUpdateManyWithoutUserNestedInput
+  watchlist?: Prisma.WatchListUpdateManyWithoutUserNestedInput
+}
+
+export type UserUncheckedUpdateWithoutAdminInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  password?: Prisma.StringFieldUpdateOperationsInput | string
+  emailVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
+  status?: Prisma.EnumUserStatusFieldUpdateOperationsInput | $Enums.UserStatus
+  needPasswordChange?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isDeleted?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  isSubscribed?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  sessions?: Prisma.SessionUncheckedUpdateManyWithoutUserNestedInput
+  accounts?: Prisma.AccountUncheckedUpdateManyWithoutUserNestedInput
+  Idea?: Prisma.IdeaUncheckedUpdateManyWithoutUserNestedInput
+  comment?: Prisma.CommentsUncheckedUpdateManyWithoutUserNestedInput
+  vote?: Prisma.VoteUncheckedUpdateManyWithoutUserNestedInput
+  purchase?: Prisma.PurchaseUncheckedUpdateManyWithoutUserNestedInput
+  watchlist?: Prisma.WatchListUncheckedUpdateManyWithoutUserNestedInput
+}
+
+export type UserCreateWithoutCommentInput = {
+  id?: string
+  name: string
+  email: string
+  password: string
+  emailVerified?: boolean
+  role?: $Enums.Role
+  status?: $Enums.UserStatus
+  needPasswordChange?: boolean
+  isDeleted?: boolean
+  deletedAt?: Date | string | null
+  image?: string | null
+  isSubscribed?: boolean
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  sessions?: Prisma.SessionCreateNestedManyWithoutUserInput
+  accounts?: Prisma.AccountCreateNestedManyWithoutUserInput
+  admin?: Prisma.AdminCreateNestedOneWithoutUserInput
+  Idea?: Prisma.IdeaCreateNestedManyWithoutUserInput
+  vote?: Prisma.VoteCreateNestedManyWithoutUserInput
+  purchase?: Prisma.PurchaseCreateNestedManyWithoutUserInput
+  watchlist?: Prisma.WatchListCreateNestedManyWithoutUserInput
+}
+
+export type UserUncheckedCreateWithoutCommentInput = {
+  id?: string
+  name: string
+  email: string
+  password: string
+  emailVerified?: boolean
+  role?: $Enums.Role
+  status?: $Enums.UserStatus
+  needPasswordChange?: boolean
+  isDeleted?: boolean
+  deletedAt?: Date | string | null
+  image?: string | null
+  isSubscribed?: boolean
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  sessions?: Prisma.SessionUncheckedCreateNestedManyWithoutUserInput
+  accounts?: Prisma.AccountUncheckedCreateNestedManyWithoutUserInput
+  admin?: Prisma.AdminUncheckedCreateNestedOneWithoutUserInput
+  Idea?: Prisma.IdeaUncheckedCreateNestedManyWithoutUserInput
+  vote?: Prisma.VoteUncheckedCreateNestedManyWithoutUserInput
+  purchase?: Prisma.PurchaseUncheckedCreateNestedManyWithoutUserInput
+  watchlist?: Prisma.WatchListUncheckedCreateNestedManyWithoutUserInput
+}
+
+export type UserCreateOrConnectWithoutCommentInput = {
+  where: Prisma.UserWhereUniqueInput
+  create: Prisma.XOR<Prisma.UserCreateWithoutCommentInput, Prisma.UserUncheckedCreateWithoutCommentInput>
+}
+
+export type UserUpsertWithoutCommentInput = {
+  update: Prisma.XOR<Prisma.UserUpdateWithoutCommentInput, Prisma.UserUncheckedUpdateWithoutCommentInput>
+  create: Prisma.XOR<Prisma.UserCreateWithoutCommentInput, Prisma.UserUncheckedCreateWithoutCommentInput>
+  where?: Prisma.UserWhereInput
+}
+
+export type UserUpdateToOneWithWhereWithoutCommentInput = {
+  where?: Prisma.UserWhereInput
+  data: Prisma.XOR<Prisma.UserUpdateWithoutCommentInput, Prisma.UserUncheckedUpdateWithoutCommentInput>
+}
+
+export type UserUpdateWithoutCommentInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  password?: Prisma.StringFieldUpdateOperationsInput | string
+  emailVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
+  status?: Prisma.EnumUserStatusFieldUpdateOperationsInput | $Enums.UserStatus
+  needPasswordChange?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isDeleted?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  isSubscribed?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  sessions?: Prisma.SessionUpdateManyWithoutUserNestedInput
+  accounts?: Prisma.AccountUpdateManyWithoutUserNestedInput
+  admin?: Prisma.AdminUpdateOneWithoutUserNestedInput
+  Idea?: Prisma.IdeaUpdateManyWithoutUserNestedInput
+  vote?: Prisma.VoteUpdateManyWithoutUserNestedInput
+  purchase?: Prisma.PurchaseUpdateManyWithoutUserNestedInput
+  watchlist?: Prisma.WatchListUpdateManyWithoutUserNestedInput
+}
+
+export type UserUncheckedUpdateWithoutCommentInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  password?: Prisma.StringFieldUpdateOperationsInput | string
+  emailVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
+  status?: Prisma.EnumUserStatusFieldUpdateOperationsInput | $Enums.UserStatus
+  needPasswordChange?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isDeleted?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  isSubscribed?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  sessions?: Prisma.SessionUncheckedUpdateManyWithoutUserNestedInput
+  accounts?: Prisma.AccountUncheckedUpdateManyWithoutUserNestedInput
+  admin?: Prisma.AdminUncheckedUpdateOneWithoutUserNestedInput
+  Idea?: Prisma.IdeaUncheckedUpdateManyWithoutUserNestedInput
+  vote?: Prisma.VoteUncheckedUpdateManyWithoutUserNestedInput
+  purchase?: Prisma.PurchaseUncheckedUpdateManyWithoutUserNestedInput
+  watchlist?: Prisma.WatchListUncheckedUpdateManyWithoutUserNestedInput
+}
+
+export type UserCreateWithoutIdeaInput = {
+  id?: string
+  name: string
+  email: string
+  password: string
+  emailVerified?: boolean
+  role?: $Enums.Role
+  status?: $Enums.UserStatus
+  needPasswordChange?: boolean
+  isDeleted?: boolean
+  deletedAt?: Date | string | null
+  image?: string | null
+  isSubscribed?: boolean
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  sessions?: Prisma.SessionCreateNestedManyWithoutUserInput
+  accounts?: Prisma.AccountCreateNestedManyWithoutUserInput
+  admin?: Prisma.AdminCreateNestedOneWithoutUserInput
+  comment?: Prisma.CommentsCreateNestedManyWithoutUserInput
+  vote?: Prisma.VoteCreateNestedManyWithoutUserInput
+  purchase?: Prisma.PurchaseCreateNestedManyWithoutUserInput
+  watchlist?: Prisma.WatchListCreateNestedManyWithoutUserInput
+}
+
+export type UserUncheckedCreateWithoutIdeaInput = {
+  id?: string
+  name: string
+  email: string
+  password: string
+  emailVerified?: boolean
+  role?: $Enums.Role
+  status?: $Enums.UserStatus
+  needPasswordChange?: boolean
+  isDeleted?: boolean
+  deletedAt?: Date | string | null
+  image?: string | null
+  isSubscribed?: boolean
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  sessions?: Prisma.SessionUncheckedCreateNestedManyWithoutUserInput
+  accounts?: Prisma.AccountUncheckedCreateNestedManyWithoutUserInput
+  admin?: Prisma.AdminUncheckedCreateNestedOneWithoutUserInput
+  comment?: Prisma.CommentsUncheckedCreateNestedManyWithoutUserInput
+  vote?: Prisma.VoteUncheckedCreateNestedManyWithoutUserInput
+  purchase?: Prisma.PurchaseUncheckedCreateNestedManyWithoutUserInput
+  watchlist?: Prisma.WatchListUncheckedCreateNestedManyWithoutUserInput
+}
+
+export type UserCreateOrConnectWithoutIdeaInput = {
+  where: Prisma.UserWhereUniqueInput
+  create: Prisma.XOR<Prisma.UserCreateWithoutIdeaInput, Prisma.UserUncheckedCreateWithoutIdeaInput>
+}
+
+export type UserUpsertWithoutIdeaInput = {
+  update: Prisma.XOR<Prisma.UserUpdateWithoutIdeaInput, Prisma.UserUncheckedUpdateWithoutIdeaInput>
+  create: Prisma.XOR<Prisma.UserCreateWithoutIdeaInput, Prisma.UserUncheckedCreateWithoutIdeaInput>
+  where?: Prisma.UserWhereInput
+}
+
+export type UserUpdateToOneWithWhereWithoutIdeaInput = {
+  where?: Prisma.UserWhereInput
+  data: Prisma.XOR<Prisma.UserUpdateWithoutIdeaInput, Prisma.UserUncheckedUpdateWithoutIdeaInput>
+}
+
+export type UserUpdateWithoutIdeaInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  password?: Prisma.StringFieldUpdateOperationsInput | string
+  emailVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
+  status?: Prisma.EnumUserStatusFieldUpdateOperationsInput | $Enums.UserStatus
+  needPasswordChange?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isDeleted?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  isSubscribed?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  sessions?: Prisma.SessionUpdateManyWithoutUserNestedInput
+  accounts?: Prisma.AccountUpdateManyWithoutUserNestedInput
+  admin?: Prisma.AdminUpdateOneWithoutUserNestedInput
+  comment?: Prisma.CommentsUpdateManyWithoutUserNestedInput
+  vote?: Prisma.VoteUpdateManyWithoutUserNestedInput
+  purchase?: Prisma.PurchaseUpdateManyWithoutUserNestedInput
+  watchlist?: Prisma.WatchListUpdateManyWithoutUserNestedInput
+}
+
+export type UserUncheckedUpdateWithoutIdeaInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  password?: Prisma.StringFieldUpdateOperationsInput | string
+  emailVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
+  status?: Prisma.EnumUserStatusFieldUpdateOperationsInput | $Enums.UserStatus
+  needPasswordChange?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isDeleted?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  isSubscribed?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  sessions?: Prisma.SessionUncheckedUpdateManyWithoutUserNestedInput
+  accounts?: Prisma.AccountUncheckedUpdateManyWithoutUserNestedInput
+  admin?: Prisma.AdminUncheckedUpdateOneWithoutUserNestedInput
+  comment?: Prisma.CommentsUncheckedUpdateManyWithoutUserNestedInput
+  vote?: Prisma.VoteUncheckedUpdateManyWithoutUserNestedInput
+  purchase?: Prisma.PurchaseUncheckedUpdateManyWithoutUserNestedInput
+  watchlist?: Prisma.WatchListUncheckedUpdateManyWithoutUserNestedInput
+}
+
+export type UserCreateWithoutWatchlistInput = {
+  id?: string
+  name: string
+  email: string
+  password: string
+  emailVerified?: boolean
+  role?: $Enums.Role
+  status?: $Enums.UserStatus
+  needPasswordChange?: boolean
+  isDeleted?: boolean
+  deletedAt?: Date | string | null
+  image?: string | null
+  isSubscribed?: boolean
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  sessions?: Prisma.SessionCreateNestedManyWithoutUserInput
+  accounts?: Prisma.AccountCreateNestedManyWithoutUserInput
+  admin?: Prisma.AdminCreateNestedOneWithoutUserInput
+  Idea?: Prisma.IdeaCreateNestedManyWithoutUserInput
+  comment?: Prisma.CommentsCreateNestedManyWithoutUserInput
+  vote?: Prisma.VoteCreateNestedManyWithoutUserInput
+  purchase?: Prisma.PurchaseCreateNestedManyWithoutUserInput
+}
+
+export type UserUncheckedCreateWithoutWatchlistInput = {
+  id?: string
+  name: string
+  email: string
+  password: string
+  emailVerified?: boolean
+  role?: $Enums.Role
+  status?: $Enums.UserStatus
+  needPasswordChange?: boolean
+  isDeleted?: boolean
+  deletedAt?: Date | string | null
+  image?: string | null
+  isSubscribed?: boolean
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  sessions?: Prisma.SessionUncheckedCreateNestedManyWithoutUserInput
+  accounts?: Prisma.AccountUncheckedCreateNestedManyWithoutUserInput
+  admin?: Prisma.AdminUncheckedCreateNestedOneWithoutUserInput
+  Idea?: Prisma.IdeaUncheckedCreateNestedManyWithoutUserInput
+  comment?: Prisma.CommentsUncheckedCreateNestedManyWithoutUserInput
+  vote?: Prisma.VoteUncheckedCreateNestedManyWithoutUserInput
+  purchase?: Prisma.PurchaseUncheckedCreateNestedManyWithoutUserInput
+}
+
+export type UserCreateOrConnectWithoutWatchlistInput = {
+  where: Prisma.UserWhereUniqueInput
+  create: Prisma.XOR<Prisma.UserCreateWithoutWatchlistInput, Prisma.UserUncheckedCreateWithoutWatchlistInput>
+}
+
+export type UserUpsertWithoutWatchlistInput = {
+  update: Prisma.XOR<Prisma.UserUpdateWithoutWatchlistInput, Prisma.UserUncheckedUpdateWithoutWatchlistInput>
+  create: Prisma.XOR<Prisma.UserCreateWithoutWatchlistInput, Prisma.UserUncheckedCreateWithoutWatchlistInput>
+  where?: Prisma.UserWhereInput
+}
+
+export type UserUpdateToOneWithWhereWithoutWatchlistInput = {
+  where?: Prisma.UserWhereInput
+  data: Prisma.XOR<Prisma.UserUpdateWithoutWatchlistInput, Prisma.UserUncheckedUpdateWithoutWatchlistInput>
+}
+
+export type UserUpdateWithoutWatchlistInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  password?: Prisma.StringFieldUpdateOperationsInput | string
+  emailVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
+  status?: Prisma.EnumUserStatusFieldUpdateOperationsInput | $Enums.UserStatus
+  needPasswordChange?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isDeleted?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  isSubscribed?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  sessions?: Prisma.SessionUpdateManyWithoutUserNestedInput
+  accounts?: Prisma.AccountUpdateManyWithoutUserNestedInput
+  admin?: Prisma.AdminUpdateOneWithoutUserNestedInput
+  Idea?: Prisma.IdeaUpdateManyWithoutUserNestedInput
+  comment?: Prisma.CommentsUpdateManyWithoutUserNestedInput
+  vote?: Prisma.VoteUpdateManyWithoutUserNestedInput
+  purchase?: Prisma.PurchaseUpdateManyWithoutUserNestedInput
+}
+
+export type UserUncheckedUpdateWithoutWatchlistInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  password?: Prisma.StringFieldUpdateOperationsInput | string
+  emailVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
+  status?: Prisma.EnumUserStatusFieldUpdateOperationsInput | $Enums.UserStatus
+  needPasswordChange?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isDeleted?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  isSubscribed?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  sessions?: Prisma.SessionUncheckedUpdateManyWithoutUserNestedInput
+  accounts?: Prisma.AccountUncheckedUpdateManyWithoutUserNestedInput
+  admin?: Prisma.AdminUncheckedUpdateOneWithoutUserNestedInput
+  Idea?: Prisma.IdeaUncheckedUpdateManyWithoutUserNestedInput
+  comment?: Prisma.CommentsUncheckedUpdateManyWithoutUserNestedInput
+  vote?: Prisma.VoteUncheckedUpdateManyWithoutUserNestedInput
+  purchase?: Prisma.PurchaseUncheckedUpdateManyWithoutUserNestedInput
+}
+
+export type UserCreateWithoutPurchaseInput = {
+  id?: string
+  name: string
+  email: string
+  password: string
+  emailVerified?: boolean
+  role?: $Enums.Role
+  status?: $Enums.UserStatus
+  needPasswordChange?: boolean
+  isDeleted?: boolean
+  deletedAt?: Date | string | null
+  image?: string | null
+  isSubscribed?: boolean
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  sessions?: Prisma.SessionCreateNestedManyWithoutUserInput
+  accounts?: Prisma.AccountCreateNestedManyWithoutUserInput
+  admin?: Prisma.AdminCreateNestedOneWithoutUserInput
+  Idea?: Prisma.IdeaCreateNestedManyWithoutUserInput
+  comment?: Prisma.CommentsCreateNestedManyWithoutUserInput
+  vote?: Prisma.VoteCreateNestedManyWithoutUserInput
+  watchlist?: Prisma.WatchListCreateNestedManyWithoutUserInput
+}
+
+export type UserUncheckedCreateWithoutPurchaseInput = {
+  id?: string
+  name: string
+  email: string
+  password: string
+  emailVerified?: boolean
+  role?: $Enums.Role
+  status?: $Enums.UserStatus
+  needPasswordChange?: boolean
+  isDeleted?: boolean
+  deletedAt?: Date | string | null
+  image?: string | null
+  isSubscribed?: boolean
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  sessions?: Prisma.SessionUncheckedCreateNestedManyWithoutUserInput
+  accounts?: Prisma.AccountUncheckedCreateNestedManyWithoutUserInput
+  admin?: Prisma.AdminUncheckedCreateNestedOneWithoutUserInput
+  Idea?: Prisma.IdeaUncheckedCreateNestedManyWithoutUserInput
+  comment?: Prisma.CommentsUncheckedCreateNestedManyWithoutUserInput
+  vote?: Prisma.VoteUncheckedCreateNestedManyWithoutUserInput
+  watchlist?: Prisma.WatchListUncheckedCreateNestedManyWithoutUserInput
+}
+
+export type UserCreateOrConnectWithoutPurchaseInput = {
+  where: Prisma.UserWhereUniqueInput
+  create: Prisma.XOR<Prisma.UserCreateWithoutPurchaseInput, Prisma.UserUncheckedCreateWithoutPurchaseInput>
+}
+
+export type UserUpsertWithoutPurchaseInput = {
+  update: Prisma.XOR<Prisma.UserUpdateWithoutPurchaseInput, Prisma.UserUncheckedUpdateWithoutPurchaseInput>
+  create: Prisma.XOR<Prisma.UserCreateWithoutPurchaseInput, Prisma.UserUncheckedCreateWithoutPurchaseInput>
+  where?: Prisma.UserWhereInput
+}
+
+export type UserUpdateToOneWithWhereWithoutPurchaseInput = {
+  where?: Prisma.UserWhereInput
+  data: Prisma.XOR<Prisma.UserUpdateWithoutPurchaseInput, Prisma.UserUncheckedUpdateWithoutPurchaseInput>
+}
+
+export type UserUpdateWithoutPurchaseInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  password?: Prisma.StringFieldUpdateOperationsInput | string
+  emailVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
+  status?: Prisma.EnumUserStatusFieldUpdateOperationsInput | $Enums.UserStatus
+  needPasswordChange?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isDeleted?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  isSubscribed?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  sessions?: Prisma.SessionUpdateManyWithoutUserNestedInput
+  accounts?: Prisma.AccountUpdateManyWithoutUserNestedInput
+  admin?: Prisma.AdminUpdateOneWithoutUserNestedInput
+  Idea?: Prisma.IdeaUpdateManyWithoutUserNestedInput
+  comment?: Prisma.CommentsUpdateManyWithoutUserNestedInput
+  vote?: Prisma.VoteUpdateManyWithoutUserNestedInput
+  watchlist?: Prisma.WatchListUpdateManyWithoutUserNestedInput
+}
+
+export type UserUncheckedUpdateWithoutPurchaseInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  email?: Prisma.StringFieldUpdateOperationsInput | string
+  password?: Prisma.StringFieldUpdateOperationsInput | string
+  emailVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
+  status?: Prisma.EnumUserStatusFieldUpdateOperationsInput | $Enums.UserStatus
+  needPasswordChange?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isDeleted?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  isSubscribed?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  sessions?: Prisma.SessionUncheckedUpdateManyWithoutUserNestedInput
+  accounts?: Prisma.AccountUncheckedUpdateManyWithoutUserNestedInput
+  admin?: Prisma.AdminUncheckedUpdateOneWithoutUserNestedInput
+  Idea?: Prisma.IdeaUncheckedUpdateManyWithoutUserNestedInput
+  comment?: Prisma.CommentsUncheckedUpdateManyWithoutUserNestedInput
+  vote?: Prisma.VoteUncheckedUpdateManyWithoutUserNestedInput
+  watchlist?: Prisma.WatchListUncheckedUpdateManyWithoutUserNestedInput
 }
 
 export type UserCreateWithoutSessionsInput = {
@@ -1036,566 +1576,6 @@ export type UserUncheckedUpdateWithoutVoteInput = {
   admin?: Prisma.AdminUncheckedUpdateOneWithoutUserNestedInput
   Idea?: Prisma.IdeaUncheckedUpdateManyWithoutUserNestedInput
   comment?: Prisma.CommentsUncheckedUpdateManyWithoutUserNestedInput
-  purchase?: Prisma.PurchaseUncheckedUpdateManyWithoutUserNestedInput
-  watchlist?: Prisma.WatchListUncheckedUpdateManyWithoutUserNestedInput
-}
-
-export type UserCreateWithoutPurchaseInput = {
-  id?: string
-  name: string
-  email: string
-  password: string
-  emailVerified?: boolean
-  role?: $Enums.Role
-  status?: $Enums.UserStatus
-  needPasswordChange?: boolean
-  isDeleted?: boolean
-  deletedAt?: Date | string | null
-  image?: string | null
-  isSubscribed?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  sessions?: Prisma.SessionCreateNestedManyWithoutUserInput
-  accounts?: Prisma.AccountCreateNestedManyWithoutUserInput
-  admin?: Prisma.AdminCreateNestedOneWithoutUserInput
-  Idea?: Prisma.IdeaCreateNestedManyWithoutUserInput
-  comment?: Prisma.CommentsCreateNestedManyWithoutUserInput
-  vote?: Prisma.VoteCreateNestedManyWithoutUserInput
-  watchlist?: Prisma.WatchListCreateNestedManyWithoutUserInput
-}
-
-export type UserUncheckedCreateWithoutPurchaseInput = {
-  id?: string
-  name: string
-  email: string
-  password: string
-  emailVerified?: boolean
-  role?: $Enums.Role
-  status?: $Enums.UserStatus
-  needPasswordChange?: boolean
-  isDeleted?: boolean
-  deletedAt?: Date | string | null
-  image?: string | null
-  isSubscribed?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  sessions?: Prisma.SessionUncheckedCreateNestedManyWithoutUserInput
-  accounts?: Prisma.AccountUncheckedCreateNestedManyWithoutUserInput
-  admin?: Prisma.AdminUncheckedCreateNestedOneWithoutUserInput
-  Idea?: Prisma.IdeaUncheckedCreateNestedManyWithoutUserInput
-  comment?: Prisma.CommentsUncheckedCreateNestedManyWithoutUserInput
-  vote?: Prisma.VoteUncheckedCreateNestedManyWithoutUserInput
-  watchlist?: Prisma.WatchListUncheckedCreateNestedManyWithoutUserInput
-}
-
-export type UserCreateOrConnectWithoutPurchaseInput = {
-  where: Prisma.UserWhereUniqueInput
-  create: Prisma.XOR<Prisma.UserCreateWithoutPurchaseInput, Prisma.UserUncheckedCreateWithoutPurchaseInput>
-}
-
-export type UserUpsertWithoutPurchaseInput = {
-  update: Prisma.XOR<Prisma.UserUpdateWithoutPurchaseInput, Prisma.UserUncheckedUpdateWithoutPurchaseInput>
-  create: Prisma.XOR<Prisma.UserCreateWithoutPurchaseInput, Prisma.UserUncheckedCreateWithoutPurchaseInput>
-  where?: Prisma.UserWhereInput
-}
-
-export type UserUpdateToOneWithWhereWithoutPurchaseInput = {
-  where?: Prisma.UserWhereInput
-  data: Prisma.XOR<Prisma.UserUpdateWithoutPurchaseInput, Prisma.UserUncheckedUpdateWithoutPurchaseInput>
-}
-
-export type UserUpdateWithoutPurchaseInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  password?: Prisma.StringFieldUpdateOperationsInput | string
-  emailVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
-  status?: Prisma.EnumUserStatusFieldUpdateOperationsInput | $Enums.UserStatus
-  needPasswordChange?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isDeleted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isSubscribed?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sessions?: Prisma.SessionUpdateManyWithoutUserNestedInput
-  accounts?: Prisma.AccountUpdateManyWithoutUserNestedInput
-  admin?: Prisma.AdminUpdateOneWithoutUserNestedInput
-  Idea?: Prisma.IdeaUpdateManyWithoutUserNestedInput
-  comment?: Prisma.CommentsUpdateManyWithoutUserNestedInput
-  vote?: Prisma.VoteUpdateManyWithoutUserNestedInput
-  watchlist?: Prisma.WatchListUpdateManyWithoutUserNestedInput
-}
-
-export type UserUncheckedUpdateWithoutPurchaseInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  password?: Prisma.StringFieldUpdateOperationsInput | string
-  emailVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
-  status?: Prisma.EnumUserStatusFieldUpdateOperationsInput | $Enums.UserStatus
-  needPasswordChange?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isDeleted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isSubscribed?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sessions?: Prisma.SessionUncheckedUpdateManyWithoutUserNestedInput
-  accounts?: Prisma.AccountUncheckedUpdateManyWithoutUserNestedInput
-  admin?: Prisma.AdminUncheckedUpdateOneWithoutUserNestedInput
-  Idea?: Prisma.IdeaUncheckedUpdateManyWithoutUserNestedInput
-  comment?: Prisma.CommentsUncheckedUpdateManyWithoutUserNestedInput
-  vote?: Prisma.VoteUncheckedUpdateManyWithoutUserNestedInput
-  watchlist?: Prisma.WatchListUncheckedUpdateManyWithoutUserNestedInput
-}
-
-export type UserCreateWithoutIdeaInput = {
-  id?: string
-  name: string
-  email: string
-  password: string
-  emailVerified?: boolean
-  role?: $Enums.Role
-  status?: $Enums.UserStatus
-  needPasswordChange?: boolean
-  isDeleted?: boolean
-  deletedAt?: Date | string | null
-  image?: string | null
-  isSubscribed?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  sessions?: Prisma.SessionCreateNestedManyWithoutUserInput
-  accounts?: Prisma.AccountCreateNestedManyWithoutUserInput
-  admin?: Prisma.AdminCreateNestedOneWithoutUserInput
-  comment?: Prisma.CommentsCreateNestedManyWithoutUserInput
-  vote?: Prisma.VoteCreateNestedManyWithoutUserInput
-  purchase?: Prisma.PurchaseCreateNestedManyWithoutUserInput
-  watchlist?: Prisma.WatchListCreateNestedManyWithoutUserInput
-}
-
-export type UserUncheckedCreateWithoutIdeaInput = {
-  id?: string
-  name: string
-  email: string
-  password: string
-  emailVerified?: boolean
-  role?: $Enums.Role
-  status?: $Enums.UserStatus
-  needPasswordChange?: boolean
-  isDeleted?: boolean
-  deletedAt?: Date | string | null
-  image?: string | null
-  isSubscribed?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  sessions?: Prisma.SessionUncheckedCreateNestedManyWithoutUserInput
-  accounts?: Prisma.AccountUncheckedCreateNestedManyWithoutUserInput
-  admin?: Prisma.AdminUncheckedCreateNestedOneWithoutUserInput
-  comment?: Prisma.CommentsUncheckedCreateNestedManyWithoutUserInput
-  vote?: Prisma.VoteUncheckedCreateNestedManyWithoutUserInput
-  purchase?: Prisma.PurchaseUncheckedCreateNestedManyWithoutUserInput
-  watchlist?: Prisma.WatchListUncheckedCreateNestedManyWithoutUserInput
-}
-
-export type UserCreateOrConnectWithoutIdeaInput = {
-  where: Prisma.UserWhereUniqueInput
-  create: Prisma.XOR<Prisma.UserCreateWithoutIdeaInput, Prisma.UserUncheckedCreateWithoutIdeaInput>
-}
-
-export type UserUpsertWithoutIdeaInput = {
-  update: Prisma.XOR<Prisma.UserUpdateWithoutIdeaInput, Prisma.UserUncheckedUpdateWithoutIdeaInput>
-  create: Prisma.XOR<Prisma.UserCreateWithoutIdeaInput, Prisma.UserUncheckedCreateWithoutIdeaInput>
-  where?: Prisma.UserWhereInput
-}
-
-export type UserUpdateToOneWithWhereWithoutIdeaInput = {
-  where?: Prisma.UserWhereInput
-  data: Prisma.XOR<Prisma.UserUpdateWithoutIdeaInput, Prisma.UserUncheckedUpdateWithoutIdeaInput>
-}
-
-export type UserUpdateWithoutIdeaInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  password?: Prisma.StringFieldUpdateOperationsInput | string
-  emailVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
-  status?: Prisma.EnumUserStatusFieldUpdateOperationsInput | $Enums.UserStatus
-  needPasswordChange?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isDeleted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isSubscribed?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sessions?: Prisma.SessionUpdateManyWithoutUserNestedInput
-  accounts?: Prisma.AccountUpdateManyWithoutUserNestedInput
-  admin?: Prisma.AdminUpdateOneWithoutUserNestedInput
-  comment?: Prisma.CommentsUpdateManyWithoutUserNestedInput
-  vote?: Prisma.VoteUpdateManyWithoutUserNestedInput
-  purchase?: Prisma.PurchaseUpdateManyWithoutUserNestedInput
-  watchlist?: Prisma.WatchListUpdateManyWithoutUserNestedInput
-}
-
-export type UserUncheckedUpdateWithoutIdeaInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  password?: Prisma.StringFieldUpdateOperationsInput | string
-  emailVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
-  status?: Prisma.EnumUserStatusFieldUpdateOperationsInput | $Enums.UserStatus
-  needPasswordChange?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isDeleted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isSubscribed?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sessions?: Prisma.SessionUncheckedUpdateManyWithoutUserNestedInput
-  accounts?: Prisma.AccountUncheckedUpdateManyWithoutUserNestedInput
-  admin?: Prisma.AdminUncheckedUpdateOneWithoutUserNestedInput
-  comment?: Prisma.CommentsUncheckedUpdateManyWithoutUserNestedInput
-  vote?: Prisma.VoteUncheckedUpdateManyWithoutUserNestedInput
-  purchase?: Prisma.PurchaseUncheckedUpdateManyWithoutUserNestedInput
-  watchlist?: Prisma.WatchListUncheckedUpdateManyWithoutUserNestedInput
-}
-
-export type UserCreateWithoutWatchlistInput = {
-  id?: string
-  name: string
-  email: string
-  password: string
-  emailVerified?: boolean
-  role?: $Enums.Role
-  status?: $Enums.UserStatus
-  needPasswordChange?: boolean
-  isDeleted?: boolean
-  deletedAt?: Date | string | null
-  image?: string | null
-  isSubscribed?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  sessions?: Prisma.SessionCreateNestedManyWithoutUserInput
-  accounts?: Prisma.AccountCreateNestedManyWithoutUserInput
-  admin?: Prisma.AdminCreateNestedOneWithoutUserInput
-  Idea?: Prisma.IdeaCreateNestedManyWithoutUserInput
-  comment?: Prisma.CommentsCreateNestedManyWithoutUserInput
-  vote?: Prisma.VoteCreateNestedManyWithoutUserInput
-  purchase?: Prisma.PurchaseCreateNestedManyWithoutUserInput
-}
-
-export type UserUncheckedCreateWithoutWatchlistInput = {
-  id?: string
-  name: string
-  email: string
-  password: string
-  emailVerified?: boolean
-  role?: $Enums.Role
-  status?: $Enums.UserStatus
-  needPasswordChange?: boolean
-  isDeleted?: boolean
-  deletedAt?: Date | string | null
-  image?: string | null
-  isSubscribed?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  sessions?: Prisma.SessionUncheckedCreateNestedManyWithoutUserInput
-  accounts?: Prisma.AccountUncheckedCreateNestedManyWithoutUserInput
-  admin?: Prisma.AdminUncheckedCreateNestedOneWithoutUserInput
-  Idea?: Prisma.IdeaUncheckedCreateNestedManyWithoutUserInput
-  comment?: Prisma.CommentsUncheckedCreateNestedManyWithoutUserInput
-  vote?: Prisma.VoteUncheckedCreateNestedManyWithoutUserInput
-  purchase?: Prisma.PurchaseUncheckedCreateNestedManyWithoutUserInput
-}
-
-export type UserCreateOrConnectWithoutWatchlistInput = {
-  where: Prisma.UserWhereUniqueInput
-  create: Prisma.XOR<Prisma.UserCreateWithoutWatchlistInput, Prisma.UserUncheckedCreateWithoutWatchlistInput>
-}
-
-export type UserUpsertWithoutWatchlistInput = {
-  update: Prisma.XOR<Prisma.UserUpdateWithoutWatchlistInput, Prisma.UserUncheckedUpdateWithoutWatchlistInput>
-  create: Prisma.XOR<Prisma.UserCreateWithoutWatchlistInput, Prisma.UserUncheckedCreateWithoutWatchlistInput>
-  where?: Prisma.UserWhereInput
-}
-
-export type UserUpdateToOneWithWhereWithoutWatchlistInput = {
-  where?: Prisma.UserWhereInput
-  data: Prisma.XOR<Prisma.UserUpdateWithoutWatchlistInput, Prisma.UserUncheckedUpdateWithoutWatchlistInput>
-}
-
-export type UserUpdateWithoutWatchlistInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  password?: Prisma.StringFieldUpdateOperationsInput | string
-  emailVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
-  status?: Prisma.EnumUserStatusFieldUpdateOperationsInput | $Enums.UserStatus
-  needPasswordChange?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isDeleted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isSubscribed?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sessions?: Prisma.SessionUpdateManyWithoutUserNestedInput
-  accounts?: Prisma.AccountUpdateManyWithoutUserNestedInput
-  admin?: Prisma.AdminUpdateOneWithoutUserNestedInput
-  Idea?: Prisma.IdeaUpdateManyWithoutUserNestedInput
-  comment?: Prisma.CommentsUpdateManyWithoutUserNestedInput
-  vote?: Prisma.VoteUpdateManyWithoutUserNestedInput
-  purchase?: Prisma.PurchaseUpdateManyWithoutUserNestedInput
-}
-
-export type UserUncheckedUpdateWithoutWatchlistInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  password?: Prisma.StringFieldUpdateOperationsInput | string
-  emailVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
-  status?: Prisma.EnumUserStatusFieldUpdateOperationsInput | $Enums.UserStatus
-  needPasswordChange?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isDeleted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isSubscribed?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sessions?: Prisma.SessionUncheckedUpdateManyWithoutUserNestedInput
-  accounts?: Prisma.AccountUncheckedUpdateManyWithoutUserNestedInput
-  admin?: Prisma.AdminUncheckedUpdateOneWithoutUserNestedInput
-  Idea?: Prisma.IdeaUncheckedUpdateManyWithoutUserNestedInput
-  comment?: Prisma.CommentsUncheckedUpdateManyWithoutUserNestedInput
-  vote?: Prisma.VoteUncheckedUpdateManyWithoutUserNestedInput
-  purchase?: Prisma.PurchaseUncheckedUpdateManyWithoutUserNestedInput
-}
-
-export type UserCreateWithoutCommentInput = {
-  id?: string
-  name: string
-  email: string
-  password: string
-  emailVerified?: boolean
-  role?: $Enums.Role
-  status?: $Enums.UserStatus
-  needPasswordChange?: boolean
-  isDeleted?: boolean
-  deletedAt?: Date | string | null
-  image?: string | null
-  isSubscribed?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  sessions?: Prisma.SessionCreateNestedManyWithoutUserInput
-  accounts?: Prisma.AccountCreateNestedManyWithoutUserInput
-  admin?: Prisma.AdminCreateNestedOneWithoutUserInput
-  Idea?: Prisma.IdeaCreateNestedManyWithoutUserInput
-  vote?: Prisma.VoteCreateNestedManyWithoutUserInput
-  purchase?: Prisma.PurchaseCreateNestedManyWithoutUserInput
-  watchlist?: Prisma.WatchListCreateNestedManyWithoutUserInput
-}
-
-export type UserUncheckedCreateWithoutCommentInput = {
-  id?: string
-  name: string
-  email: string
-  password: string
-  emailVerified?: boolean
-  role?: $Enums.Role
-  status?: $Enums.UserStatus
-  needPasswordChange?: boolean
-  isDeleted?: boolean
-  deletedAt?: Date | string | null
-  image?: string | null
-  isSubscribed?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  sessions?: Prisma.SessionUncheckedCreateNestedManyWithoutUserInput
-  accounts?: Prisma.AccountUncheckedCreateNestedManyWithoutUserInput
-  admin?: Prisma.AdminUncheckedCreateNestedOneWithoutUserInput
-  Idea?: Prisma.IdeaUncheckedCreateNestedManyWithoutUserInput
-  vote?: Prisma.VoteUncheckedCreateNestedManyWithoutUserInput
-  purchase?: Prisma.PurchaseUncheckedCreateNestedManyWithoutUserInput
-  watchlist?: Prisma.WatchListUncheckedCreateNestedManyWithoutUserInput
-}
-
-export type UserCreateOrConnectWithoutCommentInput = {
-  where: Prisma.UserWhereUniqueInput
-  create: Prisma.XOR<Prisma.UserCreateWithoutCommentInput, Prisma.UserUncheckedCreateWithoutCommentInput>
-}
-
-export type UserUpsertWithoutCommentInput = {
-  update: Prisma.XOR<Prisma.UserUpdateWithoutCommentInput, Prisma.UserUncheckedUpdateWithoutCommentInput>
-  create: Prisma.XOR<Prisma.UserCreateWithoutCommentInput, Prisma.UserUncheckedCreateWithoutCommentInput>
-  where?: Prisma.UserWhereInput
-}
-
-export type UserUpdateToOneWithWhereWithoutCommentInput = {
-  where?: Prisma.UserWhereInput
-  data: Prisma.XOR<Prisma.UserUpdateWithoutCommentInput, Prisma.UserUncheckedUpdateWithoutCommentInput>
-}
-
-export type UserUpdateWithoutCommentInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  password?: Prisma.StringFieldUpdateOperationsInput | string
-  emailVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
-  status?: Prisma.EnumUserStatusFieldUpdateOperationsInput | $Enums.UserStatus
-  needPasswordChange?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isDeleted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isSubscribed?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sessions?: Prisma.SessionUpdateManyWithoutUserNestedInput
-  accounts?: Prisma.AccountUpdateManyWithoutUserNestedInput
-  admin?: Prisma.AdminUpdateOneWithoutUserNestedInput
-  Idea?: Prisma.IdeaUpdateManyWithoutUserNestedInput
-  vote?: Prisma.VoteUpdateManyWithoutUserNestedInput
-  purchase?: Prisma.PurchaseUpdateManyWithoutUserNestedInput
-  watchlist?: Prisma.WatchListUpdateManyWithoutUserNestedInput
-}
-
-export type UserUncheckedUpdateWithoutCommentInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  password?: Prisma.StringFieldUpdateOperationsInput | string
-  emailVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
-  status?: Prisma.EnumUserStatusFieldUpdateOperationsInput | $Enums.UserStatus
-  needPasswordChange?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isDeleted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isSubscribed?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sessions?: Prisma.SessionUncheckedUpdateManyWithoutUserNestedInput
-  accounts?: Prisma.AccountUncheckedUpdateManyWithoutUserNestedInput
-  admin?: Prisma.AdminUncheckedUpdateOneWithoutUserNestedInput
-  Idea?: Prisma.IdeaUncheckedUpdateManyWithoutUserNestedInput
-  vote?: Prisma.VoteUncheckedUpdateManyWithoutUserNestedInput
-  purchase?: Prisma.PurchaseUncheckedUpdateManyWithoutUserNestedInput
-  watchlist?: Prisma.WatchListUncheckedUpdateManyWithoutUserNestedInput
-}
-
-export type UserCreateWithoutAdminInput = {
-  id?: string
-  name: string
-  email: string
-  password: string
-  emailVerified?: boolean
-  role?: $Enums.Role
-  status?: $Enums.UserStatus
-  needPasswordChange?: boolean
-  isDeleted?: boolean
-  deletedAt?: Date | string | null
-  image?: string | null
-  isSubscribed?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  sessions?: Prisma.SessionCreateNestedManyWithoutUserInput
-  accounts?: Prisma.AccountCreateNestedManyWithoutUserInput
-  Idea?: Prisma.IdeaCreateNestedManyWithoutUserInput
-  comment?: Prisma.CommentsCreateNestedManyWithoutUserInput
-  vote?: Prisma.VoteCreateNestedManyWithoutUserInput
-  purchase?: Prisma.PurchaseCreateNestedManyWithoutUserInput
-  watchlist?: Prisma.WatchListCreateNestedManyWithoutUserInput
-}
-
-export type UserUncheckedCreateWithoutAdminInput = {
-  id?: string
-  name: string
-  email: string
-  password: string
-  emailVerified?: boolean
-  role?: $Enums.Role
-  status?: $Enums.UserStatus
-  needPasswordChange?: boolean
-  isDeleted?: boolean
-  deletedAt?: Date | string | null
-  image?: string | null
-  isSubscribed?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  sessions?: Prisma.SessionUncheckedCreateNestedManyWithoutUserInput
-  accounts?: Prisma.AccountUncheckedCreateNestedManyWithoutUserInput
-  Idea?: Prisma.IdeaUncheckedCreateNestedManyWithoutUserInput
-  comment?: Prisma.CommentsUncheckedCreateNestedManyWithoutUserInput
-  vote?: Prisma.VoteUncheckedCreateNestedManyWithoutUserInput
-  purchase?: Prisma.PurchaseUncheckedCreateNestedManyWithoutUserInput
-  watchlist?: Prisma.WatchListUncheckedCreateNestedManyWithoutUserInput
-}
-
-export type UserCreateOrConnectWithoutAdminInput = {
-  where: Prisma.UserWhereUniqueInput
-  create: Prisma.XOR<Prisma.UserCreateWithoutAdminInput, Prisma.UserUncheckedCreateWithoutAdminInput>
-}
-
-export type UserUpsertWithoutAdminInput = {
-  update: Prisma.XOR<Prisma.UserUpdateWithoutAdminInput, Prisma.UserUncheckedUpdateWithoutAdminInput>
-  create: Prisma.XOR<Prisma.UserCreateWithoutAdminInput, Prisma.UserUncheckedCreateWithoutAdminInput>
-  where?: Prisma.UserWhereInput
-}
-
-export type UserUpdateToOneWithWhereWithoutAdminInput = {
-  where?: Prisma.UserWhereInput
-  data: Prisma.XOR<Prisma.UserUpdateWithoutAdminInput, Prisma.UserUncheckedUpdateWithoutAdminInput>
-}
-
-export type UserUpdateWithoutAdminInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  password?: Prisma.StringFieldUpdateOperationsInput | string
-  emailVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
-  status?: Prisma.EnumUserStatusFieldUpdateOperationsInput | $Enums.UserStatus
-  needPasswordChange?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isDeleted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isSubscribed?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sessions?: Prisma.SessionUpdateManyWithoutUserNestedInput
-  accounts?: Prisma.AccountUpdateManyWithoutUserNestedInput
-  Idea?: Prisma.IdeaUpdateManyWithoutUserNestedInput
-  comment?: Prisma.CommentsUpdateManyWithoutUserNestedInput
-  vote?: Prisma.VoteUpdateManyWithoutUserNestedInput
-  purchase?: Prisma.PurchaseUpdateManyWithoutUserNestedInput
-  watchlist?: Prisma.WatchListUpdateManyWithoutUserNestedInput
-}
-
-export type UserUncheckedUpdateWithoutAdminInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  password?: Prisma.StringFieldUpdateOperationsInput | string
-  emailVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  role?: Prisma.EnumRoleFieldUpdateOperationsInput | $Enums.Role
-  status?: Prisma.EnumUserStatusFieldUpdateOperationsInput | $Enums.UserStatus
-  needPasswordChange?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isDeleted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  deletedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  image?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isSubscribed?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  sessions?: Prisma.SessionUncheckedUpdateManyWithoutUserNestedInput
-  accounts?: Prisma.AccountUncheckedUpdateManyWithoutUserNestedInput
-  Idea?: Prisma.IdeaUncheckedUpdateManyWithoutUserNestedInput
-  comment?: Prisma.CommentsUncheckedUpdateManyWithoutUserNestedInput
-  vote?: Prisma.VoteUncheckedUpdateManyWithoutUserNestedInput
   purchase?: Prisma.PurchaseUncheckedUpdateManyWithoutUserNestedInput
   watchlist?: Prisma.WatchListUncheckedUpdateManyWithoutUserNestedInput
 }

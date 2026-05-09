@@ -332,6 +332,11 @@ export type CommentsUncheckedUpdateManyInput = {
   userId?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
+export type CommentsNullableScalarRelationFilter = {
+  is?: Prisma.CommentsWhereInput | null
+  isNot?: Prisma.CommentsWhereInput | null
+}
+
 export type CommentsListRelationFilter = {
   every?: Prisma.CommentsWhereInput
   some?: Prisma.CommentsWhereInput
@@ -340,11 +345,6 @@ export type CommentsListRelationFilter = {
 
 export type CommentsOrderByRelationAggregateInput = {
   _count?: Prisma.SortOrder
-}
-
-export type CommentsNullableScalarRelationFilter = {
-  is?: Prisma.CommentsWhereInput | null
-  isNot?: Prisma.CommentsWhereInput | null
 }
 
 export type CommentsCountOrderByAggregateInput = {
@@ -375,90 +375,6 @@ export type CommentsMinOrderByAggregateInput = {
   isDeleted?: Prisma.SortOrder
   ideaId?: Prisma.SortOrder
   userId?: Prisma.SortOrder
-}
-
-export type CommentsCreateNestedManyWithoutUserInput = {
-  create?: Prisma.XOR<Prisma.CommentsCreateWithoutUserInput, Prisma.CommentsUncheckedCreateWithoutUserInput> | Prisma.CommentsCreateWithoutUserInput[] | Prisma.CommentsUncheckedCreateWithoutUserInput[]
-  connectOrCreate?: Prisma.CommentsCreateOrConnectWithoutUserInput | Prisma.CommentsCreateOrConnectWithoutUserInput[]
-  createMany?: Prisma.CommentsCreateManyUserInputEnvelope
-  connect?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
-}
-
-export type CommentsUncheckedCreateNestedManyWithoutUserInput = {
-  create?: Prisma.XOR<Prisma.CommentsCreateWithoutUserInput, Prisma.CommentsUncheckedCreateWithoutUserInput> | Prisma.CommentsCreateWithoutUserInput[] | Prisma.CommentsUncheckedCreateWithoutUserInput[]
-  connectOrCreate?: Prisma.CommentsCreateOrConnectWithoutUserInput | Prisma.CommentsCreateOrConnectWithoutUserInput[]
-  createMany?: Prisma.CommentsCreateManyUserInputEnvelope
-  connect?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
-}
-
-export type CommentsUpdateManyWithoutUserNestedInput = {
-  create?: Prisma.XOR<Prisma.CommentsCreateWithoutUserInput, Prisma.CommentsUncheckedCreateWithoutUserInput> | Prisma.CommentsCreateWithoutUserInput[] | Prisma.CommentsUncheckedCreateWithoutUserInput[]
-  connectOrCreate?: Prisma.CommentsCreateOrConnectWithoutUserInput | Prisma.CommentsCreateOrConnectWithoutUserInput[]
-  upsert?: Prisma.CommentsUpsertWithWhereUniqueWithoutUserInput | Prisma.CommentsUpsertWithWhereUniqueWithoutUserInput[]
-  createMany?: Prisma.CommentsCreateManyUserInputEnvelope
-  set?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
-  disconnect?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
-  delete?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
-  connect?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
-  update?: Prisma.CommentsUpdateWithWhereUniqueWithoutUserInput | Prisma.CommentsUpdateWithWhereUniqueWithoutUserInput[]
-  updateMany?: Prisma.CommentsUpdateManyWithWhereWithoutUserInput | Prisma.CommentsUpdateManyWithWhereWithoutUserInput[]
-  deleteMany?: Prisma.CommentsScalarWhereInput | Prisma.CommentsScalarWhereInput[]
-}
-
-export type CommentsUncheckedUpdateManyWithoutUserNestedInput = {
-  create?: Prisma.XOR<Prisma.CommentsCreateWithoutUserInput, Prisma.CommentsUncheckedCreateWithoutUserInput> | Prisma.CommentsCreateWithoutUserInput[] | Prisma.CommentsUncheckedCreateWithoutUserInput[]
-  connectOrCreate?: Prisma.CommentsCreateOrConnectWithoutUserInput | Prisma.CommentsCreateOrConnectWithoutUserInput[]
-  upsert?: Prisma.CommentsUpsertWithWhereUniqueWithoutUserInput | Prisma.CommentsUpsertWithWhereUniqueWithoutUserInput[]
-  createMany?: Prisma.CommentsCreateManyUserInputEnvelope
-  set?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
-  disconnect?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
-  delete?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
-  connect?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
-  update?: Prisma.CommentsUpdateWithWhereUniqueWithoutUserInput | Prisma.CommentsUpdateWithWhereUniqueWithoutUserInput[]
-  updateMany?: Prisma.CommentsUpdateManyWithWhereWithoutUserInput | Prisma.CommentsUpdateManyWithWhereWithoutUserInput[]
-  deleteMany?: Prisma.CommentsScalarWhereInput | Prisma.CommentsScalarWhereInput[]
-}
-
-export type CommentsCreateNestedManyWithoutIdeaInput = {
-  create?: Prisma.XOR<Prisma.CommentsCreateWithoutIdeaInput, Prisma.CommentsUncheckedCreateWithoutIdeaInput> | Prisma.CommentsCreateWithoutIdeaInput[] | Prisma.CommentsUncheckedCreateWithoutIdeaInput[]
-  connectOrCreate?: Prisma.CommentsCreateOrConnectWithoutIdeaInput | Prisma.CommentsCreateOrConnectWithoutIdeaInput[]
-  createMany?: Prisma.CommentsCreateManyIdeaInputEnvelope
-  connect?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
-}
-
-export type CommentsUncheckedCreateNestedManyWithoutIdeaInput = {
-  create?: Prisma.XOR<Prisma.CommentsCreateWithoutIdeaInput, Prisma.CommentsUncheckedCreateWithoutIdeaInput> | Prisma.CommentsCreateWithoutIdeaInput[] | Prisma.CommentsUncheckedCreateWithoutIdeaInput[]
-  connectOrCreate?: Prisma.CommentsCreateOrConnectWithoutIdeaInput | Prisma.CommentsCreateOrConnectWithoutIdeaInput[]
-  createMany?: Prisma.CommentsCreateManyIdeaInputEnvelope
-  connect?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
-}
-
-export type CommentsUpdateManyWithoutIdeaNestedInput = {
-  create?: Prisma.XOR<Prisma.CommentsCreateWithoutIdeaInput, Prisma.CommentsUncheckedCreateWithoutIdeaInput> | Prisma.CommentsCreateWithoutIdeaInput[] | Prisma.CommentsUncheckedCreateWithoutIdeaInput[]
-  connectOrCreate?: Prisma.CommentsCreateOrConnectWithoutIdeaInput | Prisma.CommentsCreateOrConnectWithoutIdeaInput[]
-  upsert?: Prisma.CommentsUpsertWithWhereUniqueWithoutIdeaInput | Prisma.CommentsUpsertWithWhereUniqueWithoutIdeaInput[]
-  createMany?: Prisma.CommentsCreateManyIdeaInputEnvelope
-  set?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
-  disconnect?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
-  delete?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
-  connect?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
-  update?: Prisma.CommentsUpdateWithWhereUniqueWithoutIdeaInput | Prisma.CommentsUpdateWithWhereUniqueWithoutIdeaInput[]
-  updateMany?: Prisma.CommentsUpdateManyWithWhereWithoutIdeaInput | Prisma.CommentsUpdateManyWithWhereWithoutIdeaInput[]
-  deleteMany?: Prisma.CommentsScalarWhereInput | Prisma.CommentsScalarWhereInput[]
-}
-
-export type CommentsUncheckedUpdateManyWithoutIdeaNestedInput = {
-  create?: Prisma.XOR<Prisma.CommentsCreateWithoutIdeaInput, Prisma.CommentsUncheckedCreateWithoutIdeaInput> | Prisma.CommentsCreateWithoutIdeaInput[] | Prisma.CommentsUncheckedCreateWithoutIdeaInput[]
-  connectOrCreate?: Prisma.CommentsCreateOrConnectWithoutIdeaInput | Prisma.CommentsCreateOrConnectWithoutIdeaInput[]
-  upsert?: Prisma.CommentsUpsertWithWhereUniqueWithoutIdeaInput | Prisma.CommentsUpsertWithWhereUniqueWithoutIdeaInput[]
-  createMany?: Prisma.CommentsCreateManyIdeaInputEnvelope
-  set?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
-  disconnect?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
-  delete?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
-  connect?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
-  update?: Prisma.CommentsUpdateWithWhereUniqueWithoutIdeaInput | Prisma.CommentsUpdateWithWhereUniqueWithoutIdeaInput[]
-  updateMany?: Prisma.CommentsUpdateManyWithWhereWithoutIdeaInput | Prisma.CommentsUpdateManyWithWhereWithoutIdeaInput[]
-  deleteMany?: Prisma.CommentsScalarWhereInput | Prisma.CommentsScalarWhereInput[]
 }
 
 export type CommentsCreateNestedOneWithoutRepliesInput = {
@@ -519,109 +435,88 @@ export type CommentsUncheckedUpdateManyWithoutParentNestedInput = {
   deleteMany?: Prisma.CommentsScalarWhereInput | Prisma.CommentsScalarWhereInput[]
 }
 
-export type CommentsCreateWithoutUserInput = {
-  id?: string
-  comment: string
-  createdAt?: Date | string
-  isDeleted?: boolean
-  parent?: Prisma.CommentsCreateNestedOneWithoutRepliesInput
-  replies?: Prisma.CommentsCreateNestedManyWithoutParentInput
-  idea: Prisma.IdeaCreateNestedOneWithoutCommentsInput
+export type CommentsCreateNestedManyWithoutIdeaInput = {
+  create?: Prisma.XOR<Prisma.CommentsCreateWithoutIdeaInput, Prisma.CommentsUncheckedCreateWithoutIdeaInput> | Prisma.CommentsCreateWithoutIdeaInput[] | Prisma.CommentsUncheckedCreateWithoutIdeaInput[]
+  connectOrCreate?: Prisma.CommentsCreateOrConnectWithoutIdeaInput | Prisma.CommentsCreateOrConnectWithoutIdeaInput[]
+  createMany?: Prisma.CommentsCreateManyIdeaInputEnvelope
+  connect?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
 }
 
-export type CommentsUncheckedCreateWithoutUserInput = {
-  id?: string
-  comment: string
-  parentId?: string | null
-  createdAt?: Date | string
-  isDeleted?: boolean
-  ideaId: string
-  replies?: Prisma.CommentsUncheckedCreateNestedManyWithoutParentInput
+export type CommentsUncheckedCreateNestedManyWithoutIdeaInput = {
+  create?: Prisma.XOR<Prisma.CommentsCreateWithoutIdeaInput, Prisma.CommentsUncheckedCreateWithoutIdeaInput> | Prisma.CommentsCreateWithoutIdeaInput[] | Prisma.CommentsUncheckedCreateWithoutIdeaInput[]
+  connectOrCreate?: Prisma.CommentsCreateOrConnectWithoutIdeaInput | Prisma.CommentsCreateOrConnectWithoutIdeaInput[]
+  createMany?: Prisma.CommentsCreateManyIdeaInputEnvelope
+  connect?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
 }
 
-export type CommentsCreateOrConnectWithoutUserInput = {
-  where: Prisma.CommentsWhereUniqueInput
-  create: Prisma.XOR<Prisma.CommentsCreateWithoutUserInput, Prisma.CommentsUncheckedCreateWithoutUserInput>
+export type CommentsUpdateManyWithoutIdeaNestedInput = {
+  create?: Prisma.XOR<Prisma.CommentsCreateWithoutIdeaInput, Prisma.CommentsUncheckedCreateWithoutIdeaInput> | Prisma.CommentsCreateWithoutIdeaInput[] | Prisma.CommentsUncheckedCreateWithoutIdeaInput[]
+  connectOrCreate?: Prisma.CommentsCreateOrConnectWithoutIdeaInput | Prisma.CommentsCreateOrConnectWithoutIdeaInput[]
+  upsert?: Prisma.CommentsUpsertWithWhereUniqueWithoutIdeaInput | Prisma.CommentsUpsertWithWhereUniqueWithoutIdeaInput[]
+  createMany?: Prisma.CommentsCreateManyIdeaInputEnvelope
+  set?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
+  disconnect?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
+  delete?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
+  connect?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
+  update?: Prisma.CommentsUpdateWithWhereUniqueWithoutIdeaInput | Prisma.CommentsUpdateWithWhereUniqueWithoutIdeaInput[]
+  updateMany?: Prisma.CommentsUpdateManyWithWhereWithoutIdeaInput | Prisma.CommentsUpdateManyWithWhereWithoutIdeaInput[]
+  deleteMany?: Prisma.CommentsScalarWhereInput | Prisma.CommentsScalarWhereInput[]
 }
 
-export type CommentsCreateManyUserInputEnvelope = {
-  data: Prisma.CommentsCreateManyUserInput | Prisma.CommentsCreateManyUserInput[]
-  skipDuplicates?: boolean
+export type CommentsUncheckedUpdateManyWithoutIdeaNestedInput = {
+  create?: Prisma.XOR<Prisma.CommentsCreateWithoutIdeaInput, Prisma.CommentsUncheckedCreateWithoutIdeaInput> | Prisma.CommentsCreateWithoutIdeaInput[] | Prisma.CommentsUncheckedCreateWithoutIdeaInput[]
+  connectOrCreate?: Prisma.CommentsCreateOrConnectWithoutIdeaInput | Prisma.CommentsCreateOrConnectWithoutIdeaInput[]
+  upsert?: Prisma.CommentsUpsertWithWhereUniqueWithoutIdeaInput | Prisma.CommentsUpsertWithWhereUniqueWithoutIdeaInput[]
+  createMany?: Prisma.CommentsCreateManyIdeaInputEnvelope
+  set?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
+  disconnect?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
+  delete?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
+  connect?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
+  update?: Prisma.CommentsUpdateWithWhereUniqueWithoutIdeaInput | Prisma.CommentsUpdateWithWhereUniqueWithoutIdeaInput[]
+  updateMany?: Prisma.CommentsUpdateManyWithWhereWithoutIdeaInput | Prisma.CommentsUpdateManyWithWhereWithoutIdeaInput[]
+  deleteMany?: Prisma.CommentsScalarWhereInput | Prisma.CommentsScalarWhereInput[]
 }
 
-export type CommentsUpsertWithWhereUniqueWithoutUserInput = {
-  where: Prisma.CommentsWhereUniqueInput
-  update: Prisma.XOR<Prisma.CommentsUpdateWithoutUserInput, Prisma.CommentsUncheckedUpdateWithoutUserInput>
-  create: Prisma.XOR<Prisma.CommentsCreateWithoutUserInput, Prisma.CommentsUncheckedCreateWithoutUserInput>
+export type CommentsCreateNestedManyWithoutUserInput = {
+  create?: Prisma.XOR<Prisma.CommentsCreateWithoutUserInput, Prisma.CommentsUncheckedCreateWithoutUserInput> | Prisma.CommentsCreateWithoutUserInput[] | Prisma.CommentsUncheckedCreateWithoutUserInput[]
+  connectOrCreate?: Prisma.CommentsCreateOrConnectWithoutUserInput | Prisma.CommentsCreateOrConnectWithoutUserInput[]
+  createMany?: Prisma.CommentsCreateManyUserInputEnvelope
+  connect?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
 }
 
-export type CommentsUpdateWithWhereUniqueWithoutUserInput = {
-  where: Prisma.CommentsWhereUniqueInput
-  data: Prisma.XOR<Prisma.CommentsUpdateWithoutUserInput, Prisma.CommentsUncheckedUpdateWithoutUserInput>
+export type CommentsUncheckedCreateNestedManyWithoutUserInput = {
+  create?: Prisma.XOR<Prisma.CommentsCreateWithoutUserInput, Prisma.CommentsUncheckedCreateWithoutUserInput> | Prisma.CommentsCreateWithoutUserInput[] | Prisma.CommentsUncheckedCreateWithoutUserInput[]
+  connectOrCreate?: Prisma.CommentsCreateOrConnectWithoutUserInput | Prisma.CommentsCreateOrConnectWithoutUserInput[]
+  createMany?: Prisma.CommentsCreateManyUserInputEnvelope
+  connect?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
 }
 
-export type CommentsUpdateManyWithWhereWithoutUserInput = {
-  where: Prisma.CommentsScalarWhereInput
-  data: Prisma.XOR<Prisma.CommentsUpdateManyMutationInput, Prisma.CommentsUncheckedUpdateManyWithoutUserInput>
+export type CommentsUpdateManyWithoutUserNestedInput = {
+  create?: Prisma.XOR<Prisma.CommentsCreateWithoutUserInput, Prisma.CommentsUncheckedCreateWithoutUserInput> | Prisma.CommentsCreateWithoutUserInput[] | Prisma.CommentsUncheckedCreateWithoutUserInput[]
+  connectOrCreate?: Prisma.CommentsCreateOrConnectWithoutUserInput | Prisma.CommentsCreateOrConnectWithoutUserInput[]
+  upsert?: Prisma.CommentsUpsertWithWhereUniqueWithoutUserInput | Prisma.CommentsUpsertWithWhereUniqueWithoutUserInput[]
+  createMany?: Prisma.CommentsCreateManyUserInputEnvelope
+  set?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
+  disconnect?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
+  delete?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
+  connect?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
+  update?: Prisma.CommentsUpdateWithWhereUniqueWithoutUserInput | Prisma.CommentsUpdateWithWhereUniqueWithoutUserInput[]
+  updateMany?: Prisma.CommentsUpdateManyWithWhereWithoutUserInput | Prisma.CommentsUpdateManyWithWhereWithoutUserInput[]
+  deleteMany?: Prisma.CommentsScalarWhereInput | Prisma.CommentsScalarWhereInput[]
 }
 
-export type CommentsScalarWhereInput = {
-  AND?: Prisma.CommentsScalarWhereInput | Prisma.CommentsScalarWhereInput[]
-  OR?: Prisma.CommentsScalarWhereInput[]
-  NOT?: Prisma.CommentsScalarWhereInput | Prisma.CommentsScalarWhereInput[]
-  id?: Prisma.StringFilter<"Comments"> | string
-  comment?: Prisma.StringFilter<"Comments"> | string
-  parentId?: Prisma.StringNullableFilter<"Comments"> | string | null
-  createdAt?: Prisma.DateTimeFilter<"Comments"> | Date | string
-  isDeleted?: Prisma.BoolFilter<"Comments"> | boolean
-  ideaId?: Prisma.StringFilter<"Comments"> | string
-  userId?: Prisma.StringFilter<"Comments"> | string
-}
-
-export type CommentsCreateWithoutIdeaInput = {
-  id?: string
-  comment: string
-  createdAt?: Date | string
-  isDeleted?: boolean
-  parent?: Prisma.CommentsCreateNestedOneWithoutRepliesInput
-  replies?: Prisma.CommentsCreateNestedManyWithoutParentInput
-  user: Prisma.UserCreateNestedOneWithoutCommentInput
-}
-
-export type CommentsUncheckedCreateWithoutIdeaInput = {
-  id?: string
-  comment: string
-  parentId?: string | null
-  createdAt?: Date | string
-  isDeleted?: boolean
-  userId: string
-  replies?: Prisma.CommentsUncheckedCreateNestedManyWithoutParentInput
-}
-
-export type CommentsCreateOrConnectWithoutIdeaInput = {
-  where: Prisma.CommentsWhereUniqueInput
-  create: Prisma.XOR<Prisma.CommentsCreateWithoutIdeaInput, Prisma.CommentsUncheckedCreateWithoutIdeaInput>
-}
-
-export type CommentsCreateManyIdeaInputEnvelope = {
-  data: Prisma.CommentsCreateManyIdeaInput | Prisma.CommentsCreateManyIdeaInput[]
-  skipDuplicates?: boolean
-}
-
-export type CommentsUpsertWithWhereUniqueWithoutIdeaInput = {
-  where: Prisma.CommentsWhereUniqueInput
-  update: Prisma.XOR<Prisma.CommentsUpdateWithoutIdeaInput, Prisma.CommentsUncheckedUpdateWithoutIdeaInput>
-  create: Prisma.XOR<Prisma.CommentsCreateWithoutIdeaInput, Prisma.CommentsUncheckedCreateWithoutIdeaInput>
-}
-
-export type CommentsUpdateWithWhereUniqueWithoutIdeaInput = {
-  where: Prisma.CommentsWhereUniqueInput
-  data: Prisma.XOR<Prisma.CommentsUpdateWithoutIdeaInput, Prisma.CommentsUncheckedUpdateWithoutIdeaInput>
-}
-
-export type CommentsUpdateManyWithWhereWithoutIdeaInput = {
-  where: Prisma.CommentsScalarWhereInput
-  data: Prisma.XOR<Prisma.CommentsUpdateManyMutationInput, Prisma.CommentsUncheckedUpdateManyWithoutIdeaInput>
+export type CommentsUncheckedUpdateManyWithoutUserNestedInput = {
+  create?: Prisma.XOR<Prisma.CommentsCreateWithoutUserInput, Prisma.CommentsUncheckedCreateWithoutUserInput> | Prisma.CommentsCreateWithoutUserInput[] | Prisma.CommentsUncheckedCreateWithoutUserInput[]
+  connectOrCreate?: Prisma.CommentsCreateOrConnectWithoutUserInput | Prisma.CommentsCreateOrConnectWithoutUserInput[]
+  upsert?: Prisma.CommentsUpsertWithWhereUniqueWithoutUserInput | Prisma.CommentsUpsertWithWhereUniqueWithoutUserInput[]
+  createMany?: Prisma.CommentsCreateManyUserInputEnvelope
+  set?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
+  disconnect?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
+  delete?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
+  connect?: Prisma.CommentsWhereUniqueInput | Prisma.CommentsWhereUniqueInput[]
+  update?: Prisma.CommentsUpdateWithWhereUniqueWithoutUserInput | Prisma.CommentsUpdateWithWhereUniqueWithoutUserInput[]
+  updateMany?: Prisma.CommentsUpdateManyWithWhereWithoutUserInput | Prisma.CommentsUpdateManyWithWhereWithoutUserInput[]
+  deleteMany?: Prisma.CommentsScalarWhereInput | Prisma.CommentsScalarWhereInput[]
 }
 
 export type CommentsCreateWithoutRepliesInput = {
@@ -726,42 +621,147 @@ export type CommentsUpdateManyWithWhereWithoutParentInput = {
   data: Prisma.XOR<Prisma.CommentsUpdateManyMutationInput, Prisma.CommentsUncheckedUpdateManyWithoutParentInput>
 }
 
-export type CommentsCreateManyUserInput = {
+export type CommentsScalarWhereInput = {
+  AND?: Prisma.CommentsScalarWhereInput | Prisma.CommentsScalarWhereInput[]
+  OR?: Prisma.CommentsScalarWhereInput[]
+  NOT?: Prisma.CommentsScalarWhereInput | Prisma.CommentsScalarWhereInput[]
+  id?: Prisma.StringFilter<"Comments"> | string
+  comment?: Prisma.StringFilter<"Comments"> | string
+  parentId?: Prisma.StringNullableFilter<"Comments"> | string | null
+  createdAt?: Prisma.DateTimeFilter<"Comments"> | Date | string
+  isDeleted?: Prisma.BoolFilter<"Comments"> | boolean
+  ideaId?: Prisma.StringFilter<"Comments"> | string
+  userId?: Prisma.StringFilter<"Comments"> | string
+}
+
+export type CommentsCreateWithoutIdeaInput = {
+  id?: string
+  comment: string
+  createdAt?: Date | string
+  isDeleted?: boolean
+  parent?: Prisma.CommentsCreateNestedOneWithoutRepliesInput
+  replies?: Prisma.CommentsCreateNestedManyWithoutParentInput
+  user: Prisma.UserCreateNestedOneWithoutCommentInput
+}
+
+export type CommentsUncheckedCreateWithoutIdeaInput = {
+  id?: string
+  comment: string
+  parentId?: string | null
+  createdAt?: Date | string
+  isDeleted?: boolean
+  userId: string
+  replies?: Prisma.CommentsUncheckedCreateNestedManyWithoutParentInput
+}
+
+export type CommentsCreateOrConnectWithoutIdeaInput = {
+  where: Prisma.CommentsWhereUniqueInput
+  create: Prisma.XOR<Prisma.CommentsCreateWithoutIdeaInput, Prisma.CommentsUncheckedCreateWithoutIdeaInput>
+}
+
+export type CommentsCreateManyIdeaInputEnvelope = {
+  data: Prisma.CommentsCreateManyIdeaInput | Prisma.CommentsCreateManyIdeaInput[]
+  skipDuplicates?: boolean
+}
+
+export type CommentsUpsertWithWhereUniqueWithoutIdeaInput = {
+  where: Prisma.CommentsWhereUniqueInput
+  update: Prisma.XOR<Prisma.CommentsUpdateWithoutIdeaInput, Prisma.CommentsUncheckedUpdateWithoutIdeaInput>
+  create: Prisma.XOR<Prisma.CommentsCreateWithoutIdeaInput, Prisma.CommentsUncheckedCreateWithoutIdeaInput>
+}
+
+export type CommentsUpdateWithWhereUniqueWithoutIdeaInput = {
+  where: Prisma.CommentsWhereUniqueInput
+  data: Prisma.XOR<Prisma.CommentsUpdateWithoutIdeaInput, Prisma.CommentsUncheckedUpdateWithoutIdeaInput>
+}
+
+export type CommentsUpdateManyWithWhereWithoutIdeaInput = {
+  where: Prisma.CommentsScalarWhereInput
+  data: Prisma.XOR<Prisma.CommentsUpdateManyMutationInput, Prisma.CommentsUncheckedUpdateManyWithoutIdeaInput>
+}
+
+export type CommentsCreateWithoutUserInput = {
+  id?: string
+  comment: string
+  createdAt?: Date | string
+  isDeleted?: boolean
+  parent?: Prisma.CommentsCreateNestedOneWithoutRepliesInput
+  replies?: Prisma.CommentsCreateNestedManyWithoutParentInput
+  idea: Prisma.IdeaCreateNestedOneWithoutCommentsInput
+}
+
+export type CommentsUncheckedCreateWithoutUserInput = {
   id?: string
   comment: string
   parentId?: string | null
   createdAt?: Date | string
   isDeleted?: boolean
   ideaId: string
+  replies?: Prisma.CommentsUncheckedCreateNestedManyWithoutParentInput
 }
 
-export type CommentsUpdateWithoutUserInput = {
+export type CommentsCreateOrConnectWithoutUserInput = {
+  where: Prisma.CommentsWhereUniqueInput
+  create: Prisma.XOR<Prisma.CommentsCreateWithoutUserInput, Prisma.CommentsUncheckedCreateWithoutUserInput>
+}
+
+export type CommentsCreateManyUserInputEnvelope = {
+  data: Prisma.CommentsCreateManyUserInput | Prisma.CommentsCreateManyUserInput[]
+  skipDuplicates?: boolean
+}
+
+export type CommentsUpsertWithWhereUniqueWithoutUserInput = {
+  where: Prisma.CommentsWhereUniqueInput
+  update: Prisma.XOR<Prisma.CommentsUpdateWithoutUserInput, Prisma.CommentsUncheckedUpdateWithoutUserInput>
+  create: Prisma.XOR<Prisma.CommentsCreateWithoutUserInput, Prisma.CommentsUncheckedCreateWithoutUserInput>
+}
+
+export type CommentsUpdateWithWhereUniqueWithoutUserInput = {
+  where: Prisma.CommentsWhereUniqueInput
+  data: Prisma.XOR<Prisma.CommentsUpdateWithoutUserInput, Prisma.CommentsUncheckedUpdateWithoutUserInput>
+}
+
+export type CommentsUpdateManyWithWhereWithoutUserInput = {
+  where: Prisma.CommentsScalarWhereInput
+  data: Prisma.XOR<Prisma.CommentsUpdateManyMutationInput, Prisma.CommentsUncheckedUpdateManyWithoutUserInput>
+}
+
+export type CommentsCreateManyParentInput = {
+  id?: string
+  comment: string
+  createdAt?: Date | string
+  isDeleted?: boolean
+  ideaId: string
+  userId: string
+}
+
+export type CommentsUpdateWithoutParentInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   comment?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   isDeleted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  parent?: Prisma.CommentsUpdateOneWithoutRepliesNestedInput
   replies?: Prisma.CommentsUpdateManyWithoutParentNestedInput
   idea?: Prisma.IdeaUpdateOneRequiredWithoutCommentsNestedInput
+  user?: Prisma.UserUpdateOneRequiredWithoutCommentNestedInput
 }
 
-export type CommentsUncheckedUpdateWithoutUserInput = {
+export type CommentsUncheckedUpdateWithoutParentInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   comment?: Prisma.StringFieldUpdateOperationsInput | string
-  parentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   isDeleted?: Prisma.BoolFieldUpdateOperationsInput | boolean
   ideaId?: Prisma.StringFieldUpdateOperationsInput | string
+  userId?: Prisma.StringFieldUpdateOperationsInput | string
   replies?: Prisma.CommentsUncheckedUpdateManyWithoutParentNestedInput
 }
 
-export type CommentsUncheckedUpdateManyWithoutUserInput = {
+export type CommentsUncheckedUpdateManyWithoutParentInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   comment?: Prisma.StringFieldUpdateOperationsInput | string
-  parentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   isDeleted?: Prisma.BoolFieldUpdateOperationsInput | boolean
   ideaId?: Prisma.StringFieldUpdateOperationsInput | string
+  userId?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
 export type CommentsCreateManyIdeaInput = {
@@ -802,42 +802,42 @@ export type CommentsUncheckedUpdateManyWithoutIdeaInput = {
   userId?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
-export type CommentsCreateManyParentInput = {
+export type CommentsCreateManyUserInput = {
   id?: string
   comment: string
+  parentId?: string | null
   createdAt?: Date | string
   isDeleted?: boolean
   ideaId: string
-  userId: string
 }
 
-export type CommentsUpdateWithoutParentInput = {
+export type CommentsUpdateWithoutUserInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   comment?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   isDeleted?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  parent?: Prisma.CommentsUpdateOneWithoutRepliesNestedInput
   replies?: Prisma.CommentsUpdateManyWithoutParentNestedInput
   idea?: Prisma.IdeaUpdateOneRequiredWithoutCommentsNestedInput
-  user?: Prisma.UserUpdateOneRequiredWithoutCommentNestedInput
 }
 
-export type CommentsUncheckedUpdateWithoutParentInput = {
+export type CommentsUncheckedUpdateWithoutUserInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   comment?: Prisma.StringFieldUpdateOperationsInput | string
+  parentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   isDeleted?: Prisma.BoolFieldUpdateOperationsInput | boolean
   ideaId?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.StringFieldUpdateOperationsInput | string
   replies?: Prisma.CommentsUncheckedUpdateManyWithoutParentNestedInput
 }
 
-export type CommentsUncheckedUpdateManyWithoutParentInput = {
+export type CommentsUncheckedUpdateManyWithoutUserInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   comment?: Prisma.StringFieldUpdateOperationsInput | string
+  parentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   isDeleted?: Prisma.BoolFieldUpdateOperationsInput | boolean
   ideaId?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
 

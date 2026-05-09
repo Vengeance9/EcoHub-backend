@@ -18,10 +18,40 @@ export { Prisma }
 export * as $Enums from './enums'
 export * from './enums';
 /**
- * Model User
+ * Model Admin
  * 
  */
-export type User = Prisma.UserModel
+export type Admin = Prisma.AdminModel
+/**
+ * Model Announcement
+ * 
+ */
+export type Announcement = Prisma.AnnouncementModel
+/**
+ * Model Category
+ * 
+ */
+export type Category = Prisma.CategoryModel
+/**
+ * Model Comments
+ * 
+ */
+export type Comments = Prisma.CommentsModel
+/**
+ * Model Idea
+ * 
+ */
+export type Idea = Prisma.IdeaModel
+/**
+ * Model WatchList
+ * 
+ */
+export type WatchList = Prisma.WatchListModel
+/**
+ * Model Purchase
+ * 
+ */
+export type Purchase = Prisma.PurchaseModel
 /**
  * Model Session
  * 
@@ -38,42 +68,12 @@ export type Account = Prisma.AccountModel
  */
 export type Verification = Prisma.VerificationModel
 /**
+ * Model User
+ * 
+ */
+export type User = Prisma.UserModel
+/**
  * Model Vote
  * 
  */
 export type Vote = Prisma.VoteModel
-/**
- * Model Purchase
- * 
- */
-export type Purchase = Prisma.PurchaseModel
-/**
- * Model Idea
- * 
- */
-export type Idea = Prisma.IdeaModel
-/**
- * Model WatchList
- * 
- */
-export type WatchList = Prisma.WatchListModel
-/**
- * Model Comments
- * 
- */
-export type Comments = Prisma.CommentsModel
-/**
- * Model Category
- * 
- */
-export type Category = Prisma.CategoryModel
-/**
- * Model Admin
- * 
- */
-export type Admin = Prisma.AdminModel
-/**
- * Model Announcement
- * 
- */
-export type Announcement = Prisma.AnnouncementModel

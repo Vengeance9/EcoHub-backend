@@ -716,6 +716,110 @@ export type IdeaSumOrderByAggregateInput = {
   downvotes?: Prisma.SortOrder
 }
 
+export type IdeaCreateNestedManyWithoutCategoryInput = {
+  create?: Prisma.XOR<Prisma.IdeaCreateWithoutCategoryInput, Prisma.IdeaUncheckedCreateWithoutCategoryInput> | Prisma.IdeaCreateWithoutCategoryInput[] | Prisma.IdeaUncheckedCreateWithoutCategoryInput[]
+  connectOrCreate?: Prisma.IdeaCreateOrConnectWithoutCategoryInput | Prisma.IdeaCreateOrConnectWithoutCategoryInput[]
+  createMany?: Prisma.IdeaCreateManyCategoryInputEnvelope
+  connect?: Prisma.IdeaWhereUniqueInput | Prisma.IdeaWhereUniqueInput[]
+}
+
+export type IdeaUncheckedCreateNestedManyWithoutCategoryInput = {
+  create?: Prisma.XOR<Prisma.IdeaCreateWithoutCategoryInput, Prisma.IdeaUncheckedCreateWithoutCategoryInput> | Prisma.IdeaCreateWithoutCategoryInput[] | Prisma.IdeaUncheckedCreateWithoutCategoryInput[]
+  connectOrCreate?: Prisma.IdeaCreateOrConnectWithoutCategoryInput | Prisma.IdeaCreateOrConnectWithoutCategoryInput[]
+  createMany?: Prisma.IdeaCreateManyCategoryInputEnvelope
+  connect?: Prisma.IdeaWhereUniqueInput | Prisma.IdeaWhereUniqueInput[]
+}
+
+export type IdeaUpdateManyWithoutCategoryNestedInput = {
+  create?: Prisma.XOR<Prisma.IdeaCreateWithoutCategoryInput, Prisma.IdeaUncheckedCreateWithoutCategoryInput> | Prisma.IdeaCreateWithoutCategoryInput[] | Prisma.IdeaUncheckedCreateWithoutCategoryInput[]
+  connectOrCreate?: Prisma.IdeaCreateOrConnectWithoutCategoryInput | Prisma.IdeaCreateOrConnectWithoutCategoryInput[]
+  upsert?: Prisma.IdeaUpsertWithWhereUniqueWithoutCategoryInput | Prisma.IdeaUpsertWithWhereUniqueWithoutCategoryInput[]
+  createMany?: Prisma.IdeaCreateManyCategoryInputEnvelope
+  set?: Prisma.IdeaWhereUniqueInput | Prisma.IdeaWhereUniqueInput[]
+  disconnect?: Prisma.IdeaWhereUniqueInput | Prisma.IdeaWhereUniqueInput[]
+  delete?: Prisma.IdeaWhereUniqueInput | Prisma.IdeaWhereUniqueInput[]
+  connect?: Prisma.IdeaWhereUniqueInput | Prisma.IdeaWhereUniqueInput[]
+  update?: Prisma.IdeaUpdateWithWhereUniqueWithoutCategoryInput | Prisma.IdeaUpdateWithWhereUniqueWithoutCategoryInput[]
+  updateMany?: Prisma.IdeaUpdateManyWithWhereWithoutCategoryInput | Prisma.IdeaUpdateManyWithWhereWithoutCategoryInput[]
+  deleteMany?: Prisma.IdeaScalarWhereInput | Prisma.IdeaScalarWhereInput[]
+}
+
+export type IdeaUncheckedUpdateManyWithoutCategoryNestedInput = {
+  create?: Prisma.XOR<Prisma.IdeaCreateWithoutCategoryInput, Prisma.IdeaUncheckedCreateWithoutCategoryInput> | Prisma.IdeaCreateWithoutCategoryInput[] | Prisma.IdeaUncheckedCreateWithoutCategoryInput[]
+  connectOrCreate?: Prisma.IdeaCreateOrConnectWithoutCategoryInput | Prisma.IdeaCreateOrConnectWithoutCategoryInput[]
+  upsert?: Prisma.IdeaUpsertWithWhereUniqueWithoutCategoryInput | Prisma.IdeaUpsertWithWhereUniqueWithoutCategoryInput[]
+  createMany?: Prisma.IdeaCreateManyCategoryInputEnvelope
+  set?: Prisma.IdeaWhereUniqueInput | Prisma.IdeaWhereUniqueInput[]
+  disconnect?: Prisma.IdeaWhereUniqueInput | Prisma.IdeaWhereUniqueInput[]
+  delete?: Prisma.IdeaWhereUniqueInput | Prisma.IdeaWhereUniqueInput[]
+  connect?: Prisma.IdeaWhereUniqueInput | Prisma.IdeaWhereUniqueInput[]
+  update?: Prisma.IdeaUpdateWithWhereUniqueWithoutCategoryInput | Prisma.IdeaUpdateWithWhereUniqueWithoutCategoryInput[]
+  updateMany?: Prisma.IdeaUpdateManyWithWhereWithoutCategoryInput | Prisma.IdeaUpdateManyWithWhereWithoutCategoryInput[]
+  deleteMany?: Prisma.IdeaScalarWhereInput | Prisma.IdeaScalarWhereInput[]
+}
+
+export type IdeaCreateNestedOneWithoutCommentsInput = {
+  create?: Prisma.XOR<Prisma.IdeaCreateWithoutCommentsInput, Prisma.IdeaUncheckedCreateWithoutCommentsInput>
+  connectOrCreate?: Prisma.IdeaCreateOrConnectWithoutCommentsInput
+  connect?: Prisma.IdeaWhereUniqueInput
+}
+
+export type IdeaUpdateOneRequiredWithoutCommentsNestedInput = {
+  create?: Prisma.XOR<Prisma.IdeaCreateWithoutCommentsInput, Prisma.IdeaUncheckedCreateWithoutCommentsInput>
+  connectOrCreate?: Prisma.IdeaCreateOrConnectWithoutCommentsInput
+  upsert?: Prisma.IdeaUpsertWithoutCommentsInput
+  connect?: Prisma.IdeaWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.IdeaUpdateToOneWithWhereWithoutCommentsInput, Prisma.IdeaUpdateWithoutCommentsInput>, Prisma.IdeaUncheckedUpdateWithoutCommentsInput>
+}
+
+export type NullableDecimalFieldUpdateOperationsInput = {
+  set?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  increment?: runtime.Decimal | runtime.DecimalJsLike | number | string
+  decrement?: runtime.Decimal | runtime.DecimalJsLike | number | string
+  multiply?: runtime.Decimal | runtime.DecimalJsLike | number | string
+  divide?: runtime.Decimal | runtime.DecimalJsLike | number | string
+}
+
+export type IntFieldUpdateOperationsInput = {
+  set?: number
+  increment?: number
+  decrement?: number
+  multiply?: number
+  divide?: number
+}
+
+export type EnumIdeaStatusFieldUpdateOperationsInput = {
+  set?: $Enums.IdeaStatus
+}
+
+export type IdeaCreateNestedOneWithoutWatchListInput = {
+  create?: Prisma.XOR<Prisma.IdeaCreateWithoutWatchListInput, Prisma.IdeaUncheckedCreateWithoutWatchListInput>
+  connectOrCreate?: Prisma.IdeaCreateOrConnectWithoutWatchListInput
+  connect?: Prisma.IdeaWhereUniqueInput
+}
+
+export type IdeaUpdateOneRequiredWithoutWatchListNestedInput = {
+  create?: Prisma.XOR<Prisma.IdeaCreateWithoutWatchListInput, Prisma.IdeaUncheckedCreateWithoutWatchListInput>
+  connectOrCreate?: Prisma.IdeaCreateOrConnectWithoutWatchListInput
+  upsert?: Prisma.IdeaUpsertWithoutWatchListInput
+  connect?: Prisma.IdeaWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.IdeaUpdateToOneWithWhereWithoutWatchListInput, Prisma.IdeaUpdateWithoutWatchListInput>, Prisma.IdeaUncheckedUpdateWithoutWatchListInput>
+}
+
+export type IdeaCreateNestedOneWithoutPurchaseInput = {
+  create?: Prisma.XOR<Prisma.IdeaCreateWithoutPurchaseInput, Prisma.IdeaUncheckedCreateWithoutPurchaseInput>
+  connectOrCreate?: Prisma.IdeaCreateOrConnectWithoutPurchaseInput
+  connect?: Prisma.IdeaWhereUniqueInput
+}
+
+export type IdeaUpdateOneRequiredWithoutPurchaseNestedInput = {
+  create?: Prisma.XOR<Prisma.IdeaCreateWithoutPurchaseInput, Prisma.IdeaUncheckedCreateWithoutPurchaseInput>
+  connectOrCreate?: Prisma.IdeaCreateOrConnectWithoutPurchaseInput
+  upsert?: Prisma.IdeaUpsertWithoutPurchaseInput
+  connect?: Prisma.IdeaWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.IdeaUpdateToOneWithWhereWithoutPurchaseInput, Prisma.IdeaUpdateWithoutPurchaseInput>, Prisma.IdeaUncheckedUpdateWithoutPurchaseInput>
+}
+
 export type IdeaCreateNestedManyWithoutUserInput = {
   create?: Prisma.XOR<Prisma.IdeaCreateWithoutUserInput, Prisma.IdeaUncheckedCreateWithoutUserInput> | Prisma.IdeaCreateWithoutUserInput[] | Prisma.IdeaUncheckedCreateWithoutUserInput[]
   connectOrCreate?: Prisma.IdeaCreateOrConnectWithoutUserInput | Prisma.IdeaCreateOrConnectWithoutUserInput[]
@@ -772,111 +876,7 @@ export type IdeaUpdateOneRequiredWithoutVoteNestedInput = {
   update?: Prisma.XOR<Prisma.XOR<Prisma.IdeaUpdateToOneWithWhereWithoutVoteInput, Prisma.IdeaUpdateWithoutVoteInput>, Prisma.IdeaUncheckedUpdateWithoutVoteInput>
 }
 
-export type IdeaCreateNestedOneWithoutPurchaseInput = {
-  create?: Prisma.XOR<Prisma.IdeaCreateWithoutPurchaseInput, Prisma.IdeaUncheckedCreateWithoutPurchaseInput>
-  connectOrCreate?: Prisma.IdeaCreateOrConnectWithoutPurchaseInput
-  connect?: Prisma.IdeaWhereUniqueInput
-}
-
-export type IdeaUpdateOneRequiredWithoutPurchaseNestedInput = {
-  create?: Prisma.XOR<Prisma.IdeaCreateWithoutPurchaseInput, Prisma.IdeaUncheckedCreateWithoutPurchaseInput>
-  connectOrCreate?: Prisma.IdeaCreateOrConnectWithoutPurchaseInput
-  upsert?: Prisma.IdeaUpsertWithoutPurchaseInput
-  connect?: Prisma.IdeaWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.IdeaUpdateToOneWithWhereWithoutPurchaseInput, Prisma.IdeaUpdateWithoutPurchaseInput>, Prisma.IdeaUncheckedUpdateWithoutPurchaseInput>
-}
-
-export type NullableDecimalFieldUpdateOperationsInput = {
-  set?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  increment?: runtime.Decimal | runtime.DecimalJsLike | number | string
-  decrement?: runtime.Decimal | runtime.DecimalJsLike | number | string
-  multiply?: runtime.Decimal | runtime.DecimalJsLike | number | string
-  divide?: runtime.Decimal | runtime.DecimalJsLike | number | string
-}
-
-export type IntFieldUpdateOperationsInput = {
-  set?: number
-  increment?: number
-  decrement?: number
-  multiply?: number
-  divide?: number
-}
-
-export type EnumIdeaStatusFieldUpdateOperationsInput = {
-  set?: $Enums.IdeaStatus
-}
-
-export type IdeaCreateNestedOneWithoutWatchListInput = {
-  create?: Prisma.XOR<Prisma.IdeaCreateWithoutWatchListInput, Prisma.IdeaUncheckedCreateWithoutWatchListInput>
-  connectOrCreate?: Prisma.IdeaCreateOrConnectWithoutWatchListInput
-  connect?: Prisma.IdeaWhereUniqueInput
-}
-
-export type IdeaUpdateOneRequiredWithoutWatchListNestedInput = {
-  create?: Prisma.XOR<Prisma.IdeaCreateWithoutWatchListInput, Prisma.IdeaUncheckedCreateWithoutWatchListInput>
-  connectOrCreate?: Prisma.IdeaCreateOrConnectWithoutWatchListInput
-  upsert?: Prisma.IdeaUpsertWithoutWatchListInput
-  connect?: Prisma.IdeaWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.IdeaUpdateToOneWithWhereWithoutWatchListInput, Prisma.IdeaUpdateWithoutWatchListInput>, Prisma.IdeaUncheckedUpdateWithoutWatchListInput>
-}
-
-export type IdeaCreateNestedOneWithoutCommentsInput = {
-  create?: Prisma.XOR<Prisma.IdeaCreateWithoutCommentsInput, Prisma.IdeaUncheckedCreateWithoutCommentsInput>
-  connectOrCreate?: Prisma.IdeaCreateOrConnectWithoutCommentsInput
-  connect?: Prisma.IdeaWhereUniqueInput
-}
-
-export type IdeaUpdateOneRequiredWithoutCommentsNestedInput = {
-  create?: Prisma.XOR<Prisma.IdeaCreateWithoutCommentsInput, Prisma.IdeaUncheckedCreateWithoutCommentsInput>
-  connectOrCreate?: Prisma.IdeaCreateOrConnectWithoutCommentsInput
-  upsert?: Prisma.IdeaUpsertWithoutCommentsInput
-  connect?: Prisma.IdeaWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.IdeaUpdateToOneWithWhereWithoutCommentsInput, Prisma.IdeaUpdateWithoutCommentsInput>, Prisma.IdeaUncheckedUpdateWithoutCommentsInput>
-}
-
-export type IdeaCreateNestedManyWithoutCategoryInput = {
-  create?: Prisma.XOR<Prisma.IdeaCreateWithoutCategoryInput, Prisma.IdeaUncheckedCreateWithoutCategoryInput> | Prisma.IdeaCreateWithoutCategoryInput[] | Prisma.IdeaUncheckedCreateWithoutCategoryInput[]
-  connectOrCreate?: Prisma.IdeaCreateOrConnectWithoutCategoryInput | Prisma.IdeaCreateOrConnectWithoutCategoryInput[]
-  createMany?: Prisma.IdeaCreateManyCategoryInputEnvelope
-  connect?: Prisma.IdeaWhereUniqueInput | Prisma.IdeaWhereUniqueInput[]
-}
-
-export type IdeaUncheckedCreateNestedManyWithoutCategoryInput = {
-  create?: Prisma.XOR<Prisma.IdeaCreateWithoutCategoryInput, Prisma.IdeaUncheckedCreateWithoutCategoryInput> | Prisma.IdeaCreateWithoutCategoryInput[] | Prisma.IdeaUncheckedCreateWithoutCategoryInput[]
-  connectOrCreate?: Prisma.IdeaCreateOrConnectWithoutCategoryInput | Prisma.IdeaCreateOrConnectWithoutCategoryInput[]
-  createMany?: Prisma.IdeaCreateManyCategoryInputEnvelope
-  connect?: Prisma.IdeaWhereUniqueInput | Prisma.IdeaWhereUniqueInput[]
-}
-
-export type IdeaUpdateManyWithoutCategoryNestedInput = {
-  create?: Prisma.XOR<Prisma.IdeaCreateWithoutCategoryInput, Prisma.IdeaUncheckedCreateWithoutCategoryInput> | Prisma.IdeaCreateWithoutCategoryInput[] | Prisma.IdeaUncheckedCreateWithoutCategoryInput[]
-  connectOrCreate?: Prisma.IdeaCreateOrConnectWithoutCategoryInput | Prisma.IdeaCreateOrConnectWithoutCategoryInput[]
-  upsert?: Prisma.IdeaUpsertWithWhereUniqueWithoutCategoryInput | Prisma.IdeaUpsertWithWhereUniqueWithoutCategoryInput[]
-  createMany?: Prisma.IdeaCreateManyCategoryInputEnvelope
-  set?: Prisma.IdeaWhereUniqueInput | Prisma.IdeaWhereUniqueInput[]
-  disconnect?: Prisma.IdeaWhereUniqueInput | Prisma.IdeaWhereUniqueInput[]
-  delete?: Prisma.IdeaWhereUniqueInput | Prisma.IdeaWhereUniqueInput[]
-  connect?: Prisma.IdeaWhereUniqueInput | Prisma.IdeaWhereUniqueInput[]
-  update?: Prisma.IdeaUpdateWithWhereUniqueWithoutCategoryInput | Prisma.IdeaUpdateWithWhereUniqueWithoutCategoryInput[]
-  updateMany?: Prisma.IdeaUpdateManyWithWhereWithoutCategoryInput | Prisma.IdeaUpdateManyWithWhereWithoutCategoryInput[]
-  deleteMany?: Prisma.IdeaScalarWhereInput | Prisma.IdeaScalarWhereInput[]
-}
-
-export type IdeaUncheckedUpdateManyWithoutCategoryNestedInput = {
-  create?: Prisma.XOR<Prisma.IdeaCreateWithoutCategoryInput, Prisma.IdeaUncheckedCreateWithoutCategoryInput> | Prisma.IdeaCreateWithoutCategoryInput[] | Prisma.IdeaUncheckedCreateWithoutCategoryInput[]
-  connectOrCreate?: Prisma.IdeaCreateOrConnectWithoutCategoryInput | Prisma.IdeaCreateOrConnectWithoutCategoryInput[]
-  upsert?: Prisma.IdeaUpsertWithWhereUniqueWithoutCategoryInput | Prisma.IdeaUpsertWithWhereUniqueWithoutCategoryInput[]
-  createMany?: Prisma.IdeaCreateManyCategoryInputEnvelope
-  set?: Prisma.IdeaWhereUniqueInput | Prisma.IdeaWhereUniqueInput[]
-  disconnect?: Prisma.IdeaWhereUniqueInput | Prisma.IdeaWhereUniqueInput[]
-  delete?: Prisma.IdeaWhereUniqueInput | Prisma.IdeaWhereUniqueInput[]
-  connect?: Prisma.IdeaWhereUniqueInput | Prisma.IdeaWhereUniqueInput[]
-  update?: Prisma.IdeaUpdateWithWhereUniqueWithoutCategoryInput | Prisma.IdeaUpdateWithWhereUniqueWithoutCategoryInput[]
-  updateMany?: Prisma.IdeaUpdateManyWithWhereWithoutCategoryInput | Prisma.IdeaUpdateManyWithWhereWithoutCategoryInput[]
-  deleteMany?: Prisma.IdeaScalarWhereInput | Prisma.IdeaScalarWhereInput[]
-}
-
-export type IdeaCreateWithoutUserInput = {
+export type IdeaCreateWithoutCategoryInput = {
   id?: string
   title: string
   problem: string
@@ -897,11 +897,11 @@ export type IdeaCreateWithoutUserInput = {
   vote?: Prisma.VoteCreateNestedManyWithoutIdeaInput
   purchase?: Prisma.PurchaseCreateNestedManyWithoutIdeaInput
   comments?: Prisma.CommentsCreateNestedManyWithoutIdeaInput
+  user: Prisma.UserCreateNestedOneWithoutIdeaInput
   watchList?: Prisma.WatchListCreateNestedManyWithoutIdeaInput
-  category: Prisma.CategoryCreateNestedOneWithoutIdeasInput
 }
 
-export type IdeaUncheckedCreateWithoutUserInput = {
+export type IdeaUncheckedCreateWithoutCategoryInput = {
   id?: string
   title: string
   problem: string
@@ -909,6 +909,7 @@ export type IdeaUncheckedCreateWithoutUserInput = {
   photo: string
   description: string
   createdAt?: Date | string
+  userId: string
   isPaid?: boolean
   price?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: string | null
@@ -919,37 +920,36 @@ export type IdeaUncheckedCreateWithoutUserInput = {
   rejectedAt?: Date | string | null
   acceptedAt?: Date | string | null
   status?: $Enums.IdeaStatus
-  categoryId: string
   vote?: Prisma.VoteUncheckedCreateNestedManyWithoutIdeaInput
   purchase?: Prisma.PurchaseUncheckedCreateNestedManyWithoutIdeaInput
   comments?: Prisma.CommentsUncheckedCreateNestedManyWithoutIdeaInput
   watchList?: Prisma.WatchListUncheckedCreateNestedManyWithoutIdeaInput
 }
 
-export type IdeaCreateOrConnectWithoutUserInput = {
+export type IdeaCreateOrConnectWithoutCategoryInput = {
   where: Prisma.IdeaWhereUniqueInput
-  create: Prisma.XOR<Prisma.IdeaCreateWithoutUserInput, Prisma.IdeaUncheckedCreateWithoutUserInput>
+  create: Prisma.XOR<Prisma.IdeaCreateWithoutCategoryInput, Prisma.IdeaUncheckedCreateWithoutCategoryInput>
 }
 
-export type IdeaCreateManyUserInputEnvelope = {
-  data: Prisma.IdeaCreateManyUserInput | Prisma.IdeaCreateManyUserInput[]
+export type IdeaCreateManyCategoryInputEnvelope = {
+  data: Prisma.IdeaCreateManyCategoryInput | Prisma.IdeaCreateManyCategoryInput[]
   skipDuplicates?: boolean
 }
 
-export type IdeaUpsertWithWhereUniqueWithoutUserInput = {
+export type IdeaUpsertWithWhereUniqueWithoutCategoryInput = {
   where: Prisma.IdeaWhereUniqueInput
-  update: Prisma.XOR<Prisma.IdeaUpdateWithoutUserInput, Prisma.IdeaUncheckedUpdateWithoutUserInput>
-  create: Prisma.XOR<Prisma.IdeaCreateWithoutUserInput, Prisma.IdeaUncheckedCreateWithoutUserInput>
+  update: Prisma.XOR<Prisma.IdeaUpdateWithoutCategoryInput, Prisma.IdeaUncheckedUpdateWithoutCategoryInput>
+  create: Prisma.XOR<Prisma.IdeaCreateWithoutCategoryInput, Prisma.IdeaUncheckedCreateWithoutCategoryInput>
 }
 
-export type IdeaUpdateWithWhereUniqueWithoutUserInput = {
+export type IdeaUpdateWithWhereUniqueWithoutCategoryInput = {
   where: Prisma.IdeaWhereUniqueInput
-  data: Prisma.XOR<Prisma.IdeaUpdateWithoutUserInput, Prisma.IdeaUncheckedUpdateWithoutUserInput>
+  data: Prisma.XOR<Prisma.IdeaUpdateWithoutCategoryInput, Prisma.IdeaUncheckedUpdateWithoutCategoryInput>
 }
 
-export type IdeaUpdateManyWithWhereWithoutUserInput = {
+export type IdeaUpdateManyWithWhereWithoutCategoryInput = {
   where: Prisma.IdeaScalarWhereInput
-  data: Prisma.XOR<Prisma.IdeaUpdateManyMutationInput, Prisma.IdeaUncheckedUpdateManyWithoutUserInput>
+  data: Prisma.XOR<Prisma.IdeaUpdateManyMutationInput, Prisma.IdeaUncheckedUpdateManyWithoutCategoryInput>
 }
 
 export type IdeaScalarWhereInput = {
@@ -977,123 +977,7 @@ export type IdeaScalarWhereInput = {
   categoryId?: Prisma.StringFilter<"Idea"> | string
 }
 
-export type IdeaCreateWithoutVoteInput = {
-  id?: string
-  title: string
-  problem: string
-  solution: string
-  photo: string
-  description: string
-  createdAt?: Date | string
-  isPaid?: boolean
-  price?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  feedback?: string | null
-  highlighted?: boolean
-  upvotes?: number
-  downvotes?: number
-  editedAt?: Date | string | null
-  rejectedAt?: Date | string | null
-  acceptedAt?: Date | string | null
-  status?: $Enums.IdeaStatus
-  purchase?: Prisma.PurchaseCreateNestedManyWithoutIdeaInput
-  comments?: Prisma.CommentsCreateNestedManyWithoutIdeaInput
-  user: Prisma.UserCreateNestedOneWithoutIdeaInput
-  watchList?: Prisma.WatchListCreateNestedManyWithoutIdeaInput
-  category: Prisma.CategoryCreateNestedOneWithoutIdeasInput
-}
-
-export type IdeaUncheckedCreateWithoutVoteInput = {
-  id?: string
-  title: string
-  problem: string
-  solution: string
-  photo: string
-  description: string
-  createdAt?: Date | string
-  userId: string
-  isPaid?: boolean
-  price?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  feedback?: string | null
-  highlighted?: boolean
-  upvotes?: number
-  downvotes?: number
-  editedAt?: Date | string | null
-  rejectedAt?: Date | string | null
-  acceptedAt?: Date | string | null
-  status?: $Enums.IdeaStatus
-  categoryId: string
-  purchase?: Prisma.PurchaseUncheckedCreateNestedManyWithoutIdeaInput
-  comments?: Prisma.CommentsUncheckedCreateNestedManyWithoutIdeaInput
-  watchList?: Prisma.WatchListUncheckedCreateNestedManyWithoutIdeaInput
-}
-
-export type IdeaCreateOrConnectWithoutVoteInput = {
-  where: Prisma.IdeaWhereUniqueInput
-  create: Prisma.XOR<Prisma.IdeaCreateWithoutVoteInput, Prisma.IdeaUncheckedCreateWithoutVoteInput>
-}
-
-export type IdeaUpsertWithoutVoteInput = {
-  update: Prisma.XOR<Prisma.IdeaUpdateWithoutVoteInput, Prisma.IdeaUncheckedUpdateWithoutVoteInput>
-  create: Prisma.XOR<Prisma.IdeaCreateWithoutVoteInput, Prisma.IdeaUncheckedCreateWithoutVoteInput>
-  where?: Prisma.IdeaWhereInput
-}
-
-export type IdeaUpdateToOneWithWhereWithoutVoteInput = {
-  where?: Prisma.IdeaWhereInput
-  data: Prisma.XOR<Prisma.IdeaUpdateWithoutVoteInput, Prisma.IdeaUncheckedUpdateWithoutVoteInput>
-}
-
-export type IdeaUpdateWithoutVoteInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  title?: Prisma.StringFieldUpdateOperationsInput | string
-  problem?: Prisma.StringFieldUpdateOperationsInput | string
-  solution?: Prisma.StringFieldUpdateOperationsInput | string
-  photo?: Prisma.StringFieldUpdateOperationsInput | string
-  description?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  isPaid?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  price?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  feedback?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  highlighted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
-  downvotes?: Prisma.IntFieldUpdateOperationsInput | number
-  editedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
-  purchase?: Prisma.PurchaseUpdateManyWithoutIdeaNestedInput
-  comments?: Prisma.CommentsUpdateManyWithoutIdeaNestedInput
-  user?: Prisma.UserUpdateOneRequiredWithoutIdeaNestedInput
-  watchList?: Prisma.WatchListUpdateManyWithoutIdeaNestedInput
-  category?: Prisma.CategoryUpdateOneRequiredWithoutIdeasNestedInput
-}
-
-export type IdeaUncheckedUpdateWithoutVoteInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  title?: Prisma.StringFieldUpdateOperationsInput | string
-  problem?: Prisma.StringFieldUpdateOperationsInput | string
-  solution?: Prisma.StringFieldUpdateOperationsInput | string
-  photo?: Prisma.StringFieldUpdateOperationsInput | string
-  description?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  userId?: Prisma.StringFieldUpdateOperationsInput | string
-  isPaid?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  price?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  feedback?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  highlighted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
-  downvotes?: Prisma.IntFieldUpdateOperationsInput | number
-  editedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
-  categoryId?: Prisma.StringFieldUpdateOperationsInput | string
-  purchase?: Prisma.PurchaseUncheckedUpdateManyWithoutIdeaNestedInput
-  comments?: Prisma.CommentsUncheckedUpdateManyWithoutIdeaNestedInput
-  watchList?: Prisma.WatchListUncheckedUpdateManyWithoutIdeaNestedInput
-}
-
-export type IdeaCreateWithoutPurchaseInput = {
+export type IdeaCreateWithoutCommentsInput = {
   id?: string
   title: string
   problem: string
@@ -1112,13 +996,13 @@ export type IdeaCreateWithoutPurchaseInput = {
   acceptedAt?: Date | string | null
   status?: $Enums.IdeaStatus
   vote?: Prisma.VoteCreateNestedManyWithoutIdeaInput
-  comments?: Prisma.CommentsCreateNestedManyWithoutIdeaInput
+  purchase?: Prisma.PurchaseCreateNestedManyWithoutIdeaInput
   user: Prisma.UserCreateNestedOneWithoutIdeaInput
   watchList?: Prisma.WatchListCreateNestedManyWithoutIdeaInput
   category: Prisma.CategoryCreateNestedOneWithoutIdeasInput
 }
 
-export type IdeaUncheckedCreateWithoutPurchaseInput = {
+export type IdeaUncheckedCreateWithoutCommentsInput = {
   id?: string
   title: string
   problem: string
@@ -1139,27 +1023,27 @@ export type IdeaUncheckedCreateWithoutPurchaseInput = {
   status?: $Enums.IdeaStatus
   categoryId: string
   vote?: Prisma.VoteUncheckedCreateNestedManyWithoutIdeaInput
-  comments?: Prisma.CommentsUncheckedCreateNestedManyWithoutIdeaInput
+  purchase?: Prisma.PurchaseUncheckedCreateNestedManyWithoutIdeaInput
   watchList?: Prisma.WatchListUncheckedCreateNestedManyWithoutIdeaInput
 }
 
-export type IdeaCreateOrConnectWithoutPurchaseInput = {
+export type IdeaCreateOrConnectWithoutCommentsInput = {
   where: Prisma.IdeaWhereUniqueInput
-  create: Prisma.XOR<Prisma.IdeaCreateWithoutPurchaseInput, Prisma.IdeaUncheckedCreateWithoutPurchaseInput>
+  create: Prisma.XOR<Prisma.IdeaCreateWithoutCommentsInput, Prisma.IdeaUncheckedCreateWithoutCommentsInput>
 }
 
-export type IdeaUpsertWithoutPurchaseInput = {
-  update: Prisma.XOR<Prisma.IdeaUpdateWithoutPurchaseInput, Prisma.IdeaUncheckedUpdateWithoutPurchaseInput>
-  create: Prisma.XOR<Prisma.IdeaCreateWithoutPurchaseInput, Prisma.IdeaUncheckedCreateWithoutPurchaseInput>
+export type IdeaUpsertWithoutCommentsInput = {
+  update: Prisma.XOR<Prisma.IdeaUpdateWithoutCommentsInput, Prisma.IdeaUncheckedUpdateWithoutCommentsInput>
+  create: Prisma.XOR<Prisma.IdeaCreateWithoutCommentsInput, Prisma.IdeaUncheckedCreateWithoutCommentsInput>
   where?: Prisma.IdeaWhereInput
 }
 
-export type IdeaUpdateToOneWithWhereWithoutPurchaseInput = {
+export type IdeaUpdateToOneWithWhereWithoutCommentsInput = {
   where?: Prisma.IdeaWhereInput
-  data: Prisma.XOR<Prisma.IdeaUpdateWithoutPurchaseInput, Prisma.IdeaUncheckedUpdateWithoutPurchaseInput>
+  data: Prisma.XOR<Prisma.IdeaUpdateWithoutCommentsInput, Prisma.IdeaUncheckedUpdateWithoutCommentsInput>
 }
 
-export type IdeaUpdateWithoutPurchaseInput = {
+export type IdeaUpdateWithoutCommentsInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   title?: Prisma.StringFieldUpdateOperationsInput | string
   problem?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1178,13 +1062,13 @@ export type IdeaUpdateWithoutPurchaseInput = {
   acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
   vote?: Prisma.VoteUpdateManyWithoutIdeaNestedInput
-  comments?: Prisma.CommentsUpdateManyWithoutIdeaNestedInput
+  purchase?: Prisma.PurchaseUpdateManyWithoutIdeaNestedInput
   user?: Prisma.UserUpdateOneRequiredWithoutIdeaNestedInput
   watchList?: Prisma.WatchListUpdateManyWithoutIdeaNestedInput
   category?: Prisma.CategoryUpdateOneRequiredWithoutIdeasNestedInput
 }
 
-export type IdeaUncheckedUpdateWithoutPurchaseInput = {
+export type IdeaUncheckedUpdateWithoutCommentsInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   title?: Prisma.StringFieldUpdateOperationsInput | string
   problem?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1205,7 +1089,7 @@ export type IdeaUncheckedUpdateWithoutPurchaseInput = {
   status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
   categoryId?: Prisma.StringFieldUpdateOperationsInput | string
   vote?: Prisma.VoteUncheckedUpdateManyWithoutIdeaNestedInput
-  comments?: Prisma.CommentsUncheckedUpdateManyWithoutIdeaNestedInput
+  purchase?: Prisma.PurchaseUncheckedUpdateManyWithoutIdeaNestedInput
   watchList?: Prisma.WatchListUncheckedUpdateManyWithoutIdeaNestedInput
 }
 
@@ -1325,7 +1209,7 @@ export type IdeaUncheckedUpdateWithoutWatchListInput = {
   comments?: Prisma.CommentsUncheckedUpdateManyWithoutIdeaNestedInput
 }
 
-export type IdeaCreateWithoutCommentsInput = {
+export type IdeaCreateWithoutPurchaseInput = {
   id?: string
   title: string
   problem: string
@@ -1344,13 +1228,13 @@ export type IdeaCreateWithoutCommentsInput = {
   acceptedAt?: Date | string | null
   status?: $Enums.IdeaStatus
   vote?: Prisma.VoteCreateNestedManyWithoutIdeaInput
-  purchase?: Prisma.PurchaseCreateNestedManyWithoutIdeaInput
+  comments?: Prisma.CommentsCreateNestedManyWithoutIdeaInput
   user: Prisma.UserCreateNestedOneWithoutIdeaInput
   watchList?: Prisma.WatchListCreateNestedManyWithoutIdeaInput
   category: Prisma.CategoryCreateNestedOneWithoutIdeasInput
 }
 
-export type IdeaUncheckedCreateWithoutCommentsInput = {
+export type IdeaUncheckedCreateWithoutPurchaseInput = {
   id?: string
   title: string
   problem: string
@@ -1371,27 +1255,27 @@ export type IdeaUncheckedCreateWithoutCommentsInput = {
   status?: $Enums.IdeaStatus
   categoryId: string
   vote?: Prisma.VoteUncheckedCreateNestedManyWithoutIdeaInput
-  purchase?: Prisma.PurchaseUncheckedCreateNestedManyWithoutIdeaInput
+  comments?: Prisma.CommentsUncheckedCreateNestedManyWithoutIdeaInput
   watchList?: Prisma.WatchListUncheckedCreateNestedManyWithoutIdeaInput
 }
 
-export type IdeaCreateOrConnectWithoutCommentsInput = {
+export type IdeaCreateOrConnectWithoutPurchaseInput = {
   where: Prisma.IdeaWhereUniqueInput
-  create: Prisma.XOR<Prisma.IdeaCreateWithoutCommentsInput, Prisma.IdeaUncheckedCreateWithoutCommentsInput>
+  create: Prisma.XOR<Prisma.IdeaCreateWithoutPurchaseInput, Prisma.IdeaUncheckedCreateWithoutPurchaseInput>
 }
 
-export type IdeaUpsertWithoutCommentsInput = {
-  update: Prisma.XOR<Prisma.IdeaUpdateWithoutCommentsInput, Prisma.IdeaUncheckedUpdateWithoutCommentsInput>
-  create: Prisma.XOR<Prisma.IdeaCreateWithoutCommentsInput, Prisma.IdeaUncheckedCreateWithoutCommentsInput>
+export type IdeaUpsertWithoutPurchaseInput = {
+  update: Prisma.XOR<Prisma.IdeaUpdateWithoutPurchaseInput, Prisma.IdeaUncheckedUpdateWithoutPurchaseInput>
+  create: Prisma.XOR<Prisma.IdeaCreateWithoutPurchaseInput, Prisma.IdeaUncheckedCreateWithoutPurchaseInput>
   where?: Prisma.IdeaWhereInput
 }
 
-export type IdeaUpdateToOneWithWhereWithoutCommentsInput = {
+export type IdeaUpdateToOneWithWhereWithoutPurchaseInput = {
   where?: Prisma.IdeaWhereInput
-  data: Prisma.XOR<Prisma.IdeaUpdateWithoutCommentsInput, Prisma.IdeaUncheckedUpdateWithoutCommentsInput>
+  data: Prisma.XOR<Prisma.IdeaUpdateWithoutPurchaseInput, Prisma.IdeaUncheckedUpdateWithoutPurchaseInput>
 }
 
-export type IdeaUpdateWithoutCommentsInput = {
+export type IdeaUpdateWithoutPurchaseInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   title?: Prisma.StringFieldUpdateOperationsInput | string
   problem?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1410,13 +1294,13 @@ export type IdeaUpdateWithoutCommentsInput = {
   acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
   vote?: Prisma.VoteUpdateManyWithoutIdeaNestedInput
-  purchase?: Prisma.PurchaseUpdateManyWithoutIdeaNestedInput
+  comments?: Prisma.CommentsUpdateManyWithoutIdeaNestedInput
   user?: Prisma.UserUpdateOneRequiredWithoutIdeaNestedInput
   watchList?: Prisma.WatchListUpdateManyWithoutIdeaNestedInput
   category?: Prisma.CategoryUpdateOneRequiredWithoutIdeasNestedInput
 }
 
-export type IdeaUncheckedUpdateWithoutCommentsInput = {
+export type IdeaUncheckedUpdateWithoutPurchaseInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   title?: Prisma.StringFieldUpdateOperationsInput | string
   problem?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1437,11 +1321,11 @@ export type IdeaUncheckedUpdateWithoutCommentsInput = {
   status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
   categoryId?: Prisma.StringFieldUpdateOperationsInput | string
   vote?: Prisma.VoteUncheckedUpdateManyWithoutIdeaNestedInput
-  purchase?: Prisma.PurchaseUncheckedUpdateManyWithoutIdeaNestedInput
+  comments?: Prisma.CommentsUncheckedUpdateManyWithoutIdeaNestedInput
   watchList?: Prisma.WatchListUncheckedUpdateManyWithoutIdeaNestedInput
 }
 
-export type IdeaCreateWithoutCategoryInput = {
+export type IdeaCreateWithoutUserInput = {
   id?: string
   title: string
   problem: string
@@ -1462,62 +1346,11 @@ export type IdeaCreateWithoutCategoryInput = {
   vote?: Prisma.VoteCreateNestedManyWithoutIdeaInput
   purchase?: Prisma.PurchaseCreateNestedManyWithoutIdeaInput
   comments?: Prisma.CommentsCreateNestedManyWithoutIdeaInput
-  user: Prisma.UserCreateNestedOneWithoutIdeaInput
   watchList?: Prisma.WatchListCreateNestedManyWithoutIdeaInput
+  category: Prisma.CategoryCreateNestedOneWithoutIdeasInput
 }
 
-export type IdeaUncheckedCreateWithoutCategoryInput = {
-  id?: string
-  title: string
-  problem: string
-  solution: string
-  photo: string
-  description: string
-  createdAt?: Date | string
-  userId: string
-  isPaid?: boolean
-  price?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  feedback?: string | null
-  highlighted?: boolean
-  upvotes?: number
-  downvotes?: number
-  editedAt?: Date | string | null
-  rejectedAt?: Date | string | null
-  acceptedAt?: Date | string | null
-  status?: $Enums.IdeaStatus
-  vote?: Prisma.VoteUncheckedCreateNestedManyWithoutIdeaInput
-  purchase?: Prisma.PurchaseUncheckedCreateNestedManyWithoutIdeaInput
-  comments?: Prisma.CommentsUncheckedCreateNestedManyWithoutIdeaInput
-  watchList?: Prisma.WatchListUncheckedCreateNestedManyWithoutIdeaInput
-}
-
-export type IdeaCreateOrConnectWithoutCategoryInput = {
-  where: Prisma.IdeaWhereUniqueInput
-  create: Prisma.XOR<Prisma.IdeaCreateWithoutCategoryInput, Prisma.IdeaUncheckedCreateWithoutCategoryInput>
-}
-
-export type IdeaCreateManyCategoryInputEnvelope = {
-  data: Prisma.IdeaCreateManyCategoryInput | Prisma.IdeaCreateManyCategoryInput[]
-  skipDuplicates?: boolean
-}
-
-export type IdeaUpsertWithWhereUniqueWithoutCategoryInput = {
-  where: Prisma.IdeaWhereUniqueInput
-  update: Prisma.XOR<Prisma.IdeaUpdateWithoutCategoryInput, Prisma.IdeaUncheckedUpdateWithoutCategoryInput>
-  create: Prisma.XOR<Prisma.IdeaCreateWithoutCategoryInput, Prisma.IdeaUncheckedCreateWithoutCategoryInput>
-}
-
-export type IdeaUpdateWithWhereUniqueWithoutCategoryInput = {
-  where: Prisma.IdeaWhereUniqueInput
-  data: Prisma.XOR<Prisma.IdeaUpdateWithoutCategoryInput, Prisma.IdeaUncheckedUpdateWithoutCategoryInput>
-}
-
-export type IdeaUpdateManyWithWhereWithoutCategoryInput = {
-  where: Prisma.IdeaScalarWhereInput
-  data: Prisma.XOR<Prisma.IdeaUpdateManyMutationInput, Prisma.IdeaUncheckedUpdateManyWithoutCategoryInput>
-}
-
-export type IdeaCreateManyUserInput = {
+export type IdeaUncheckedCreateWithoutUserInput = {
   id?: string
   title: string
   problem: string
@@ -1536,9 +1369,105 @@ export type IdeaCreateManyUserInput = {
   acceptedAt?: Date | string | null
   status?: $Enums.IdeaStatus
   categoryId: string
+  vote?: Prisma.VoteUncheckedCreateNestedManyWithoutIdeaInput
+  purchase?: Prisma.PurchaseUncheckedCreateNestedManyWithoutIdeaInput
+  comments?: Prisma.CommentsUncheckedCreateNestedManyWithoutIdeaInput
+  watchList?: Prisma.WatchListUncheckedCreateNestedManyWithoutIdeaInput
 }
 
-export type IdeaUpdateWithoutUserInput = {
+export type IdeaCreateOrConnectWithoutUserInput = {
+  where: Prisma.IdeaWhereUniqueInput
+  create: Prisma.XOR<Prisma.IdeaCreateWithoutUserInput, Prisma.IdeaUncheckedCreateWithoutUserInput>
+}
+
+export type IdeaCreateManyUserInputEnvelope = {
+  data: Prisma.IdeaCreateManyUserInput | Prisma.IdeaCreateManyUserInput[]
+  skipDuplicates?: boolean
+}
+
+export type IdeaUpsertWithWhereUniqueWithoutUserInput = {
+  where: Prisma.IdeaWhereUniqueInput
+  update: Prisma.XOR<Prisma.IdeaUpdateWithoutUserInput, Prisma.IdeaUncheckedUpdateWithoutUserInput>
+  create: Prisma.XOR<Prisma.IdeaCreateWithoutUserInput, Prisma.IdeaUncheckedCreateWithoutUserInput>
+}
+
+export type IdeaUpdateWithWhereUniqueWithoutUserInput = {
+  where: Prisma.IdeaWhereUniqueInput
+  data: Prisma.XOR<Prisma.IdeaUpdateWithoutUserInput, Prisma.IdeaUncheckedUpdateWithoutUserInput>
+}
+
+export type IdeaUpdateManyWithWhereWithoutUserInput = {
+  where: Prisma.IdeaScalarWhereInput
+  data: Prisma.XOR<Prisma.IdeaUpdateManyMutationInput, Prisma.IdeaUncheckedUpdateManyWithoutUserInput>
+}
+
+export type IdeaCreateWithoutVoteInput = {
+  id?: string
+  title: string
+  problem: string
+  solution: string
+  photo: string
+  description: string
+  createdAt?: Date | string
+  isPaid?: boolean
+  price?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  feedback?: string | null
+  highlighted?: boolean
+  upvotes?: number
+  downvotes?: number
+  editedAt?: Date | string | null
+  rejectedAt?: Date | string | null
+  acceptedAt?: Date | string | null
+  status?: $Enums.IdeaStatus
+  purchase?: Prisma.PurchaseCreateNestedManyWithoutIdeaInput
+  comments?: Prisma.CommentsCreateNestedManyWithoutIdeaInput
+  user: Prisma.UserCreateNestedOneWithoutIdeaInput
+  watchList?: Prisma.WatchListCreateNestedManyWithoutIdeaInput
+  category: Prisma.CategoryCreateNestedOneWithoutIdeasInput
+}
+
+export type IdeaUncheckedCreateWithoutVoteInput = {
+  id?: string
+  title: string
+  problem: string
+  solution: string
+  photo: string
+  description: string
+  createdAt?: Date | string
+  userId: string
+  isPaid?: boolean
+  price?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  feedback?: string | null
+  highlighted?: boolean
+  upvotes?: number
+  downvotes?: number
+  editedAt?: Date | string | null
+  rejectedAt?: Date | string | null
+  acceptedAt?: Date | string | null
+  status?: $Enums.IdeaStatus
+  categoryId: string
+  purchase?: Prisma.PurchaseUncheckedCreateNestedManyWithoutIdeaInput
+  comments?: Prisma.CommentsUncheckedCreateNestedManyWithoutIdeaInput
+  watchList?: Prisma.WatchListUncheckedCreateNestedManyWithoutIdeaInput
+}
+
+export type IdeaCreateOrConnectWithoutVoteInput = {
+  where: Prisma.IdeaWhereUniqueInput
+  create: Prisma.XOR<Prisma.IdeaCreateWithoutVoteInput, Prisma.IdeaUncheckedCreateWithoutVoteInput>
+}
+
+export type IdeaUpsertWithoutVoteInput = {
+  update: Prisma.XOR<Prisma.IdeaUpdateWithoutVoteInput, Prisma.IdeaUncheckedUpdateWithoutVoteInput>
+  create: Prisma.XOR<Prisma.IdeaCreateWithoutVoteInput, Prisma.IdeaUncheckedCreateWithoutVoteInput>
+  where?: Prisma.IdeaWhereInput
+}
+
+export type IdeaUpdateToOneWithWhereWithoutVoteInput = {
+  where?: Prisma.IdeaWhereInput
+  data: Prisma.XOR<Prisma.IdeaUpdateWithoutVoteInput, Prisma.IdeaUncheckedUpdateWithoutVoteInput>
+}
+
+export type IdeaUpdateWithoutVoteInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   title?: Prisma.StringFieldUpdateOperationsInput | string
   problem?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1556,14 +1485,14 @@ export type IdeaUpdateWithoutUserInput = {
   rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
-  vote?: Prisma.VoteUpdateManyWithoutIdeaNestedInput
   purchase?: Prisma.PurchaseUpdateManyWithoutIdeaNestedInput
   comments?: Prisma.CommentsUpdateManyWithoutIdeaNestedInput
+  user?: Prisma.UserUpdateOneRequiredWithoutIdeaNestedInput
   watchList?: Prisma.WatchListUpdateManyWithoutIdeaNestedInput
   category?: Prisma.CategoryUpdateOneRequiredWithoutIdeasNestedInput
 }
 
-export type IdeaUncheckedUpdateWithoutUserInput = {
+export type IdeaUncheckedUpdateWithoutVoteInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   title?: Prisma.StringFieldUpdateOperationsInput | string
   problem?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1571,6 +1500,7 @@ export type IdeaUncheckedUpdateWithoutUserInput = {
   photo?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  userId?: Prisma.StringFieldUpdateOperationsInput | string
   isPaid?: Prisma.BoolFieldUpdateOperationsInput | boolean
   price?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1582,31 +1512,9 @@ export type IdeaUncheckedUpdateWithoutUserInput = {
   acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
   categoryId?: Prisma.StringFieldUpdateOperationsInput | string
-  vote?: Prisma.VoteUncheckedUpdateManyWithoutIdeaNestedInput
   purchase?: Prisma.PurchaseUncheckedUpdateManyWithoutIdeaNestedInput
   comments?: Prisma.CommentsUncheckedUpdateManyWithoutIdeaNestedInput
   watchList?: Prisma.WatchListUncheckedUpdateManyWithoutIdeaNestedInput
-}
-
-export type IdeaUncheckedUpdateManyWithoutUserInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  title?: Prisma.StringFieldUpdateOperationsInput | string
-  problem?: Prisma.StringFieldUpdateOperationsInput | string
-  solution?: Prisma.StringFieldUpdateOperationsInput | string
-  photo?: Prisma.StringFieldUpdateOperationsInput | string
-  description?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  isPaid?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  price?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
-  feedback?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  highlighted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
-  downvotes?: Prisma.IntFieldUpdateOperationsInput | number
-  editedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
-  categoryId?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
 export type IdeaCreateManyCategoryInput = {
@@ -1699,6 +1607,98 @@ export type IdeaUncheckedUpdateManyWithoutCategoryInput = {
   rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
+}
+
+export type IdeaCreateManyUserInput = {
+  id?: string
+  title: string
+  problem: string
+  solution: string
+  photo: string
+  description: string
+  createdAt?: Date | string
+  isPaid?: boolean
+  price?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  feedback?: string | null
+  highlighted?: boolean
+  upvotes?: number
+  downvotes?: number
+  editedAt?: Date | string | null
+  rejectedAt?: Date | string | null
+  acceptedAt?: Date | string | null
+  status?: $Enums.IdeaStatus
+  categoryId: string
+}
+
+export type IdeaUpdateWithoutUserInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  title?: Prisma.StringFieldUpdateOperationsInput | string
+  problem?: Prisma.StringFieldUpdateOperationsInput | string
+  solution?: Prisma.StringFieldUpdateOperationsInput | string
+  photo?: Prisma.StringFieldUpdateOperationsInput | string
+  description?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  isPaid?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  price?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  feedback?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  highlighted?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  downvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  editedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
+  vote?: Prisma.VoteUpdateManyWithoutIdeaNestedInput
+  purchase?: Prisma.PurchaseUpdateManyWithoutIdeaNestedInput
+  comments?: Prisma.CommentsUpdateManyWithoutIdeaNestedInput
+  watchList?: Prisma.WatchListUpdateManyWithoutIdeaNestedInput
+  category?: Prisma.CategoryUpdateOneRequiredWithoutIdeasNestedInput
+}
+
+export type IdeaUncheckedUpdateWithoutUserInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  title?: Prisma.StringFieldUpdateOperationsInput | string
+  problem?: Prisma.StringFieldUpdateOperationsInput | string
+  solution?: Prisma.StringFieldUpdateOperationsInput | string
+  photo?: Prisma.StringFieldUpdateOperationsInput | string
+  description?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  isPaid?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  price?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  feedback?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  highlighted?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  downvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  editedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
+  categoryId?: Prisma.StringFieldUpdateOperationsInput | string
+  vote?: Prisma.VoteUncheckedUpdateManyWithoutIdeaNestedInput
+  purchase?: Prisma.PurchaseUncheckedUpdateManyWithoutIdeaNestedInput
+  comments?: Prisma.CommentsUncheckedUpdateManyWithoutIdeaNestedInput
+  watchList?: Prisma.WatchListUncheckedUpdateManyWithoutIdeaNestedInput
+}
+
+export type IdeaUncheckedUpdateManyWithoutUserInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  title?: Prisma.StringFieldUpdateOperationsInput | string
+  problem?: Prisma.StringFieldUpdateOperationsInput | string
+  solution?: Prisma.StringFieldUpdateOperationsInput | string
+  photo?: Prisma.StringFieldUpdateOperationsInput | string
+  description?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  isPaid?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  price?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
+  feedback?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  highlighted?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  downvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  editedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
+  categoryId?: Prisma.StringFieldUpdateOperationsInput | string
 }
 
 

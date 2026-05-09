@@ -51,18 +51,18 @@ export const AnyNull = runtime.AnyNull
 
 
 export const ModelName = {
-  User: 'User',
+  Admin: 'Admin',
+  Announcement: 'Announcement',
+  Category: 'Category',
+  Comments: 'Comments',
+  Idea: 'Idea',
+  WatchList: 'WatchList',
+  Purchase: 'Purchase',
   Session: 'Session',
   Account: 'Account',
   Verification: 'Verification',
-  Vote: 'Vote',
-  Purchase: 'Purchase',
-  Idea: 'Idea',
-  WatchList: 'WatchList',
-  Comments: 'Comments',
-  Category: 'Category',
-  Admin: 'Admin',
-  Announcement: 'Announcement'
+  User: 'User',
+  Vote: 'Vote'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -81,24 +81,102 @@ export const TransactionIsolationLevel = runtime.makeStrictEnum({
 export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel]
 
 
-export const UserScalarFieldEnum = {
+export const AdminScalarFieldEnum = {
   id: 'id',
   name: 'name',
   email: 'email',
-  password: 'password',
-  emailVerified: 'emailVerified',
-  role: 'role',
-  status: 'status',
-  needPasswordChange: 'needPasswordChange',
+  profilePhoto: 'profilePhoto',
+  contactNumber: 'contactNumber',
   isDeleted: 'isDeleted',
-  deletedAt: 'deletedAt',
-  image: 'image',
-  isSubscribed: 'isSubscribed',
   createdAt: 'createdAt',
+  updatedAt: 'updatedAt',
+  deletedAt: 'deletedAt',
+  userId: 'userId'
+} as const
+
+export type AdminScalarFieldEnum = (typeof AdminScalarFieldEnum)[keyof typeof AdminScalarFieldEnum]
+
+
+export const AnnouncementScalarFieldEnum = {
+  id: 'id',
+  content: 'content',
+  photo: 'photo',
+  createdAt: 'createdAt'
+} as const
+
+export type AnnouncementScalarFieldEnum = (typeof AnnouncementScalarFieldEnum)[keyof typeof AnnouncementScalarFieldEnum]
+
+
+export const CategoryScalarFieldEnum = {
+  id: 'id',
+  name: 'name'
+} as const
+
+export type CategoryScalarFieldEnum = (typeof CategoryScalarFieldEnum)[keyof typeof CategoryScalarFieldEnum]
+
+
+export const CommentsScalarFieldEnum = {
+  id: 'id',
+  comment: 'comment',
+  parentId: 'parentId',
+  createdAt: 'createdAt',
+  isDeleted: 'isDeleted',
+  ideaId: 'ideaId',
+  userId: 'userId'
+} as const
+
+export type CommentsScalarFieldEnum = (typeof CommentsScalarFieldEnum)[keyof typeof CommentsScalarFieldEnum]
+
+
+export const IdeaScalarFieldEnum = {
+  id: 'id',
+  title: 'title',
+  problem: 'problem',
+  solution: 'solution',
+  photo: 'photo',
+  description: 'description',
+  createdAt: 'createdAt',
+  userId: 'userId',
+  isPaid: 'isPaid',
+  price: 'price',
+  feedback: 'feedback',
+  highlighted: 'highlighted',
+  upvotes: 'upvotes',
+  downvotes: 'downvotes',
+  editedAt: 'editedAt',
+  rejectedAt: 'rejectedAt',
+  acceptedAt: 'acceptedAt',
+  status: 'status',
+  categoryId: 'categoryId'
+} as const
+
+export type IdeaScalarFieldEnum = (typeof IdeaScalarFieldEnum)[keyof typeof IdeaScalarFieldEnum]
+
+
+export const WatchListScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  ideaId: 'ideaId',
+  listedAt: 'listedAt'
+} as const
+
+export type WatchListScalarFieldEnum = (typeof WatchListScalarFieldEnum)[keyof typeof WatchListScalarFieldEnum]
+
+
+export const PurchaseScalarFieldEnum = {
+  id: 'id',
+  amount: 'amount',
+  transactionId: 'transactionId',
+  stripeEventId: 'stripeEventId',
+  status: 'status',
+  paymentGatewayData: 'paymentGatewayData',
+  userId: 'userId',
+  ideaId: 'ideaId',
+  purchasedAt: 'purchasedAt',
   updatedAt: 'updatedAt'
 } as const
 
-export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
+export type PurchaseScalarFieldEnum = (typeof PurchaseScalarFieldEnum)[keyof typeof PurchaseScalarFieldEnum]
 
 
 export const SessionScalarFieldEnum = {
@@ -146,6 +224,26 @@ export const VerificationScalarFieldEnum = {
 export type VerificationScalarFieldEnum = (typeof VerificationScalarFieldEnum)[keyof typeof VerificationScalarFieldEnum]
 
 
+export const UserScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  email: 'email',
+  password: 'password',
+  emailVerified: 'emailVerified',
+  role: 'role',
+  status: 'status',
+  needPasswordChange: 'needPasswordChange',
+  isDeleted: 'isDeleted',
+  deletedAt: 'deletedAt',
+  image: 'image',
+  isSubscribed: 'isSubscribed',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
+
+
 export const VoteScalarFieldEnum = {
   id: 'id',
   type: 'type',
@@ -156,104 +254,6 @@ export const VoteScalarFieldEnum = {
 } as const
 
 export type VoteScalarFieldEnum = (typeof VoteScalarFieldEnum)[keyof typeof VoteScalarFieldEnum]
-
-
-export const PurchaseScalarFieldEnum = {
-  id: 'id',
-  amount: 'amount',
-  transactionId: 'transactionId',
-  stripeEventId: 'stripeEventId',
-  status: 'status',
-  paymentGatewayData: 'paymentGatewayData',
-  userId: 'userId',
-  ideaId: 'ideaId',
-  purchasedAt: 'purchasedAt',
-  updatedAt: 'updatedAt'
-} as const
-
-export type PurchaseScalarFieldEnum = (typeof PurchaseScalarFieldEnum)[keyof typeof PurchaseScalarFieldEnum]
-
-
-export const IdeaScalarFieldEnum = {
-  id: 'id',
-  title: 'title',
-  problem: 'problem',
-  solution: 'solution',
-  photo: 'photo',
-  description: 'description',
-  createdAt: 'createdAt',
-  userId: 'userId',
-  isPaid: 'isPaid',
-  price: 'price',
-  feedback: 'feedback',
-  highlighted: 'highlighted',
-  upvotes: 'upvotes',
-  downvotes: 'downvotes',
-  editedAt: 'editedAt',
-  rejectedAt: 'rejectedAt',
-  acceptedAt: 'acceptedAt',
-  status: 'status',
-  categoryId: 'categoryId'
-} as const
-
-export type IdeaScalarFieldEnum = (typeof IdeaScalarFieldEnum)[keyof typeof IdeaScalarFieldEnum]
-
-
-export const WatchListScalarFieldEnum = {
-  id: 'id',
-  userId: 'userId',
-  ideaId: 'ideaId',
-  listedAt: 'listedAt'
-} as const
-
-export type WatchListScalarFieldEnum = (typeof WatchListScalarFieldEnum)[keyof typeof WatchListScalarFieldEnum]
-
-
-export const CommentsScalarFieldEnum = {
-  id: 'id',
-  comment: 'comment',
-  parentId: 'parentId',
-  createdAt: 'createdAt',
-  isDeleted: 'isDeleted',
-  ideaId: 'ideaId',
-  userId: 'userId'
-} as const
-
-export type CommentsScalarFieldEnum = (typeof CommentsScalarFieldEnum)[keyof typeof CommentsScalarFieldEnum]
-
-
-export const CategoryScalarFieldEnum = {
-  id: 'id',
-  name: 'name'
-} as const
-
-export type CategoryScalarFieldEnum = (typeof CategoryScalarFieldEnum)[keyof typeof CategoryScalarFieldEnum]
-
-
-export const AdminScalarFieldEnum = {
-  id: 'id',
-  name: 'name',
-  email: 'email',
-  profilePhoto: 'profilePhoto',
-  contactNumber: 'contactNumber',
-  isDeleted: 'isDeleted',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt',
-  deletedAt: 'deletedAt',
-  userId: 'userId'
-} as const
-
-export type AdminScalarFieldEnum = (typeof AdminScalarFieldEnum)[keyof typeof AdminScalarFieldEnum]
-
-
-export const AnnouncementScalarFieldEnum = {
-  id: 'id',
-  content: 'content',
-  photo: 'photo',
-  createdAt: 'createdAt'
-} as const
-
-export type AnnouncementScalarFieldEnum = (typeof AnnouncementScalarFieldEnum)[keyof typeof AnnouncementScalarFieldEnum]
 
 
 export const SortOrder = {

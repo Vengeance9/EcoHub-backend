@@ -473,60 +473,6 @@ export type PurchaseSumOrderByAggregateInput = {
   amount?: Prisma.SortOrder
 }
 
-export type PurchaseCreateNestedManyWithoutUserInput = {
-  create?: Prisma.XOR<Prisma.PurchaseCreateWithoutUserInput, Prisma.PurchaseUncheckedCreateWithoutUserInput> | Prisma.PurchaseCreateWithoutUserInput[] | Prisma.PurchaseUncheckedCreateWithoutUserInput[]
-  connectOrCreate?: Prisma.PurchaseCreateOrConnectWithoutUserInput | Prisma.PurchaseCreateOrConnectWithoutUserInput[]
-  createMany?: Prisma.PurchaseCreateManyUserInputEnvelope
-  connect?: Prisma.PurchaseWhereUniqueInput | Prisma.PurchaseWhereUniqueInput[]
-}
-
-export type PurchaseUncheckedCreateNestedManyWithoutUserInput = {
-  create?: Prisma.XOR<Prisma.PurchaseCreateWithoutUserInput, Prisma.PurchaseUncheckedCreateWithoutUserInput> | Prisma.PurchaseCreateWithoutUserInput[] | Prisma.PurchaseUncheckedCreateWithoutUserInput[]
-  connectOrCreate?: Prisma.PurchaseCreateOrConnectWithoutUserInput | Prisma.PurchaseCreateOrConnectWithoutUserInput[]
-  createMany?: Prisma.PurchaseCreateManyUserInputEnvelope
-  connect?: Prisma.PurchaseWhereUniqueInput | Prisma.PurchaseWhereUniqueInput[]
-}
-
-export type PurchaseUpdateManyWithoutUserNestedInput = {
-  create?: Prisma.XOR<Prisma.PurchaseCreateWithoutUserInput, Prisma.PurchaseUncheckedCreateWithoutUserInput> | Prisma.PurchaseCreateWithoutUserInput[] | Prisma.PurchaseUncheckedCreateWithoutUserInput[]
-  connectOrCreate?: Prisma.PurchaseCreateOrConnectWithoutUserInput | Prisma.PurchaseCreateOrConnectWithoutUserInput[]
-  upsert?: Prisma.PurchaseUpsertWithWhereUniqueWithoutUserInput | Prisma.PurchaseUpsertWithWhereUniqueWithoutUserInput[]
-  createMany?: Prisma.PurchaseCreateManyUserInputEnvelope
-  set?: Prisma.PurchaseWhereUniqueInput | Prisma.PurchaseWhereUniqueInput[]
-  disconnect?: Prisma.PurchaseWhereUniqueInput | Prisma.PurchaseWhereUniqueInput[]
-  delete?: Prisma.PurchaseWhereUniqueInput | Prisma.PurchaseWhereUniqueInput[]
-  connect?: Prisma.PurchaseWhereUniqueInput | Prisma.PurchaseWhereUniqueInput[]
-  update?: Prisma.PurchaseUpdateWithWhereUniqueWithoutUserInput | Prisma.PurchaseUpdateWithWhereUniqueWithoutUserInput[]
-  updateMany?: Prisma.PurchaseUpdateManyWithWhereWithoutUserInput | Prisma.PurchaseUpdateManyWithWhereWithoutUserInput[]
-  deleteMany?: Prisma.PurchaseScalarWhereInput | Prisma.PurchaseScalarWhereInput[]
-}
-
-export type PurchaseUncheckedUpdateManyWithoutUserNestedInput = {
-  create?: Prisma.XOR<Prisma.PurchaseCreateWithoutUserInput, Prisma.PurchaseUncheckedCreateWithoutUserInput> | Prisma.PurchaseCreateWithoutUserInput[] | Prisma.PurchaseUncheckedCreateWithoutUserInput[]
-  connectOrCreate?: Prisma.PurchaseCreateOrConnectWithoutUserInput | Prisma.PurchaseCreateOrConnectWithoutUserInput[]
-  upsert?: Prisma.PurchaseUpsertWithWhereUniqueWithoutUserInput | Prisma.PurchaseUpsertWithWhereUniqueWithoutUserInput[]
-  createMany?: Prisma.PurchaseCreateManyUserInputEnvelope
-  set?: Prisma.PurchaseWhereUniqueInput | Prisma.PurchaseWhereUniqueInput[]
-  disconnect?: Prisma.PurchaseWhereUniqueInput | Prisma.PurchaseWhereUniqueInput[]
-  delete?: Prisma.PurchaseWhereUniqueInput | Prisma.PurchaseWhereUniqueInput[]
-  connect?: Prisma.PurchaseWhereUniqueInput | Prisma.PurchaseWhereUniqueInput[]
-  update?: Prisma.PurchaseUpdateWithWhereUniqueWithoutUserInput | Prisma.PurchaseUpdateWithWhereUniqueWithoutUserInput[]
-  updateMany?: Prisma.PurchaseUpdateManyWithWhereWithoutUserInput | Prisma.PurchaseUpdateManyWithWhereWithoutUserInput[]
-  deleteMany?: Prisma.PurchaseScalarWhereInput | Prisma.PurchaseScalarWhereInput[]
-}
-
-export type FloatFieldUpdateOperationsInput = {
-  set?: number
-  increment?: number
-  decrement?: number
-  multiply?: number
-  divide?: number
-}
-
-export type EnumPaymentStatusFieldUpdateOperationsInput = {
-  set?: $Enums.PaymentStatus
-}
-
 export type PurchaseCreateNestedManyWithoutIdeaInput = {
   create?: Prisma.XOR<Prisma.PurchaseCreateWithoutIdeaInput, Prisma.PurchaseUncheckedCreateWithoutIdeaInput> | Prisma.PurchaseCreateWithoutIdeaInput[] | Prisma.PurchaseUncheckedCreateWithoutIdeaInput[]
   connectOrCreate?: Prisma.PurchaseCreateOrConnectWithoutIdeaInput | Prisma.PurchaseCreateOrConnectWithoutIdeaInput[]
@@ -569,70 +515,58 @@ export type PurchaseUncheckedUpdateManyWithoutIdeaNestedInput = {
   deleteMany?: Prisma.PurchaseScalarWhereInput | Prisma.PurchaseScalarWhereInput[]
 }
 
-export type PurchaseCreateWithoutUserInput = {
-  id?: string
-  amount: number
-  transactionId?: string
-  stripeEventId?: string | null
-  status?: $Enums.PaymentStatus
-  paymentGatewayData?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  purchasedAt?: Date | string
-  updatedAt?: Date | string
-  idea: Prisma.IdeaCreateNestedOneWithoutPurchaseInput
+export type FloatFieldUpdateOperationsInput = {
+  set?: number
+  increment?: number
+  decrement?: number
+  multiply?: number
+  divide?: number
 }
 
-export type PurchaseUncheckedCreateWithoutUserInput = {
-  id?: string
-  amount: number
-  transactionId?: string
-  stripeEventId?: string | null
-  status?: $Enums.PaymentStatus
-  paymentGatewayData?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  ideaId: string
-  purchasedAt?: Date | string
-  updatedAt?: Date | string
+export type EnumPaymentStatusFieldUpdateOperationsInput = {
+  set?: $Enums.PaymentStatus
 }
 
-export type PurchaseCreateOrConnectWithoutUserInput = {
-  where: Prisma.PurchaseWhereUniqueInput
-  create: Prisma.XOR<Prisma.PurchaseCreateWithoutUserInput, Prisma.PurchaseUncheckedCreateWithoutUserInput>
+export type PurchaseCreateNestedManyWithoutUserInput = {
+  create?: Prisma.XOR<Prisma.PurchaseCreateWithoutUserInput, Prisma.PurchaseUncheckedCreateWithoutUserInput> | Prisma.PurchaseCreateWithoutUserInput[] | Prisma.PurchaseUncheckedCreateWithoutUserInput[]
+  connectOrCreate?: Prisma.PurchaseCreateOrConnectWithoutUserInput | Prisma.PurchaseCreateOrConnectWithoutUserInput[]
+  createMany?: Prisma.PurchaseCreateManyUserInputEnvelope
+  connect?: Prisma.PurchaseWhereUniqueInput | Prisma.PurchaseWhereUniqueInput[]
 }
 
-export type PurchaseCreateManyUserInputEnvelope = {
-  data: Prisma.PurchaseCreateManyUserInput | Prisma.PurchaseCreateManyUserInput[]
-  skipDuplicates?: boolean
+export type PurchaseUncheckedCreateNestedManyWithoutUserInput = {
+  create?: Prisma.XOR<Prisma.PurchaseCreateWithoutUserInput, Prisma.PurchaseUncheckedCreateWithoutUserInput> | Prisma.PurchaseCreateWithoutUserInput[] | Prisma.PurchaseUncheckedCreateWithoutUserInput[]
+  connectOrCreate?: Prisma.PurchaseCreateOrConnectWithoutUserInput | Prisma.PurchaseCreateOrConnectWithoutUserInput[]
+  createMany?: Prisma.PurchaseCreateManyUserInputEnvelope
+  connect?: Prisma.PurchaseWhereUniqueInput | Prisma.PurchaseWhereUniqueInput[]
 }
 
-export type PurchaseUpsertWithWhereUniqueWithoutUserInput = {
-  where: Prisma.PurchaseWhereUniqueInput
-  update: Prisma.XOR<Prisma.PurchaseUpdateWithoutUserInput, Prisma.PurchaseUncheckedUpdateWithoutUserInput>
-  create: Prisma.XOR<Prisma.PurchaseCreateWithoutUserInput, Prisma.PurchaseUncheckedCreateWithoutUserInput>
+export type PurchaseUpdateManyWithoutUserNestedInput = {
+  create?: Prisma.XOR<Prisma.PurchaseCreateWithoutUserInput, Prisma.PurchaseUncheckedCreateWithoutUserInput> | Prisma.PurchaseCreateWithoutUserInput[] | Prisma.PurchaseUncheckedCreateWithoutUserInput[]
+  connectOrCreate?: Prisma.PurchaseCreateOrConnectWithoutUserInput | Prisma.PurchaseCreateOrConnectWithoutUserInput[]
+  upsert?: Prisma.PurchaseUpsertWithWhereUniqueWithoutUserInput | Prisma.PurchaseUpsertWithWhereUniqueWithoutUserInput[]
+  createMany?: Prisma.PurchaseCreateManyUserInputEnvelope
+  set?: Prisma.PurchaseWhereUniqueInput | Prisma.PurchaseWhereUniqueInput[]
+  disconnect?: Prisma.PurchaseWhereUniqueInput | Prisma.PurchaseWhereUniqueInput[]
+  delete?: Prisma.PurchaseWhereUniqueInput | Prisma.PurchaseWhereUniqueInput[]
+  connect?: Prisma.PurchaseWhereUniqueInput | Prisma.PurchaseWhereUniqueInput[]
+  update?: Prisma.PurchaseUpdateWithWhereUniqueWithoutUserInput | Prisma.PurchaseUpdateWithWhereUniqueWithoutUserInput[]
+  updateMany?: Prisma.PurchaseUpdateManyWithWhereWithoutUserInput | Prisma.PurchaseUpdateManyWithWhereWithoutUserInput[]
+  deleteMany?: Prisma.PurchaseScalarWhereInput | Prisma.PurchaseScalarWhereInput[]
 }
 
-export type PurchaseUpdateWithWhereUniqueWithoutUserInput = {
-  where: Prisma.PurchaseWhereUniqueInput
-  data: Prisma.XOR<Prisma.PurchaseUpdateWithoutUserInput, Prisma.PurchaseUncheckedUpdateWithoutUserInput>
-}
-
-export type PurchaseUpdateManyWithWhereWithoutUserInput = {
-  where: Prisma.PurchaseScalarWhereInput
-  data: Prisma.XOR<Prisma.PurchaseUpdateManyMutationInput, Prisma.PurchaseUncheckedUpdateManyWithoutUserInput>
-}
-
-export type PurchaseScalarWhereInput = {
-  AND?: Prisma.PurchaseScalarWhereInput | Prisma.PurchaseScalarWhereInput[]
-  OR?: Prisma.PurchaseScalarWhereInput[]
-  NOT?: Prisma.PurchaseScalarWhereInput | Prisma.PurchaseScalarWhereInput[]
-  id?: Prisma.StringFilter<"Purchase"> | string
-  amount?: Prisma.FloatFilter<"Purchase"> | number
-  transactionId?: Prisma.StringFilter<"Purchase"> | string
-  stripeEventId?: Prisma.StringNullableFilter<"Purchase"> | string | null
-  status?: Prisma.EnumPaymentStatusFilter<"Purchase"> | $Enums.PaymentStatus
-  paymentGatewayData?: Prisma.JsonNullableFilter<"Purchase">
-  userId?: Prisma.StringFilter<"Purchase"> | string
-  ideaId?: Prisma.StringFilter<"Purchase"> | string
-  purchasedAt?: Prisma.DateTimeFilter<"Purchase"> | Date | string
-  updatedAt?: Prisma.DateTimeFilter<"Purchase"> | Date | string
+export type PurchaseUncheckedUpdateManyWithoutUserNestedInput = {
+  create?: Prisma.XOR<Prisma.PurchaseCreateWithoutUserInput, Prisma.PurchaseUncheckedCreateWithoutUserInput> | Prisma.PurchaseCreateWithoutUserInput[] | Prisma.PurchaseUncheckedCreateWithoutUserInput[]
+  connectOrCreate?: Prisma.PurchaseCreateOrConnectWithoutUserInput | Prisma.PurchaseCreateOrConnectWithoutUserInput[]
+  upsert?: Prisma.PurchaseUpsertWithWhereUniqueWithoutUserInput | Prisma.PurchaseUpsertWithWhereUniqueWithoutUserInput[]
+  createMany?: Prisma.PurchaseCreateManyUserInputEnvelope
+  set?: Prisma.PurchaseWhereUniqueInput | Prisma.PurchaseWhereUniqueInput[]
+  disconnect?: Prisma.PurchaseWhereUniqueInput | Prisma.PurchaseWhereUniqueInput[]
+  delete?: Prisma.PurchaseWhereUniqueInput | Prisma.PurchaseWhereUniqueInput[]
+  connect?: Prisma.PurchaseWhereUniqueInput | Prisma.PurchaseWhereUniqueInput[]
+  update?: Prisma.PurchaseUpdateWithWhereUniqueWithoutUserInput | Prisma.PurchaseUpdateWithWhereUniqueWithoutUserInput[]
+  updateMany?: Prisma.PurchaseUpdateManyWithWhereWithoutUserInput | Prisma.PurchaseUpdateManyWithWhereWithoutUserInput[]
+  deleteMany?: Prisma.PurchaseScalarWhereInput | Prisma.PurchaseScalarWhereInput[]
 }
 
 export type PurchaseCreateWithoutIdeaInput = {
@@ -685,7 +619,35 @@ export type PurchaseUpdateManyWithWhereWithoutIdeaInput = {
   data: Prisma.XOR<Prisma.PurchaseUpdateManyMutationInput, Prisma.PurchaseUncheckedUpdateManyWithoutIdeaInput>
 }
 
-export type PurchaseCreateManyUserInput = {
+export type PurchaseScalarWhereInput = {
+  AND?: Prisma.PurchaseScalarWhereInput | Prisma.PurchaseScalarWhereInput[]
+  OR?: Prisma.PurchaseScalarWhereInput[]
+  NOT?: Prisma.PurchaseScalarWhereInput | Prisma.PurchaseScalarWhereInput[]
+  id?: Prisma.StringFilter<"Purchase"> | string
+  amount?: Prisma.FloatFilter<"Purchase"> | number
+  transactionId?: Prisma.StringFilter<"Purchase"> | string
+  stripeEventId?: Prisma.StringNullableFilter<"Purchase"> | string | null
+  status?: Prisma.EnumPaymentStatusFilter<"Purchase"> | $Enums.PaymentStatus
+  paymentGatewayData?: Prisma.JsonNullableFilter<"Purchase">
+  userId?: Prisma.StringFilter<"Purchase"> | string
+  ideaId?: Prisma.StringFilter<"Purchase"> | string
+  purchasedAt?: Prisma.DateTimeFilter<"Purchase"> | Date | string
+  updatedAt?: Prisma.DateTimeFilter<"Purchase"> | Date | string
+}
+
+export type PurchaseCreateWithoutUserInput = {
+  id?: string
+  amount: number
+  transactionId?: string
+  stripeEventId?: string | null
+  status?: $Enums.PaymentStatus
+  paymentGatewayData?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  purchasedAt?: Date | string
+  updatedAt?: Date | string
+  idea: Prisma.IdeaCreateNestedOneWithoutPurchaseInput
+}
+
+export type PurchaseUncheckedCreateWithoutUserInput = {
   id?: string
   amount: number
   transactionId?: string
@@ -697,40 +659,30 @@ export type PurchaseCreateManyUserInput = {
   updatedAt?: Date | string
 }
 
-export type PurchaseUpdateWithoutUserInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  amount?: Prisma.FloatFieldUpdateOperationsInput | number
-  transactionId?: Prisma.StringFieldUpdateOperationsInput | string
-  stripeEventId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  status?: Prisma.EnumPaymentStatusFieldUpdateOperationsInput | $Enums.PaymentStatus
-  paymentGatewayData?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  purchasedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  idea?: Prisma.IdeaUpdateOneRequiredWithoutPurchaseNestedInput
+export type PurchaseCreateOrConnectWithoutUserInput = {
+  where: Prisma.PurchaseWhereUniqueInput
+  create: Prisma.XOR<Prisma.PurchaseCreateWithoutUserInput, Prisma.PurchaseUncheckedCreateWithoutUserInput>
 }
 
-export type PurchaseUncheckedUpdateWithoutUserInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  amount?: Prisma.FloatFieldUpdateOperationsInput | number
-  transactionId?: Prisma.StringFieldUpdateOperationsInput | string
-  stripeEventId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  status?: Prisma.EnumPaymentStatusFieldUpdateOperationsInput | $Enums.PaymentStatus
-  paymentGatewayData?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  ideaId?: Prisma.StringFieldUpdateOperationsInput | string
-  purchasedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+export type PurchaseCreateManyUserInputEnvelope = {
+  data: Prisma.PurchaseCreateManyUserInput | Prisma.PurchaseCreateManyUserInput[]
+  skipDuplicates?: boolean
 }
 
-export type PurchaseUncheckedUpdateManyWithoutUserInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  amount?: Prisma.FloatFieldUpdateOperationsInput | number
-  transactionId?: Prisma.StringFieldUpdateOperationsInput | string
-  stripeEventId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  status?: Prisma.EnumPaymentStatusFieldUpdateOperationsInput | $Enums.PaymentStatus
-  paymentGatewayData?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  ideaId?: Prisma.StringFieldUpdateOperationsInput | string
-  purchasedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+export type PurchaseUpsertWithWhereUniqueWithoutUserInput = {
+  where: Prisma.PurchaseWhereUniqueInput
+  update: Prisma.XOR<Prisma.PurchaseUpdateWithoutUserInput, Prisma.PurchaseUncheckedUpdateWithoutUserInput>
+  create: Prisma.XOR<Prisma.PurchaseCreateWithoutUserInput, Prisma.PurchaseUncheckedCreateWithoutUserInput>
+}
+
+export type PurchaseUpdateWithWhereUniqueWithoutUserInput = {
+  where: Prisma.PurchaseWhereUniqueInput
+  data: Prisma.XOR<Prisma.PurchaseUpdateWithoutUserInput, Prisma.PurchaseUncheckedUpdateWithoutUserInput>
+}
+
+export type PurchaseUpdateManyWithWhereWithoutUserInput = {
+  where: Prisma.PurchaseScalarWhereInput
+  data: Prisma.XOR<Prisma.PurchaseUpdateManyMutationInput, Prisma.PurchaseUncheckedUpdateManyWithoutUserInput>
 }
 
 export type PurchaseCreateManyIdeaInput = {
@@ -777,6 +729,54 @@ export type PurchaseUncheckedUpdateManyWithoutIdeaInput = {
   status?: Prisma.EnumPaymentStatusFieldUpdateOperationsInput | $Enums.PaymentStatus
   paymentGatewayData?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
   userId?: Prisma.StringFieldUpdateOperationsInput | string
+  purchasedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+}
+
+export type PurchaseCreateManyUserInput = {
+  id?: string
+  amount: number
+  transactionId?: string
+  stripeEventId?: string | null
+  status?: $Enums.PaymentStatus
+  paymentGatewayData?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  ideaId: string
+  purchasedAt?: Date | string
+  updatedAt?: Date | string
+}
+
+export type PurchaseUpdateWithoutUserInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  amount?: Prisma.FloatFieldUpdateOperationsInput | number
+  transactionId?: Prisma.StringFieldUpdateOperationsInput | string
+  stripeEventId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  status?: Prisma.EnumPaymentStatusFieldUpdateOperationsInput | $Enums.PaymentStatus
+  paymentGatewayData?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  purchasedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  idea?: Prisma.IdeaUpdateOneRequiredWithoutPurchaseNestedInput
+}
+
+export type PurchaseUncheckedUpdateWithoutUserInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  amount?: Prisma.FloatFieldUpdateOperationsInput | number
+  transactionId?: Prisma.StringFieldUpdateOperationsInput | string
+  stripeEventId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  status?: Prisma.EnumPaymentStatusFieldUpdateOperationsInput | $Enums.PaymentStatus
+  paymentGatewayData?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  ideaId?: Prisma.StringFieldUpdateOperationsInput | string
+  purchasedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+}
+
+export type PurchaseUncheckedUpdateManyWithoutUserInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  amount?: Prisma.FloatFieldUpdateOperationsInput | number
+  transactionId?: Prisma.StringFieldUpdateOperationsInput | string
+  stripeEventId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  status?: Prisma.EnumPaymentStatusFieldUpdateOperationsInput | $Enums.PaymentStatus
+  paymentGatewayData?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  ideaId?: Prisma.StringFieldUpdateOperationsInput | string
   purchasedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
