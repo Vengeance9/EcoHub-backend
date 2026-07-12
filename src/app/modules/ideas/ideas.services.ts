@@ -271,7 +271,9 @@ const updateIdeas = async (
     data: {
       ...payload,
       userId: user.userId,
-      editedAt:new Date()
+      photo:imageUrl,
+      editedAt:new Date(),
+      status:IdeaStatus.UNDERREVIEW
     },
   });
   return result;

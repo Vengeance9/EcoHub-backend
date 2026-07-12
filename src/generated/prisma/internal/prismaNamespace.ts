@@ -391,6 +391,7 @@ export const ModelName = {
   Idea: 'Idea',
   WatchList: 'WatchList',
   Purchase: 'Purchase',
+  DocumentEmbedding: 'DocumentEmbedding',
   Session: 'Session',
   Account: 'Account',
   Verification: 'Verification',
@@ -411,7 +412,7 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
     omit: GlobalOmitOptions
   }
   meta: {
-    modelProps: "admin" | "announcement" | "category" | "comments" | "idea" | "watchList" | "purchase" | "session" | "account" | "verification" | "user" | "vote"
+    modelProps: "admin" | "announcement" | "category" | "comments" | "idea" | "watchList" | "purchase" | "documentEmbedding" | "session" | "account" | "verification" | "user" | "vote"
     txIsolationLevel: TransactionIsolationLevel
   }
   model: {
@@ -933,6 +934,64 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
         }
       }
     }
+    DocumentEmbedding: {
+      payload: Prisma.$DocumentEmbeddingPayload<ExtArgs>
+      fields: Prisma.DocumentEmbeddingFieldRefs
+      operations: {
+        findUnique: {
+          args: Prisma.DocumentEmbeddingFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$DocumentEmbeddingPayload> | null
+        }
+        findUniqueOrThrow: {
+          args: Prisma.DocumentEmbeddingFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$DocumentEmbeddingPayload>
+        }
+        findFirst: {
+          args: Prisma.DocumentEmbeddingFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$DocumentEmbeddingPayload> | null
+        }
+        findFirstOrThrow: {
+          args: Prisma.DocumentEmbeddingFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$DocumentEmbeddingPayload>
+        }
+        findMany: {
+          args: Prisma.DocumentEmbeddingFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$DocumentEmbeddingPayload>[]
+        }
+        delete: {
+          args: Prisma.DocumentEmbeddingDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$DocumentEmbeddingPayload>
+        }
+        update: {
+          args: Prisma.DocumentEmbeddingUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$DocumentEmbeddingPayload>
+        }
+        deleteMany: {
+          args: Prisma.DocumentEmbeddingDeleteManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateMany: {
+          args: Prisma.DocumentEmbeddingUpdateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateManyAndReturn: {
+          args: Prisma.DocumentEmbeddingUpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$DocumentEmbeddingPayload>[]
+        }
+        aggregate: {
+          args: Prisma.DocumentEmbeddingAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateDocumentEmbedding>
+        }
+        groupBy: {
+          args: Prisma.DocumentEmbeddingGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.DocumentEmbeddingGroupByOutputType>[]
+        }
+        count: {
+          args: Prisma.DocumentEmbeddingCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.DocumentEmbeddingCountAggregateOutputType> | number
+        }
+      }
+    }
     Session: {
       payload: Prisma.$SessionPayload<ExtArgs>
       fields: Prisma.SessionFieldRefs
@@ -1396,19 +1455,19 @@ export const IdeaScalarFieldEnum = {
   solution: 'solution',
   photo: 'photo',
   description: 'description',
-  createdAt: 'createdAt',
   userId: 'userId',
   isPaid: 'isPaid',
   price: 'price',
   feedback: 'feedback',
   highlighted: 'highlighted',
-  upvotes: 'upvotes',
-  downvotes: 'downvotes',
-  editedAt: 'editedAt',
-  rejectedAt: 'rejectedAt',
-  acceptedAt: 'acceptedAt',
   status: 'status',
-  categoryId: 'categoryId'
+  categoryId: 'categoryId',
+  createdAt: 'createdAt',
+  downvotes: 'downvotes',
+  upvotes: 'upvotes',
+  acceptedAt: 'acceptedAt',
+  editedAt: 'editedAt',
+  rejectedAt: 'rejectedAt'
 } as const
 
 export type IdeaScalarFieldEnum = (typeof IdeaScalarFieldEnum)[keyof typeof IdeaScalarFieldEnum]
@@ -1426,18 +1485,35 @@ export type WatchListScalarFieldEnum = (typeof WatchListScalarFieldEnum)[keyof t
 
 export const PurchaseScalarFieldEnum = {
   id: 'id',
-  amount: 'amount',
-  transactionId: 'transactionId',
-  stripeEventId: 'stripeEventId',
-  status: 'status',
-  paymentGatewayData: 'paymentGatewayData',
   userId: 'userId',
   ideaId: 'ideaId',
   purchasedAt: 'purchasedAt',
+  amount: 'amount',
+  paymentGatewayData: 'paymentGatewayData',
+  status: 'status',
+  stripeEventId: 'stripeEventId',
+  transactionId: 'transactionId',
   updatedAt: 'updatedAt'
 } as const
 
 export type PurchaseScalarFieldEnum = (typeof PurchaseScalarFieldEnum)[keyof typeof PurchaseScalarFieldEnum]
+
+
+export const DocumentEmbeddingScalarFieldEnum = {
+  id: 'id',
+  chunkKey: 'chunkKey',
+  sourceId: 'sourceId',
+  sourceType: 'sourceType',
+  sourceLabel: 'sourceLabel',
+  content: 'content',
+  metadata: 'metadata',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt',
+  deletedAt: 'deletedAt',
+  isDeleted: 'isDeleted'
+} as const
+
+export type DocumentEmbeddingScalarFieldEnum = (typeof DocumentEmbeddingScalarFieldEnum)[keyof typeof DocumentEmbeddingScalarFieldEnum]
 
 
 export const SessionScalarFieldEnum = {
@@ -1489,7 +1565,6 @@ export const UserScalarFieldEnum = {
   id: 'id',
   name: 'name',
   email: 'email',
-  password: 'password',
   emailVerified: 'emailVerified',
   role: 'role',
   status: 'status',
@@ -1499,7 +1574,8 @@ export const UserScalarFieldEnum = {
   image: 'image',
   isSubscribed: 'isSubscribed',
   createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
+  updatedAt: 'updatedAt',
+  password: 'password'
 } as const
 
 export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
@@ -1510,8 +1586,8 @@ export const VoteScalarFieldEnum = {
   type: 'type',
   userId: 'userId',
   ideaId: 'ideaId',
-  upvotes: 'upvotes',
-  downvotes: 'downvotes'
+  downvotes: 'downvotes',
+  upvotes: 'upvotes'
 } as const
 
 export type VoteScalarFieldEnum = (typeof VoteScalarFieldEnum)[keyof typeof VoteScalarFieldEnum]
@@ -1614,20 +1690,6 @@ export type ListDecimalFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaMo
 
 
 /**
- * Reference to a field of type 'Int'
- */
-export type IntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Int'>
-    
-
-
-/**
- * Reference to a field of type 'Int[]'
- */
-export type ListIntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Int[]'>
-    
-
-
-/**
  * Reference to a field of type 'IdeaStatus'
  */
 export type EnumIdeaStatusFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'IdeaStatus'>
@@ -1638,6 +1700,20 @@ export type EnumIdeaStatusFieldRefInput<$PrismaModel> = FieldRefInputType<$Prism
  * Reference to a field of type 'IdeaStatus[]'
  */
 export type ListEnumIdeaStatusFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'IdeaStatus[]'>
+    
+
+
+/**
+ * Reference to a field of type 'Int'
+ */
+export type IntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Int'>
+    
+
+
+/**
+ * Reference to a field of type 'Int[]'
+ */
+export type ListIntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Int[]'>
     
 
 
@@ -1656,20 +1732,6 @@ export type ListFloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaMode
 
 
 /**
- * Reference to a field of type 'PaymentStatus'
- */
-export type EnumPaymentStatusFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'PaymentStatus'>
-    
-
-
-/**
- * Reference to a field of type 'PaymentStatus[]'
- */
-export type ListEnumPaymentStatusFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'PaymentStatus[]'>
-    
-
-
-/**
  * Reference to a field of type 'Json'
  */
 export type JsonFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Json'>
@@ -1680,6 +1742,20 @@ export type JsonFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'J
  * Reference to a field of type 'QueryMode'
  */
 export type EnumQueryModeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'QueryMode'>
+    
+
+
+/**
+ * Reference to a field of type 'PaymentStatus'
+ */
+export type EnumPaymentStatusFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'PaymentStatus'>
+    
+
+
+/**
+ * Reference to a field of type 'PaymentStatus[]'
+ */
+export type ListEnumPaymentStatusFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'PaymentStatus[]'>
     
 
 
@@ -1841,6 +1917,7 @@ export type GlobalOmitConfig = {
   idea?: Prisma.IdeaOmit
   watchList?: Prisma.WatchListOmit
   purchase?: Prisma.PurchaseOmit
+  documentEmbedding?: Prisma.DocumentEmbeddingOmit
   session?: Prisma.SessionOmit
   account?: Prisma.AccountOmit
   verification?: Prisma.VerificationOmit

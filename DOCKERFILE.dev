@@ -1,0 +1,23 @@
+# ── Development Dockerfile ──────────────────────────────
+# Single stage, fast, supports hot reload via volumes
+FROM node:20-alpine
+
+# Required for Prisma + Neon/Postgres
+RUN apk add --no-cache openssl
+
+WORKDIR /app
+
+COPY package*.json ./
+COPY prisma ./prisma/
+COPY prisma.config.ts ./
+
+# Install ALL deps including devDependencies (tsx, tsup, etc.)
+RUN npm install
+
+# Note: prisma generate is run via docker-compose command
+# so it always reflects latest schema on container start
+
+EXPOSE 5000
+
+# Overridden by docker-compose.dev.yml command
+CMD ["npm", "run", "dev"]

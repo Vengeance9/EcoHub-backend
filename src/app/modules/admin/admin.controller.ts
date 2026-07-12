@@ -98,6 +98,13 @@ const highlightIdea = catchAsync(
     }
 )
 
+const getUserAnalytics  = catchAsync(
+    async(req:Request,res:Response)=>{
+        const result = await AdminServices.getUserAnalytics()
+        sendResponse(res,{statusCode:200,success:true,message:"User analytics fetched successfully",data:result})
+    }
+)
 
 
-export const AdminController = {highlightIdea,updateStatus,updateRole,createCategory,deleteCategory,ViewMembers,activateUser,blockUser,approveIdeas,reviewIdeas,viewIdeasByStatus}
+
+export const AdminController = {getUserAnalytics,highlightIdea,updateStatus,updateRole,createCategory,deleteCategory,ViewMembers,activateUser,blockUser,approveIdeas,reviewIdeas,viewIdeasByStatus}

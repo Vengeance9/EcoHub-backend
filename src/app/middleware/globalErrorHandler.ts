@@ -39,6 +39,7 @@ const globalErrorHandler = (
     message,
     statusCode,
     errorSources,
+    error:err,
     stack: stack || undefined,
   };
 };

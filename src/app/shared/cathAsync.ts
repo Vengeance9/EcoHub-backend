@@ -11,6 +11,7 @@ export const catchAsync = (fn:RequestHandler)=>{
                 message:"internal server error",
                 error:error.message
             })
+            
         }
     }
 }

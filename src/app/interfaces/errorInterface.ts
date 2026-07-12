@@ -3,6 +3,7 @@ export interface TErrorResponse{
     message:string,
     errorSources:TErrorSources[],
     statusCode:number
+    error?:unknown,
     stack?:string
 }
 

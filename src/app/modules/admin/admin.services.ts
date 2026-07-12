@@ -1,5 +1,5 @@
 //import { UserStatus } from './../../../generated/prisma/enums';
-import { Category, IdeaStatus, Role, UserStatus } from './../../../generated/prisma/browser';
+import { Category, IdeaStatus, Role, UserStatus, VoteType } from './../../../generated/prisma/browser';
 import { prisma } from "../../lib/prisma"
 import { QueryBuilder } from '../../utils/QueryBuilder';
 import { IQueryParams } from '../../interfaces/query.interface';
@@ -170,7 +170,86 @@ const updateStatus = async(userId:string,status:string)=>{
     return idea
   }
 
+  interface CommentsPerDay{
+    date:Date,
+    count:number
+  }
+  interface IdeasPerDay{
+    date:Date,
+    count:number
+  }
+
+  
+
+  const getUserAnalytics = async()=>{
+    const ideasPerDay:IdeasPerDay[] = await prisma.$queryRaw`
+    SELECT 
+    DATE("createdAt") AS date,
+    COUNT(*)::int AS count
+    FROM "Idea"
+    Where "createdAt" >=NOW() - INTERVAL '100 days'
+    GROUP BY DATE("createdAt")
+    ORDER by date;
+    `
+    
+    const commentsPerDay:CommentsPerDay[] = await prisma.$queryRaw`
+    SELECT 
+    DATE("createdAt") AS date,
+    COUNT(*)::int AS count
+    FROM "Comments"
+    Where "createdAt" >=NOW() - INTERVAL '100 days'
+    GROUP BY DATE("createdAt")
+    ORDER by date;
+    `
+
+    const map = new Map<string, {day:string, ideas:number,comments:number}>();
+
+    const ensure = (data:Date)=>{
+      const key = data.toISOString().split('T')[0]
+      if(!map.has(key)){
+        map.set(key,{day:key,ideas:0,comments:0})
+      }
+      return map.get(key)!
+    }
+
+    ideasPerDay.forEach((i:any)=>{
+      ensure(i.date).ideas = i.count
+    })
+    commentsPerDay.forEach((i:any)=>{
+      ensure(i.date).comments = i.count
+    })
+
+    console.log("I am here now")
+
+    const chartData = [...map.values()].sort((a, b) =>
+      a.day.localeCompare(b.day)
+    );
+    console.log("THIS IS THE CHART DATA",chartData)
+
+    const [approved, pending, rejected] = await prisma.$transaction([
+      prisma.idea.count({ where: { status: IdeaStatus.ACCEPTED } }),
+      prisma.idea.count({ where: { status: IdeaStatus.UNDERREVIEW } }),
+      prisma.idea.count({ where: { status: IdeaStatus.REJECTED } }),
+    ]);
+    const [Free, Paid] = await prisma.$transaction([
+      prisma.idea.count({ where: { isPaid: false } }),
+      prisma.idea.count({ where: { isPaid: true } })
+      
+    ]);
+    const pieChartData = {
+      approved:approved,
+      pending: pending,
+      rejected: rejected,
+    };
+    const pieChartData2 = {
+      Free:Free,
+      Paid: Paid
+    }
+    return {chartData,pieChartData,pieChartData2}
+  }
+
 export const AdminServices = {
+  getUserAnalytics,
   highlightIdea,
   updateStatus,
     createCategory,

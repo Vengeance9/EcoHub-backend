@@ -1,40 +1,38 @@
-model Idea{
-    id String @id  @default(uuid())
-    title String
-    problem String
-    solution String
-    photo String 
-    description String
-    createdAt DateTime @default(now())
-    userId String
-    isPaid Boolean @default(false)
-    price Decimal?
-    feedback String?
-    vote Vote[]
-    purchase Purchase[]
-    comments Comments[]
-    highlighted Boolean @default(false)
-    upvotes Int @default(0)
-    downvotes Int @default(0)
-
-    editedAt DateTime?
-    rejectedAt DateTime?
-    acceptedAt DateTime?
-
-    user User @relation(fields: [userId],references: [id])
-    watchList WatchList[]
-    status IdeaStatus @default(UNDERREVIEW)
-    categoryId String
-    category Category @relation(fields: [categoryId],references: [id])
+model Idea {
+  id          String      @id @default(uuid())
+  title       String
+  problem     String
+  solution    String
+  photo       String
+  description String
+  userId      String
+  isPaid      Boolean     @default(false)
+  price       Decimal?
+  feedback    String?
+  highlighted Boolean     @default(false)
+  status      IdeaStatus  @default(UNDERREVIEW)
+  categoryId  String
+  createdAt   DateTime    @default(now())
+  downvotes   Int         @default(0)
+  upvotes     Int         @default(0)
+  acceptedAt  DateTime?
+  editedAt    DateTime?
+  rejectedAt  DateTime?
+  comments    Comments[]
+  category    Category    @relation(fields: [categoryId], references: [id])
+  user        User        @relation(fields: [userId], references: [id])
+  purchase    Purchase[]
+  vote        Vote[]
+  watchList   WatchList[]
 }
 
-model WatchList{
-  id String @id @default(uuid())
-  userId String
-  ideaId String
+model WatchList {
+  id       String   @id @default(uuid())
+  userId   String
+  ideaId   String
   listedAt DateTime @default(now())
-  user User @relation(fields: [userId],references: [id])
-  idea Idea @relation(fields: [ideaId],references: [id])
+  idea     Idea     @relation(fields: [ideaId], references: [id])
+  user     User     @relation(fields: [userId], references: [id])
 
-  @@unique([userId,ideaId])
+  @@unique([userId, ideaId])
 }

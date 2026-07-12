@@ -174,8 +174,8 @@ export type WatchListWhereInput = {
   userId?: Prisma.StringFilter<"WatchList"> | string
   ideaId?: Prisma.StringFilter<"WatchList"> | string
   listedAt?: Prisma.DateTimeFilter<"WatchList"> | Date | string
-  user?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>
   idea?: Prisma.XOR<Prisma.IdeaScalarRelationFilter, Prisma.IdeaWhereInput>
+  user?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>
 }
 
 export type WatchListOrderByWithRelationInput = {
@@ -183,8 +183,8 @@ export type WatchListOrderByWithRelationInput = {
   userId?: Prisma.SortOrder
   ideaId?: Prisma.SortOrder
   listedAt?: Prisma.SortOrder
-  user?: Prisma.UserOrderByWithRelationInput
   idea?: Prisma.IdeaOrderByWithRelationInput
+  user?: Prisma.UserOrderByWithRelationInput
 }
 
 export type WatchListWhereUniqueInput = Prisma.AtLeast<{
@@ -196,8 +196,8 @@ export type WatchListWhereUniqueInput = Prisma.AtLeast<{
   userId?: Prisma.StringFilter<"WatchList"> | string
   ideaId?: Prisma.StringFilter<"WatchList"> | string
   listedAt?: Prisma.DateTimeFilter<"WatchList"> | Date | string
-  user?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>
   idea?: Prisma.XOR<Prisma.IdeaScalarRelationFilter, Prisma.IdeaWhereInput>
+  user?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>
 }, "id" | "userId_ideaId">
 
 export type WatchListOrderByWithAggregationInput = {
@@ -223,8 +223,8 @@ export type WatchListScalarWhereWithAggregatesInput = {
 export type WatchListCreateInput = {
   id?: string
   listedAt?: Date | string
-  user: Prisma.UserCreateNestedOneWithoutWatchlistInput
   idea: Prisma.IdeaCreateNestedOneWithoutWatchListInput
+  user: Prisma.UserCreateNestedOneWithoutWatchlistInput
 }
 
 export type WatchListUncheckedCreateInput = {
@@ -237,8 +237,8 @@ export type WatchListUncheckedCreateInput = {
 export type WatchListUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   listedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  user?: Prisma.UserUpdateOneRequiredWithoutWatchlistNestedInput
   idea?: Prisma.IdeaUpdateOneRequiredWithoutWatchListNestedInput
+  user?: Prisma.UserUpdateOneRequiredWithoutWatchlistNestedInput
 }
 
 export type WatchListUncheckedUpdateInput = {
@@ -528,8 +528,8 @@ export type WatchListSelect<ExtArgs extends runtime.Types.Extensions.InternalArg
   userId?: boolean
   ideaId?: boolean
   listedAt?: boolean
-  user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
   idea?: boolean | Prisma.IdeaDefaultArgs<ExtArgs>
+  user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["watchList"]>
 
 export type WatchListSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
@@ -537,8 +537,8 @@ export type WatchListSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Ext
   userId?: boolean
   ideaId?: boolean
   listedAt?: boolean
-  user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
   idea?: boolean | Prisma.IdeaDefaultArgs<ExtArgs>
+  user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["watchList"]>
 
 export type WatchListSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
@@ -546,8 +546,8 @@ export type WatchListSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Ext
   userId?: boolean
   ideaId?: boolean
   listedAt?: boolean
-  user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
   idea?: boolean | Prisma.IdeaDefaultArgs<ExtArgs>
+  user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["watchList"]>
 
 export type WatchListSelectScalar = {
@@ -559,23 +559,23 @@ export type WatchListSelectScalar = {
 
 export type WatchListOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "userId" | "ideaId" | "listedAt", ExtArgs["result"]["watchList"]>
 export type WatchListInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
   idea?: boolean | Prisma.IdeaDefaultArgs<ExtArgs>
+  user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
 }
 export type WatchListIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
   idea?: boolean | Prisma.IdeaDefaultArgs<ExtArgs>
+  user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
 }
 export type WatchListIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
   idea?: boolean | Prisma.IdeaDefaultArgs<ExtArgs>
+  user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
 }
 
 export type $WatchListPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "WatchList"
   objects: {
-    user: Prisma.$UserPayload<ExtArgs>
     idea: Prisma.$IdeaPayload<ExtArgs>
+    user: Prisma.$UserPayload<ExtArgs>
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
@@ -976,8 +976,8 @@ readonly fields: WatchListFieldRefs;
  */
 export interface Prisma__WatchListClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
-  user<T extends Prisma.UserDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.UserDefaultArgs<ExtArgs>>): Prisma.Prisma__UserClient<runtime.Types.Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
   idea<T extends Prisma.IdeaDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.IdeaDefaultArgs<ExtArgs>>): Prisma.Prisma__IdeaClient<runtime.Types.Result.GetResult<Prisma.$IdeaPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+  user<T extends Prisma.UserDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.UserDefaultArgs<ExtArgs>>): Prisma.Prisma__UserClient<runtime.Types.Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.

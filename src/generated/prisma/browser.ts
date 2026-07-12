@@ -53,6 +53,11 @@ export type WatchList = Prisma.WatchListModel
  */
 export type Purchase = Prisma.PurchaseModel
 /**
+ * Model DocumentEmbedding
+ * 
+ */
+export type DocumentEmbedding = Prisma.DocumentEmbeddingModel
+/**
  * Model Session
  * 
  */

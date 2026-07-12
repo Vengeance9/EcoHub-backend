@@ -1,0 +1,18 @@
+model DocumentEmbedding {
+  id          String                @id @default(uuid())
+  chunkKey    String                @unique
+  sourceId    String
+  sourceType  String
+  sourceLabel String?
+  content     String
+  metadata    Json?
+  embedding   Unsupported("vector(2048)")
+  createdAt   DateTime              @default(now())
+  updatedAt   DateTime              @updatedAt
+  deletedAt   DateTime?
+  isDeleted   Boolean               @default(false)
+
+  @@index([sourceType], map: "idx_document_embeddings_sourceType")
+  @@index([sourceId], map: "idx_document_embeddings_sourceId")
+  @@map("document_embeddings")
+}

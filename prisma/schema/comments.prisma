@@ -1,16 +1,16 @@
-model Comments{
-    id String @id  @default(uuid())
-    comment String
-    parentId String?
-    parent Comments? @relation("CommentToReplies", fields: [parentId], references: [id])
-    replies Comments[] @relation("CommentToReplies")
-    createdAt DateTime @default(now())
-    isDeleted Boolean @default(false)
-    ideaId String
-    idea Idea @relation(fields: [ideaId],references: [id])
-    userId String
-    user User @relation(fields: [userId],references: [id])
+model Comments {
+  id        String     @id @default(uuid())
+  comment   String
+  parentId  String?
+  createdAt DateTime   @default(now())
+  isDeleted Boolean    @default(false)
+  ideaId    String
+  userId    String
+  idea      Idea       @relation(fields: [ideaId], references: [id])
+  parent    Comments?  @relation("CommentToReplies", fields: [parentId], references: [id])
+  replies   Comments[] @relation("CommentToReplies")
+  user      User       @relation(fields: [userId], references: [id])
 
-    @@index([ideaId])
-    @@index([parentId])
+  @@index([ideaId])
+  @@index([parentId])
 }

@@ -58,6 +58,7 @@ export const ModelName = {
   Idea: 'Idea',
   WatchList: 'WatchList',
   Purchase: 'Purchase',
+  DocumentEmbedding: 'DocumentEmbedding',
   Session: 'Session',
   Account: 'Account',
   Verification: 'Verification',
@@ -135,19 +136,19 @@ export const IdeaScalarFieldEnum = {
   solution: 'solution',
   photo: 'photo',
   description: 'description',
-  createdAt: 'createdAt',
   userId: 'userId',
   isPaid: 'isPaid',
   price: 'price',
   feedback: 'feedback',
   highlighted: 'highlighted',
-  upvotes: 'upvotes',
-  downvotes: 'downvotes',
-  editedAt: 'editedAt',
-  rejectedAt: 'rejectedAt',
-  acceptedAt: 'acceptedAt',
   status: 'status',
-  categoryId: 'categoryId'
+  categoryId: 'categoryId',
+  createdAt: 'createdAt',
+  downvotes: 'downvotes',
+  upvotes: 'upvotes',
+  acceptedAt: 'acceptedAt',
+  editedAt: 'editedAt',
+  rejectedAt: 'rejectedAt'
 } as const
 
 export type IdeaScalarFieldEnum = (typeof IdeaScalarFieldEnum)[keyof typeof IdeaScalarFieldEnum]
@@ -165,18 +166,35 @@ export type WatchListScalarFieldEnum = (typeof WatchListScalarFieldEnum)[keyof t
 
 export const PurchaseScalarFieldEnum = {
   id: 'id',
-  amount: 'amount',
-  transactionId: 'transactionId',
-  stripeEventId: 'stripeEventId',
-  status: 'status',
-  paymentGatewayData: 'paymentGatewayData',
   userId: 'userId',
   ideaId: 'ideaId',
   purchasedAt: 'purchasedAt',
+  amount: 'amount',
+  paymentGatewayData: 'paymentGatewayData',
+  status: 'status',
+  stripeEventId: 'stripeEventId',
+  transactionId: 'transactionId',
   updatedAt: 'updatedAt'
 } as const
 
 export type PurchaseScalarFieldEnum = (typeof PurchaseScalarFieldEnum)[keyof typeof PurchaseScalarFieldEnum]
+
+
+export const DocumentEmbeddingScalarFieldEnum = {
+  id: 'id',
+  chunkKey: 'chunkKey',
+  sourceId: 'sourceId',
+  sourceType: 'sourceType',
+  sourceLabel: 'sourceLabel',
+  content: 'content',
+  metadata: 'metadata',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt',
+  deletedAt: 'deletedAt',
+  isDeleted: 'isDeleted'
+} as const
+
+export type DocumentEmbeddingScalarFieldEnum = (typeof DocumentEmbeddingScalarFieldEnum)[keyof typeof DocumentEmbeddingScalarFieldEnum]
 
 
 export const SessionScalarFieldEnum = {
@@ -228,7 +246,6 @@ export const UserScalarFieldEnum = {
   id: 'id',
   name: 'name',
   email: 'email',
-  password: 'password',
   emailVerified: 'emailVerified',
   role: 'role',
   status: 'status',
@@ -238,7 +255,8 @@ export const UserScalarFieldEnum = {
   image: 'image',
   isSubscribed: 'isSubscribed',
   createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
+  updatedAt: 'updatedAt',
+  password: 'password'
 } as const
 
 export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
@@ -249,8 +267,8 @@ export const VoteScalarFieldEnum = {
   type: 'type',
   userId: 'userId',
   ideaId: 'ideaId',
-  upvotes: 'upvotes',
-  downvotes: 'downvotes'
+  downvotes: 'downvotes',
+  upvotes: 'upvotes'
 } as const
 
 export type VoteScalarFieldEnum = (typeof VoteScalarFieldEnum)[keyof typeof VoteScalarFieldEnum]

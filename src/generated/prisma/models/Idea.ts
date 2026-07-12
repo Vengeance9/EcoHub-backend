@@ -28,14 +28,14 @@ export type AggregateIdea = {
 
 export type IdeaAvgAggregateOutputType = {
   price: runtime.Decimal | null
-  upvotes: number | null
   downvotes: number | null
+  upvotes: number | null
 }
 
 export type IdeaSumAggregateOutputType = {
   price: runtime.Decimal | null
-  upvotes: number | null
   downvotes: number | null
+  upvotes: number | null
 }
 
 export type IdeaMinAggregateOutputType = {
@@ -45,19 +45,19 @@ export type IdeaMinAggregateOutputType = {
   solution: string | null
   photo: string | null
   description: string | null
-  createdAt: Date | null
   userId: string | null
   isPaid: boolean | null
   price: runtime.Decimal | null
   feedback: string | null
   highlighted: boolean | null
-  upvotes: number | null
-  downvotes: number | null
-  editedAt: Date | null
-  rejectedAt: Date | null
-  acceptedAt: Date | null
   status: $Enums.IdeaStatus | null
   categoryId: string | null
+  createdAt: Date | null
+  downvotes: number | null
+  upvotes: number | null
+  acceptedAt: Date | null
+  editedAt: Date | null
+  rejectedAt: Date | null
 }
 
 export type IdeaMaxAggregateOutputType = {
@@ -67,19 +67,19 @@ export type IdeaMaxAggregateOutputType = {
   solution: string | null
   photo: string | null
   description: string | null
-  createdAt: Date | null
   userId: string | null
   isPaid: boolean | null
   price: runtime.Decimal | null
   feedback: string | null
   highlighted: boolean | null
-  upvotes: number | null
-  downvotes: number | null
-  editedAt: Date | null
-  rejectedAt: Date | null
-  acceptedAt: Date | null
   status: $Enums.IdeaStatus | null
   categoryId: string | null
+  createdAt: Date | null
+  downvotes: number | null
+  upvotes: number | null
+  acceptedAt: Date | null
+  editedAt: Date | null
+  rejectedAt: Date | null
 }
 
 export type IdeaCountAggregateOutputType = {
@@ -89,33 +89,33 @@ export type IdeaCountAggregateOutputType = {
   solution: number
   photo: number
   description: number
-  createdAt: number
   userId: number
   isPaid: number
   price: number
   feedback: number
   highlighted: number
-  upvotes: number
-  downvotes: number
-  editedAt: number
-  rejectedAt: number
-  acceptedAt: number
   status: number
   categoryId: number
+  createdAt: number
+  downvotes: number
+  upvotes: number
+  acceptedAt: number
+  editedAt: number
+  rejectedAt: number
   _all: number
 }
 
 
 export type IdeaAvgAggregateInputType = {
   price?: true
-  upvotes?: true
   downvotes?: true
+  upvotes?: true
 }
 
 export type IdeaSumAggregateInputType = {
   price?: true
-  upvotes?: true
   downvotes?: true
+  upvotes?: true
 }
 
 export type IdeaMinAggregateInputType = {
@@ -125,19 +125,19 @@ export type IdeaMinAggregateInputType = {
   solution?: true
   photo?: true
   description?: true
-  createdAt?: true
   userId?: true
   isPaid?: true
   price?: true
   feedback?: true
   highlighted?: true
-  upvotes?: true
-  downvotes?: true
-  editedAt?: true
-  rejectedAt?: true
-  acceptedAt?: true
   status?: true
   categoryId?: true
+  createdAt?: true
+  downvotes?: true
+  upvotes?: true
+  acceptedAt?: true
+  editedAt?: true
+  rejectedAt?: true
 }
 
 export type IdeaMaxAggregateInputType = {
@@ -147,19 +147,19 @@ export type IdeaMaxAggregateInputType = {
   solution?: true
   photo?: true
   description?: true
-  createdAt?: true
   userId?: true
   isPaid?: true
   price?: true
   feedback?: true
   highlighted?: true
-  upvotes?: true
-  downvotes?: true
-  editedAt?: true
-  rejectedAt?: true
-  acceptedAt?: true
   status?: true
   categoryId?: true
+  createdAt?: true
+  downvotes?: true
+  upvotes?: true
+  acceptedAt?: true
+  editedAt?: true
+  rejectedAt?: true
 }
 
 export type IdeaCountAggregateInputType = {
@@ -169,19 +169,19 @@ export type IdeaCountAggregateInputType = {
   solution?: true
   photo?: true
   description?: true
-  createdAt?: true
   userId?: true
   isPaid?: true
   price?: true
   feedback?: true
   highlighted?: true
-  upvotes?: true
-  downvotes?: true
-  editedAt?: true
-  rejectedAt?: true
-  acceptedAt?: true
   status?: true
   categoryId?: true
+  createdAt?: true
+  downvotes?: true
+  upvotes?: true
+  acceptedAt?: true
+  editedAt?: true
+  rejectedAt?: true
   _all?: true
 }
 
@@ -278,19 +278,19 @@ export type IdeaGroupByOutputType = {
   solution: string
   photo: string
   description: string
-  createdAt: Date
   userId: string
   isPaid: boolean
   price: runtime.Decimal | null
   feedback: string | null
   highlighted: boolean
-  upvotes: number
-  downvotes: number
-  editedAt: Date | null
-  rejectedAt: Date | null
-  acceptedAt: Date | null
   status: $Enums.IdeaStatus
   categoryId: string
+  createdAt: Date
+  downvotes: number
+  upvotes: number
+  acceptedAt: Date | null
+  editedAt: Date | null
+  rejectedAt: Date | null
   _count: IdeaCountAggregateOutputType | null
   _avg: IdeaAvgAggregateOutputType | null
   _sum: IdeaSumAggregateOutputType | null
@@ -323,25 +323,25 @@ export type IdeaWhereInput = {
   solution?: Prisma.StringFilter<"Idea"> | string
   photo?: Prisma.StringFilter<"Idea"> | string
   description?: Prisma.StringFilter<"Idea"> | string
-  createdAt?: Prisma.DateTimeFilter<"Idea"> | Date | string
   userId?: Prisma.StringFilter<"Idea"> | string
   isPaid?: Prisma.BoolFilter<"Idea"> | boolean
   price?: Prisma.DecimalNullableFilter<"Idea"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: Prisma.StringNullableFilter<"Idea"> | string | null
   highlighted?: Prisma.BoolFilter<"Idea"> | boolean
-  upvotes?: Prisma.IntFilter<"Idea"> | number
-  downvotes?: Prisma.IntFilter<"Idea"> | number
-  editedAt?: Prisma.DateTimeNullableFilter<"Idea"> | Date | string | null
-  rejectedAt?: Prisma.DateTimeNullableFilter<"Idea"> | Date | string | null
-  acceptedAt?: Prisma.DateTimeNullableFilter<"Idea"> | Date | string | null
   status?: Prisma.EnumIdeaStatusFilter<"Idea"> | $Enums.IdeaStatus
   categoryId?: Prisma.StringFilter<"Idea"> | string
-  vote?: Prisma.VoteListRelationFilter
-  purchase?: Prisma.PurchaseListRelationFilter
+  createdAt?: Prisma.DateTimeFilter<"Idea"> | Date | string
+  downvotes?: Prisma.IntFilter<"Idea"> | number
+  upvotes?: Prisma.IntFilter<"Idea"> | number
+  acceptedAt?: Prisma.DateTimeNullableFilter<"Idea"> | Date | string | null
+  editedAt?: Prisma.DateTimeNullableFilter<"Idea"> | Date | string | null
+  rejectedAt?: Prisma.DateTimeNullableFilter<"Idea"> | Date | string | null
   comments?: Prisma.CommentsListRelationFilter
-  user?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>
-  watchList?: Prisma.WatchListListRelationFilter
   category?: Prisma.XOR<Prisma.CategoryScalarRelationFilter, Prisma.CategoryWhereInput>
+  user?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>
+  purchase?: Prisma.PurchaseListRelationFilter
+  vote?: Prisma.VoteListRelationFilter
+  watchList?: Prisma.WatchListListRelationFilter
 }
 
 export type IdeaOrderByWithRelationInput = {
@@ -351,25 +351,25 @@ export type IdeaOrderByWithRelationInput = {
   solution?: Prisma.SortOrder
   photo?: Prisma.SortOrder
   description?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
   userId?: Prisma.SortOrder
   isPaid?: Prisma.SortOrder
   price?: Prisma.SortOrderInput | Prisma.SortOrder
   feedback?: Prisma.SortOrderInput | Prisma.SortOrder
   highlighted?: Prisma.SortOrder
-  upvotes?: Prisma.SortOrder
-  downvotes?: Prisma.SortOrder
-  editedAt?: Prisma.SortOrderInput | Prisma.SortOrder
-  rejectedAt?: Prisma.SortOrderInput | Prisma.SortOrder
-  acceptedAt?: Prisma.SortOrderInput | Prisma.SortOrder
   status?: Prisma.SortOrder
   categoryId?: Prisma.SortOrder
-  vote?: Prisma.VoteOrderByRelationAggregateInput
-  purchase?: Prisma.PurchaseOrderByRelationAggregateInput
+  createdAt?: Prisma.SortOrder
+  downvotes?: Prisma.SortOrder
+  upvotes?: Prisma.SortOrder
+  acceptedAt?: Prisma.SortOrderInput | Prisma.SortOrder
+  editedAt?: Prisma.SortOrderInput | Prisma.SortOrder
+  rejectedAt?: Prisma.SortOrderInput | Prisma.SortOrder
   comments?: Prisma.CommentsOrderByRelationAggregateInput
-  user?: Prisma.UserOrderByWithRelationInput
-  watchList?: Prisma.WatchListOrderByRelationAggregateInput
   category?: Prisma.CategoryOrderByWithRelationInput
+  user?: Prisma.UserOrderByWithRelationInput
+  purchase?: Prisma.PurchaseOrderByRelationAggregateInput
+  vote?: Prisma.VoteOrderByRelationAggregateInput
+  watchList?: Prisma.WatchListOrderByRelationAggregateInput
 }
 
 export type IdeaWhereUniqueInput = Prisma.AtLeast<{
@@ -382,25 +382,25 @@ export type IdeaWhereUniqueInput = Prisma.AtLeast<{
   solution?: Prisma.StringFilter<"Idea"> | string
   photo?: Prisma.StringFilter<"Idea"> | string
   description?: Prisma.StringFilter<"Idea"> | string
-  createdAt?: Prisma.DateTimeFilter<"Idea"> | Date | string
   userId?: Prisma.StringFilter<"Idea"> | string
   isPaid?: Prisma.BoolFilter<"Idea"> | boolean
   price?: Prisma.DecimalNullableFilter<"Idea"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: Prisma.StringNullableFilter<"Idea"> | string | null
   highlighted?: Prisma.BoolFilter<"Idea"> | boolean
-  upvotes?: Prisma.IntFilter<"Idea"> | number
-  downvotes?: Prisma.IntFilter<"Idea"> | number
-  editedAt?: Prisma.DateTimeNullableFilter<"Idea"> | Date | string | null
-  rejectedAt?: Prisma.DateTimeNullableFilter<"Idea"> | Date | string | null
-  acceptedAt?: Prisma.DateTimeNullableFilter<"Idea"> | Date | string | null
   status?: Prisma.EnumIdeaStatusFilter<"Idea"> | $Enums.IdeaStatus
   categoryId?: Prisma.StringFilter<"Idea"> | string
-  vote?: Prisma.VoteListRelationFilter
-  purchase?: Prisma.PurchaseListRelationFilter
+  createdAt?: Prisma.DateTimeFilter<"Idea"> | Date | string
+  downvotes?: Prisma.IntFilter<"Idea"> | number
+  upvotes?: Prisma.IntFilter<"Idea"> | number
+  acceptedAt?: Prisma.DateTimeNullableFilter<"Idea"> | Date | string | null
+  editedAt?: Prisma.DateTimeNullableFilter<"Idea"> | Date | string | null
+  rejectedAt?: Prisma.DateTimeNullableFilter<"Idea"> | Date | string | null
   comments?: Prisma.CommentsListRelationFilter
-  user?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>
-  watchList?: Prisma.WatchListListRelationFilter
   category?: Prisma.XOR<Prisma.CategoryScalarRelationFilter, Prisma.CategoryWhereInput>
+  user?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>
+  purchase?: Prisma.PurchaseListRelationFilter
+  vote?: Prisma.VoteListRelationFilter
+  watchList?: Prisma.WatchListListRelationFilter
 }, "id">
 
 export type IdeaOrderByWithAggregationInput = {
@@ -410,19 +410,19 @@ export type IdeaOrderByWithAggregationInput = {
   solution?: Prisma.SortOrder
   photo?: Prisma.SortOrder
   description?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
   userId?: Prisma.SortOrder
   isPaid?: Prisma.SortOrder
   price?: Prisma.SortOrderInput | Prisma.SortOrder
   feedback?: Prisma.SortOrderInput | Prisma.SortOrder
   highlighted?: Prisma.SortOrder
-  upvotes?: Prisma.SortOrder
-  downvotes?: Prisma.SortOrder
-  editedAt?: Prisma.SortOrderInput | Prisma.SortOrder
-  rejectedAt?: Prisma.SortOrderInput | Prisma.SortOrder
-  acceptedAt?: Prisma.SortOrderInput | Prisma.SortOrder
   status?: Prisma.SortOrder
   categoryId?: Prisma.SortOrder
+  createdAt?: Prisma.SortOrder
+  downvotes?: Prisma.SortOrder
+  upvotes?: Prisma.SortOrder
+  acceptedAt?: Prisma.SortOrderInput | Prisma.SortOrder
+  editedAt?: Prisma.SortOrderInput | Prisma.SortOrder
+  rejectedAt?: Prisma.SortOrderInput | Prisma.SortOrder
   _count?: Prisma.IdeaCountOrderByAggregateInput
   _avg?: Prisma.IdeaAvgOrderByAggregateInput
   _max?: Prisma.IdeaMaxOrderByAggregateInput
@@ -440,19 +440,19 @@ export type IdeaScalarWhereWithAggregatesInput = {
   solution?: Prisma.StringWithAggregatesFilter<"Idea"> | string
   photo?: Prisma.StringWithAggregatesFilter<"Idea"> | string
   description?: Prisma.StringWithAggregatesFilter<"Idea"> | string
-  createdAt?: Prisma.DateTimeWithAggregatesFilter<"Idea"> | Date | string
   userId?: Prisma.StringWithAggregatesFilter<"Idea"> | string
   isPaid?: Prisma.BoolWithAggregatesFilter<"Idea"> | boolean
   price?: Prisma.DecimalNullableWithAggregatesFilter<"Idea"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: Prisma.StringNullableWithAggregatesFilter<"Idea"> | string | null
   highlighted?: Prisma.BoolWithAggregatesFilter<"Idea"> | boolean
-  upvotes?: Prisma.IntWithAggregatesFilter<"Idea"> | number
-  downvotes?: Prisma.IntWithAggregatesFilter<"Idea"> | number
-  editedAt?: Prisma.DateTimeNullableWithAggregatesFilter<"Idea"> | Date | string | null
-  rejectedAt?: Prisma.DateTimeNullableWithAggregatesFilter<"Idea"> | Date | string | null
-  acceptedAt?: Prisma.DateTimeNullableWithAggregatesFilter<"Idea"> | Date | string | null
   status?: Prisma.EnumIdeaStatusWithAggregatesFilter<"Idea"> | $Enums.IdeaStatus
   categoryId?: Prisma.StringWithAggregatesFilter<"Idea"> | string
+  createdAt?: Prisma.DateTimeWithAggregatesFilter<"Idea"> | Date | string
+  downvotes?: Prisma.IntWithAggregatesFilter<"Idea"> | number
+  upvotes?: Prisma.IntWithAggregatesFilter<"Idea"> | number
+  acceptedAt?: Prisma.DateTimeNullableWithAggregatesFilter<"Idea"> | Date | string | null
+  editedAt?: Prisma.DateTimeNullableWithAggregatesFilter<"Idea"> | Date | string | null
+  rejectedAt?: Prisma.DateTimeNullableWithAggregatesFilter<"Idea"> | Date | string | null
 }
 
 export type IdeaCreateInput = {
@@ -462,23 +462,23 @@ export type IdeaCreateInput = {
   solution: string
   photo: string
   description: string
-  createdAt?: Date | string
   isPaid?: boolean
   price?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: string | null
   highlighted?: boolean
-  upvotes?: number
+  status?: $Enums.IdeaStatus
+  createdAt?: Date | string
   downvotes?: number
+  upvotes?: number
+  acceptedAt?: Date | string | null
   editedAt?: Date | string | null
   rejectedAt?: Date | string | null
-  acceptedAt?: Date | string | null
-  status?: $Enums.IdeaStatus
-  vote?: Prisma.VoteCreateNestedManyWithoutIdeaInput
-  purchase?: Prisma.PurchaseCreateNestedManyWithoutIdeaInput
   comments?: Prisma.CommentsCreateNestedManyWithoutIdeaInput
-  user: Prisma.UserCreateNestedOneWithoutIdeaInput
-  watchList?: Prisma.WatchListCreateNestedManyWithoutIdeaInput
   category: Prisma.CategoryCreateNestedOneWithoutIdeasInput
+  user: Prisma.UserCreateNestedOneWithoutIdeaInput
+  purchase?: Prisma.PurchaseCreateNestedManyWithoutIdeaInput
+  vote?: Prisma.VoteCreateNestedManyWithoutIdeaInput
+  watchList?: Prisma.WatchListCreateNestedManyWithoutIdeaInput
 }
 
 export type IdeaUncheckedCreateInput = {
@@ -488,22 +488,22 @@ export type IdeaUncheckedCreateInput = {
   solution: string
   photo: string
   description: string
-  createdAt?: Date | string
   userId: string
   isPaid?: boolean
   price?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: string | null
   highlighted?: boolean
-  upvotes?: number
-  downvotes?: number
-  editedAt?: Date | string | null
-  rejectedAt?: Date | string | null
-  acceptedAt?: Date | string | null
   status?: $Enums.IdeaStatus
   categoryId: string
-  vote?: Prisma.VoteUncheckedCreateNestedManyWithoutIdeaInput
-  purchase?: Prisma.PurchaseUncheckedCreateNestedManyWithoutIdeaInput
+  createdAt?: Date | string
+  downvotes?: number
+  upvotes?: number
+  acceptedAt?: Date | string | null
+  editedAt?: Date | string | null
+  rejectedAt?: Date | string | null
   comments?: Prisma.CommentsUncheckedCreateNestedManyWithoutIdeaInput
+  purchase?: Prisma.PurchaseUncheckedCreateNestedManyWithoutIdeaInput
+  vote?: Prisma.VoteUncheckedCreateNestedManyWithoutIdeaInput
   watchList?: Prisma.WatchListUncheckedCreateNestedManyWithoutIdeaInput
 }
 
@@ -514,23 +514,23 @@ export type IdeaUpdateInput = {
   solution?: Prisma.StringFieldUpdateOperationsInput | string
   photo?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   isPaid?: Prisma.BoolFieldUpdateOperationsInput | boolean
   price?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   highlighted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   downvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   editedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
-  vote?: Prisma.VoteUpdateManyWithoutIdeaNestedInput
-  purchase?: Prisma.PurchaseUpdateManyWithoutIdeaNestedInput
   comments?: Prisma.CommentsUpdateManyWithoutIdeaNestedInput
-  user?: Prisma.UserUpdateOneRequiredWithoutIdeaNestedInput
-  watchList?: Prisma.WatchListUpdateManyWithoutIdeaNestedInput
   category?: Prisma.CategoryUpdateOneRequiredWithoutIdeasNestedInput
+  user?: Prisma.UserUpdateOneRequiredWithoutIdeaNestedInput
+  purchase?: Prisma.PurchaseUpdateManyWithoutIdeaNestedInput
+  vote?: Prisma.VoteUpdateManyWithoutIdeaNestedInput
+  watchList?: Prisma.WatchListUpdateManyWithoutIdeaNestedInput
 }
 
 export type IdeaUncheckedUpdateInput = {
@@ -540,22 +540,22 @@ export type IdeaUncheckedUpdateInput = {
   solution?: Prisma.StringFieldUpdateOperationsInput | string
   photo?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   isPaid?: Prisma.BoolFieldUpdateOperationsInput | boolean
   price?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   highlighted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
-  downvotes?: Prisma.IntFieldUpdateOperationsInput | number
-  editedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
   categoryId?: Prisma.StringFieldUpdateOperationsInput | string
-  vote?: Prisma.VoteUncheckedUpdateManyWithoutIdeaNestedInput
-  purchase?: Prisma.PurchaseUncheckedUpdateManyWithoutIdeaNestedInput
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  downvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  editedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   comments?: Prisma.CommentsUncheckedUpdateManyWithoutIdeaNestedInput
+  purchase?: Prisma.PurchaseUncheckedUpdateManyWithoutIdeaNestedInput
+  vote?: Prisma.VoteUncheckedUpdateManyWithoutIdeaNestedInput
   watchList?: Prisma.WatchListUncheckedUpdateManyWithoutIdeaNestedInput
 }
 
@@ -566,19 +566,19 @@ export type IdeaCreateManyInput = {
   solution: string
   photo: string
   description: string
-  createdAt?: Date | string
   userId: string
   isPaid?: boolean
   price?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: string | null
   highlighted?: boolean
-  upvotes?: number
-  downvotes?: number
-  editedAt?: Date | string | null
-  rejectedAt?: Date | string | null
-  acceptedAt?: Date | string | null
   status?: $Enums.IdeaStatus
   categoryId: string
+  createdAt?: Date | string
+  downvotes?: number
+  upvotes?: number
+  acceptedAt?: Date | string | null
+  editedAt?: Date | string | null
+  rejectedAt?: Date | string | null
 }
 
 export type IdeaUpdateManyMutationInput = {
@@ -588,17 +588,17 @@ export type IdeaUpdateManyMutationInput = {
   solution?: Prisma.StringFieldUpdateOperationsInput | string
   photo?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   isPaid?: Prisma.BoolFieldUpdateOperationsInput | boolean
   price?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   highlighted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   downvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   editedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
 }
 
 export type IdeaUncheckedUpdateManyInput = {
@@ -608,19 +608,19 @@ export type IdeaUncheckedUpdateManyInput = {
   solution?: Prisma.StringFieldUpdateOperationsInput | string
   photo?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   isPaid?: Prisma.BoolFieldUpdateOperationsInput | boolean
   price?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   highlighted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
-  downvotes?: Prisma.IntFieldUpdateOperationsInput | number
-  editedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
   categoryId?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  downvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  editedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
 }
 
 export type IdeaListRelationFilter = {
@@ -645,25 +645,25 @@ export type IdeaCountOrderByAggregateInput = {
   solution?: Prisma.SortOrder
   photo?: Prisma.SortOrder
   description?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
   userId?: Prisma.SortOrder
   isPaid?: Prisma.SortOrder
   price?: Prisma.SortOrder
   feedback?: Prisma.SortOrder
   highlighted?: Prisma.SortOrder
-  upvotes?: Prisma.SortOrder
-  downvotes?: Prisma.SortOrder
-  editedAt?: Prisma.SortOrder
-  rejectedAt?: Prisma.SortOrder
-  acceptedAt?: Prisma.SortOrder
   status?: Prisma.SortOrder
   categoryId?: Prisma.SortOrder
+  createdAt?: Prisma.SortOrder
+  downvotes?: Prisma.SortOrder
+  upvotes?: Prisma.SortOrder
+  acceptedAt?: Prisma.SortOrder
+  editedAt?: Prisma.SortOrder
+  rejectedAt?: Prisma.SortOrder
 }
 
 export type IdeaAvgOrderByAggregateInput = {
   price?: Prisma.SortOrder
-  upvotes?: Prisma.SortOrder
   downvotes?: Prisma.SortOrder
+  upvotes?: Prisma.SortOrder
 }
 
 export type IdeaMaxOrderByAggregateInput = {
@@ -673,19 +673,19 @@ export type IdeaMaxOrderByAggregateInput = {
   solution?: Prisma.SortOrder
   photo?: Prisma.SortOrder
   description?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
   userId?: Prisma.SortOrder
   isPaid?: Prisma.SortOrder
   price?: Prisma.SortOrder
   feedback?: Prisma.SortOrder
   highlighted?: Prisma.SortOrder
-  upvotes?: Prisma.SortOrder
-  downvotes?: Prisma.SortOrder
-  editedAt?: Prisma.SortOrder
-  rejectedAt?: Prisma.SortOrder
-  acceptedAt?: Prisma.SortOrder
   status?: Prisma.SortOrder
   categoryId?: Prisma.SortOrder
+  createdAt?: Prisma.SortOrder
+  downvotes?: Prisma.SortOrder
+  upvotes?: Prisma.SortOrder
+  acceptedAt?: Prisma.SortOrder
+  editedAt?: Prisma.SortOrder
+  rejectedAt?: Prisma.SortOrder
 }
 
 export type IdeaMinOrderByAggregateInput = {
@@ -695,25 +695,25 @@ export type IdeaMinOrderByAggregateInput = {
   solution?: Prisma.SortOrder
   photo?: Prisma.SortOrder
   description?: Prisma.SortOrder
-  createdAt?: Prisma.SortOrder
   userId?: Prisma.SortOrder
   isPaid?: Prisma.SortOrder
   price?: Prisma.SortOrder
   feedback?: Prisma.SortOrder
   highlighted?: Prisma.SortOrder
-  upvotes?: Prisma.SortOrder
-  downvotes?: Prisma.SortOrder
-  editedAt?: Prisma.SortOrder
-  rejectedAt?: Prisma.SortOrder
-  acceptedAt?: Prisma.SortOrder
   status?: Prisma.SortOrder
   categoryId?: Prisma.SortOrder
+  createdAt?: Prisma.SortOrder
+  downvotes?: Prisma.SortOrder
+  upvotes?: Prisma.SortOrder
+  acceptedAt?: Prisma.SortOrder
+  editedAt?: Prisma.SortOrder
+  rejectedAt?: Prisma.SortOrder
 }
 
 export type IdeaSumOrderByAggregateInput = {
   price?: Prisma.SortOrder
-  upvotes?: Prisma.SortOrder
   downvotes?: Prisma.SortOrder
+  upvotes?: Prisma.SortOrder
 }
 
 export type IdeaCreateNestedManyWithoutCategoryInput = {
@@ -780,16 +780,16 @@ export type NullableDecimalFieldUpdateOperationsInput = {
   divide?: runtime.Decimal | runtime.DecimalJsLike | number | string
 }
 
+export type EnumIdeaStatusFieldUpdateOperationsInput = {
+  set?: $Enums.IdeaStatus
+}
+
 export type IntFieldUpdateOperationsInput = {
   set?: number
   increment?: number
   decrement?: number
   multiply?: number
   divide?: number
-}
-
-export type EnumIdeaStatusFieldUpdateOperationsInput = {
-  set?: $Enums.IdeaStatus
 }
 
 export type IdeaCreateNestedOneWithoutWatchListInput = {
@@ -883,21 +883,21 @@ export type IdeaCreateWithoutCategoryInput = {
   solution: string
   photo: string
   description: string
-  createdAt?: Date | string
   isPaid?: boolean
   price?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: string | null
   highlighted?: boolean
-  upvotes?: number
+  status?: $Enums.IdeaStatus
+  createdAt?: Date | string
   downvotes?: number
+  upvotes?: number
+  acceptedAt?: Date | string | null
   editedAt?: Date | string | null
   rejectedAt?: Date | string | null
-  acceptedAt?: Date | string | null
-  status?: $Enums.IdeaStatus
-  vote?: Prisma.VoteCreateNestedManyWithoutIdeaInput
-  purchase?: Prisma.PurchaseCreateNestedManyWithoutIdeaInput
   comments?: Prisma.CommentsCreateNestedManyWithoutIdeaInput
   user: Prisma.UserCreateNestedOneWithoutIdeaInput
+  purchase?: Prisma.PurchaseCreateNestedManyWithoutIdeaInput
+  vote?: Prisma.VoteCreateNestedManyWithoutIdeaInput
   watchList?: Prisma.WatchListCreateNestedManyWithoutIdeaInput
 }
 
@@ -908,21 +908,21 @@ export type IdeaUncheckedCreateWithoutCategoryInput = {
   solution: string
   photo: string
   description: string
-  createdAt?: Date | string
   userId: string
   isPaid?: boolean
   price?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: string | null
   highlighted?: boolean
-  upvotes?: number
+  status?: $Enums.IdeaStatus
+  createdAt?: Date | string
   downvotes?: number
+  upvotes?: number
+  acceptedAt?: Date | string | null
   editedAt?: Date | string | null
   rejectedAt?: Date | string | null
-  acceptedAt?: Date | string | null
-  status?: $Enums.IdeaStatus
-  vote?: Prisma.VoteUncheckedCreateNestedManyWithoutIdeaInput
-  purchase?: Prisma.PurchaseUncheckedCreateNestedManyWithoutIdeaInput
   comments?: Prisma.CommentsUncheckedCreateNestedManyWithoutIdeaInput
+  purchase?: Prisma.PurchaseUncheckedCreateNestedManyWithoutIdeaInput
+  vote?: Prisma.VoteUncheckedCreateNestedManyWithoutIdeaInput
   watchList?: Prisma.WatchListUncheckedCreateNestedManyWithoutIdeaInput
 }
 
@@ -962,19 +962,19 @@ export type IdeaScalarWhereInput = {
   solution?: Prisma.StringFilter<"Idea"> | string
   photo?: Prisma.StringFilter<"Idea"> | string
   description?: Prisma.StringFilter<"Idea"> | string
-  createdAt?: Prisma.DateTimeFilter<"Idea"> | Date | string
   userId?: Prisma.StringFilter<"Idea"> | string
   isPaid?: Prisma.BoolFilter<"Idea"> | boolean
   price?: Prisma.DecimalNullableFilter<"Idea"> | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: Prisma.StringNullableFilter<"Idea"> | string | null
   highlighted?: Prisma.BoolFilter<"Idea"> | boolean
-  upvotes?: Prisma.IntFilter<"Idea"> | number
-  downvotes?: Prisma.IntFilter<"Idea"> | number
-  editedAt?: Prisma.DateTimeNullableFilter<"Idea"> | Date | string | null
-  rejectedAt?: Prisma.DateTimeNullableFilter<"Idea"> | Date | string | null
-  acceptedAt?: Prisma.DateTimeNullableFilter<"Idea"> | Date | string | null
   status?: Prisma.EnumIdeaStatusFilter<"Idea"> | $Enums.IdeaStatus
   categoryId?: Prisma.StringFilter<"Idea"> | string
+  createdAt?: Prisma.DateTimeFilter<"Idea"> | Date | string
+  downvotes?: Prisma.IntFilter<"Idea"> | number
+  upvotes?: Prisma.IntFilter<"Idea"> | number
+  acceptedAt?: Prisma.DateTimeNullableFilter<"Idea"> | Date | string | null
+  editedAt?: Prisma.DateTimeNullableFilter<"Idea"> | Date | string | null
+  rejectedAt?: Prisma.DateTimeNullableFilter<"Idea"> | Date | string | null
 }
 
 export type IdeaCreateWithoutCommentsInput = {
@@ -984,22 +984,22 @@ export type IdeaCreateWithoutCommentsInput = {
   solution: string
   photo: string
   description: string
-  createdAt?: Date | string
   isPaid?: boolean
   price?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: string | null
   highlighted?: boolean
-  upvotes?: number
+  status?: $Enums.IdeaStatus
+  createdAt?: Date | string
   downvotes?: number
+  upvotes?: number
+  acceptedAt?: Date | string | null
   editedAt?: Date | string | null
   rejectedAt?: Date | string | null
-  acceptedAt?: Date | string | null
-  status?: $Enums.IdeaStatus
-  vote?: Prisma.VoteCreateNestedManyWithoutIdeaInput
-  purchase?: Prisma.PurchaseCreateNestedManyWithoutIdeaInput
-  user: Prisma.UserCreateNestedOneWithoutIdeaInput
-  watchList?: Prisma.WatchListCreateNestedManyWithoutIdeaInput
   category: Prisma.CategoryCreateNestedOneWithoutIdeasInput
+  user: Prisma.UserCreateNestedOneWithoutIdeaInput
+  purchase?: Prisma.PurchaseCreateNestedManyWithoutIdeaInput
+  vote?: Prisma.VoteCreateNestedManyWithoutIdeaInput
+  watchList?: Prisma.WatchListCreateNestedManyWithoutIdeaInput
 }
 
 export type IdeaUncheckedCreateWithoutCommentsInput = {
@@ -1009,21 +1009,21 @@ export type IdeaUncheckedCreateWithoutCommentsInput = {
   solution: string
   photo: string
   description: string
-  createdAt?: Date | string
   userId: string
   isPaid?: boolean
   price?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: string | null
   highlighted?: boolean
-  upvotes?: number
-  downvotes?: number
-  editedAt?: Date | string | null
-  rejectedAt?: Date | string | null
-  acceptedAt?: Date | string | null
   status?: $Enums.IdeaStatus
   categoryId: string
-  vote?: Prisma.VoteUncheckedCreateNestedManyWithoutIdeaInput
+  createdAt?: Date | string
+  downvotes?: number
+  upvotes?: number
+  acceptedAt?: Date | string | null
+  editedAt?: Date | string | null
+  rejectedAt?: Date | string | null
   purchase?: Prisma.PurchaseUncheckedCreateNestedManyWithoutIdeaInput
+  vote?: Prisma.VoteUncheckedCreateNestedManyWithoutIdeaInput
   watchList?: Prisma.WatchListUncheckedCreateNestedManyWithoutIdeaInput
 }
 
@@ -1050,22 +1050,22 @@ export type IdeaUpdateWithoutCommentsInput = {
   solution?: Prisma.StringFieldUpdateOperationsInput | string
   photo?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   isPaid?: Prisma.BoolFieldUpdateOperationsInput | boolean
   price?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   highlighted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   downvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   editedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
-  vote?: Prisma.VoteUpdateManyWithoutIdeaNestedInput
-  purchase?: Prisma.PurchaseUpdateManyWithoutIdeaNestedInput
-  user?: Prisma.UserUpdateOneRequiredWithoutIdeaNestedInput
-  watchList?: Prisma.WatchListUpdateManyWithoutIdeaNestedInput
   category?: Prisma.CategoryUpdateOneRequiredWithoutIdeasNestedInput
+  user?: Prisma.UserUpdateOneRequiredWithoutIdeaNestedInput
+  purchase?: Prisma.PurchaseUpdateManyWithoutIdeaNestedInput
+  vote?: Prisma.VoteUpdateManyWithoutIdeaNestedInput
+  watchList?: Prisma.WatchListUpdateManyWithoutIdeaNestedInput
 }
 
 export type IdeaUncheckedUpdateWithoutCommentsInput = {
@@ -1075,21 +1075,21 @@ export type IdeaUncheckedUpdateWithoutCommentsInput = {
   solution?: Prisma.StringFieldUpdateOperationsInput | string
   photo?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   isPaid?: Prisma.BoolFieldUpdateOperationsInput | boolean
   price?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   highlighted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
-  downvotes?: Prisma.IntFieldUpdateOperationsInput | number
-  editedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
   categoryId?: Prisma.StringFieldUpdateOperationsInput | string
-  vote?: Prisma.VoteUncheckedUpdateManyWithoutIdeaNestedInput
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  downvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  editedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   purchase?: Prisma.PurchaseUncheckedUpdateManyWithoutIdeaNestedInput
+  vote?: Prisma.VoteUncheckedUpdateManyWithoutIdeaNestedInput
   watchList?: Prisma.WatchListUncheckedUpdateManyWithoutIdeaNestedInput
 }
 
@@ -1100,22 +1100,22 @@ export type IdeaCreateWithoutWatchListInput = {
   solution: string
   photo: string
   description: string
-  createdAt?: Date | string
   isPaid?: boolean
   price?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: string | null
   highlighted?: boolean
-  upvotes?: number
+  status?: $Enums.IdeaStatus
+  createdAt?: Date | string
   downvotes?: number
+  upvotes?: number
+  acceptedAt?: Date | string | null
   editedAt?: Date | string | null
   rejectedAt?: Date | string | null
-  acceptedAt?: Date | string | null
-  status?: $Enums.IdeaStatus
-  vote?: Prisma.VoteCreateNestedManyWithoutIdeaInput
-  purchase?: Prisma.PurchaseCreateNestedManyWithoutIdeaInput
   comments?: Prisma.CommentsCreateNestedManyWithoutIdeaInput
-  user: Prisma.UserCreateNestedOneWithoutIdeaInput
   category: Prisma.CategoryCreateNestedOneWithoutIdeasInput
+  user: Prisma.UserCreateNestedOneWithoutIdeaInput
+  purchase?: Prisma.PurchaseCreateNestedManyWithoutIdeaInput
+  vote?: Prisma.VoteCreateNestedManyWithoutIdeaInput
 }
 
 export type IdeaUncheckedCreateWithoutWatchListInput = {
@@ -1125,22 +1125,22 @@ export type IdeaUncheckedCreateWithoutWatchListInput = {
   solution: string
   photo: string
   description: string
-  createdAt?: Date | string
   userId: string
   isPaid?: boolean
   price?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: string | null
   highlighted?: boolean
-  upvotes?: number
-  downvotes?: number
-  editedAt?: Date | string | null
-  rejectedAt?: Date | string | null
-  acceptedAt?: Date | string | null
   status?: $Enums.IdeaStatus
   categoryId: string
-  vote?: Prisma.VoteUncheckedCreateNestedManyWithoutIdeaInput
-  purchase?: Prisma.PurchaseUncheckedCreateNestedManyWithoutIdeaInput
+  createdAt?: Date | string
+  downvotes?: number
+  upvotes?: number
+  acceptedAt?: Date | string | null
+  editedAt?: Date | string | null
+  rejectedAt?: Date | string | null
   comments?: Prisma.CommentsUncheckedCreateNestedManyWithoutIdeaInput
+  purchase?: Prisma.PurchaseUncheckedCreateNestedManyWithoutIdeaInput
+  vote?: Prisma.VoteUncheckedCreateNestedManyWithoutIdeaInput
 }
 
 export type IdeaCreateOrConnectWithoutWatchListInput = {
@@ -1166,22 +1166,22 @@ export type IdeaUpdateWithoutWatchListInput = {
   solution?: Prisma.StringFieldUpdateOperationsInput | string
   photo?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   isPaid?: Prisma.BoolFieldUpdateOperationsInput | boolean
   price?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   highlighted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   downvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   editedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
-  vote?: Prisma.VoteUpdateManyWithoutIdeaNestedInput
-  purchase?: Prisma.PurchaseUpdateManyWithoutIdeaNestedInput
   comments?: Prisma.CommentsUpdateManyWithoutIdeaNestedInput
-  user?: Prisma.UserUpdateOneRequiredWithoutIdeaNestedInput
   category?: Prisma.CategoryUpdateOneRequiredWithoutIdeasNestedInput
+  user?: Prisma.UserUpdateOneRequiredWithoutIdeaNestedInput
+  purchase?: Prisma.PurchaseUpdateManyWithoutIdeaNestedInput
+  vote?: Prisma.VoteUpdateManyWithoutIdeaNestedInput
 }
 
 export type IdeaUncheckedUpdateWithoutWatchListInput = {
@@ -1191,22 +1191,22 @@ export type IdeaUncheckedUpdateWithoutWatchListInput = {
   solution?: Prisma.StringFieldUpdateOperationsInput | string
   photo?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   isPaid?: Prisma.BoolFieldUpdateOperationsInput | boolean
   price?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   highlighted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
-  downvotes?: Prisma.IntFieldUpdateOperationsInput | number
-  editedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
   categoryId?: Prisma.StringFieldUpdateOperationsInput | string
-  vote?: Prisma.VoteUncheckedUpdateManyWithoutIdeaNestedInput
-  purchase?: Prisma.PurchaseUncheckedUpdateManyWithoutIdeaNestedInput
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  downvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  editedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   comments?: Prisma.CommentsUncheckedUpdateManyWithoutIdeaNestedInput
+  purchase?: Prisma.PurchaseUncheckedUpdateManyWithoutIdeaNestedInput
+  vote?: Prisma.VoteUncheckedUpdateManyWithoutIdeaNestedInput
 }
 
 export type IdeaCreateWithoutPurchaseInput = {
@@ -1216,22 +1216,22 @@ export type IdeaCreateWithoutPurchaseInput = {
   solution: string
   photo: string
   description: string
-  createdAt?: Date | string
   isPaid?: boolean
   price?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: string | null
   highlighted?: boolean
-  upvotes?: number
+  status?: $Enums.IdeaStatus
+  createdAt?: Date | string
   downvotes?: number
+  upvotes?: number
+  acceptedAt?: Date | string | null
   editedAt?: Date | string | null
   rejectedAt?: Date | string | null
-  acceptedAt?: Date | string | null
-  status?: $Enums.IdeaStatus
-  vote?: Prisma.VoteCreateNestedManyWithoutIdeaInput
   comments?: Prisma.CommentsCreateNestedManyWithoutIdeaInput
-  user: Prisma.UserCreateNestedOneWithoutIdeaInput
-  watchList?: Prisma.WatchListCreateNestedManyWithoutIdeaInput
   category: Prisma.CategoryCreateNestedOneWithoutIdeasInput
+  user: Prisma.UserCreateNestedOneWithoutIdeaInput
+  vote?: Prisma.VoteCreateNestedManyWithoutIdeaInput
+  watchList?: Prisma.WatchListCreateNestedManyWithoutIdeaInput
 }
 
 export type IdeaUncheckedCreateWithoutPurchaseInput = {
@@ -1241,21 +1241,21 @@ export type IdeaUncheckedCreateWithoutPurchaseInput = {
   solution: string
   photo: string
   description: string
-  createdAt?: Date | string
   userId: string
   isPaid?: boolean
   price?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: string | null
   highlighted?: boolean
-  upvotes?: number
-  downvotes?: number
-  editedAt?: Date | string | null
-  rejectedAt?: Date | string | null
-  acceptedAt?: Date | string | null
   status?: $Enums.IdeaStatus
   categoryId: string
-  vote?: Prisma.VoteUncheckedCreateNestedManyWithoutIdeaInput
+  createdAt?: Date | string
+  downvotes?: number
+  upvotes?: number
+  acceptedAt?: Date | string | null
+  editedAt?: Date | string | null
+  rejectedAt?: Date | string | null
   comments?: Prisma.CommentsUncheckedCreateNestedManyWithoutIdeaInput
+  vote?: Prisma.VoteUncheckedCreateNestedManyWithoutIdeaInput
   watchList?: Prisma.WatchListUncheckedCreateNestedManyWithoutIdeaInput
 }
 
@@ -1282,22 +1282,22 @@ export type IdeaUpdateWithoutPurchaseInput = {
   solution?: Prisma.StringFieldUpdateOperationsInput | string
   photo?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   isPaid?: Prisma.BoolFieldUpdateOperationsInput | boolean
   price?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   highlighted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   downvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   editedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
-  vote?: Prisma.VoteUpdateManyWithoutIdeaNestedInput
   comments?: Prisma.CommentsUpdateManyWithoutIdeaNestedInput
-  user?: Prisma.UserUpdateOneRequiredWithoutIdeaNestedInput
-  watchList?: Prisma.WatchListUpdateManyWithoutIdeaNestedInput
   category?: Prisma.CategoryUpdateOneRequiredWithoutIdeasNestedInput
+  user?: Prisma.UserUpdateOneRequiredWithoutIdeaNestedInput
+  vote?: Prisma.VoteUpdateManyWithoutIdeaNestedInput
+  watchList?: Prisma.WatchListUpdateManyWithoutIdeaNestedInput
 }
 
 export type IdeaUncheckedUpdateWithoutPurchaseInput = {
@@ -1307,21 +1307,21 @@ export type IdeaUncheckedUpdateWithoutPurchaseInput = {
   solution?: Prisma.StringFieldUpdateOperationsInput | string
   photo?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   isPaid?: Prisma.BoolFieldUpdateOperationsInput | boolean
   price?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   highlighted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
-  downvotes?: Prisma.IntFieldUpdateOperationsInput | number
-  editedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
   categoryId?: Prisma.StringFieldUpdateOperationsInput | string
-  vote?: Prisma.VoteUncheckedUpdateManyWithoutIdeaNestedInput
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  downvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  editedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   comments?: Prisma.CommentsUncheckedUpdateManyWithoutIdeaNestedInput
+  vote?: Prisma.VoteUncheckedUpdateManyWithoutIdeaNestedInput
   watchList?: Prisma.WatchListUncheckedUpdateManyWithoutIdeaNestedInput
 }
 
@@ -1332,22 +1332,22 @@ export type IdeaCreateWithoutUserInput = {
   solution: string
   photo: string
   description: string
-  createdAt?: Date | string
   isPaid?: boolean
   price?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: string | null
   highlighted?: boolean
-  upvotes?: number
+  status?: $Enums.IdeaStatus
+  createdAt?: Date | string
   downvotes?: number
+  upvotes?: number
+  acceptedAt?: Date | string | null
   editedAt?: Date | string | null
   rejectedAt?: Date | string | null
-  acceptedAt?: Date | string | null
-  status?: $Enums.IdeaStatus
-  vote?: Prisma.VoteCreateNestedManyWithoutIdeaInput
-  purchase?: Prisma.PurchaseCreateNestedManyWithoutIdeaInput
   comments?: Prisma.CommentsCreateNestedManyWithoutIdeaInput
-  watchList?: Prisma.WatchListCreateNestedManyWithoutIdeaInput
   category: Prisma.CategoryCreateNestedOneWithoutIdeasInput
+  purchase?: Prisma.PurchaseCreateNestedManyWithoutIdeaInput
+  vote?: Prisma.VoteCreateNestedManyWithoutIdeaInput
+  watchList?: Prisma.WatchListCreateNestedManyWithoutIdeaInput
 }
 
 export type IdeaUncheckedCreateWithoutUserInput = {
@@ -1357,21 +1357,21 @@ export type IdeaUncheckedCreateWithoutUserInput = {
   solution: string
   photo: string
   description: string
-  createdAt?: Date | string
   isPaid?: boolean
   price?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: string | null
   highlighted?: boolean
-  upvotes?: number
-  downvotes?: number
-  editedAt?: Date | string | null
-  rejectedAt?: Date | string | null
-  acceptedAt?: Date | string | null
   status?: $Enums.IdeaStatus
   categoryId: string
-  vote?: Prisma.VoteUncheckedCreateNestedManyWithoutIdeaInput
-  purchase?: Prisma.PurchaseUncheckedCreateNestedManyWithoutIdeaInput
+  createdAt?: Date | string
+  downvotes?: number
+  upvotes?: number
+  acceptedAt?: Date | string | null
+  editedAt?: Date | string | null
+  rejectedAt?: Date | string | null
   comments?: Prisma.CommentsUncheckedCreateNestedManyWithoutIdeaInput
+  purchase?: Prisma.PurchaseUncheckedCreateNestedManyWithoutIdeaInput
+  vote?: Prisma.VoteUncheckedCreateNestedManyWithoutIdeaInput
   watchList?: Prisma.WatchListUncheckedCreateNestedManyWithoutIdeaInput
 }
 
@@ -1408,22 +1408,22 @@ export type IdeaCreateWithoutVoteInput = {
   solution: string
   photo: string
   description: string
-  createdAt?: Date | string
   isPaid?: boolean
   price?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: string | null
   highlighted?: boolean
-  upvotes?: number
+  status?: $Enums.IdeaStatus
+  createdAt?: Date | string
   downvotes?: number
+  upvotes?: number
+  acceptedAt?: Date | string | null
   editedAt?: Date | string | null
   rejectedAt?: Date | string | null
-  acceptedAt?: Date | string | null
-  status?: $Enums.IdeaStatus
-  purchase?: Prisma.PurchaseCreateNestedManyWithoutIdeaInput
   comments?: Prisma.CommentsCreateNestedManyWithoutIdeaInput
-  user: Prisma.UserCreateNestedOneWithoutIdeaInput
-  watchList?: Prisma.WatchListCreateNestedManyWithoutIdeaInput
   category: Prisma.CategoryCreateNestedOneWithoutIdeasInput
+  user: Prisma.UserCreateNestedOneWithoutIdeaInput
+  purchase?: Prisma.PurchaseCreateNestedManyWithoutIdeaInput
+  watchList?: Prisma.WatchListCreateNestedManyWithoutIdeaInput
 }
 
 export type IdeaUncheckedCreateWithoutVoteInput = {
@@ -1433,21 +1433,21 @@ export type IdeaUncheckedCreateWithoutVoteInput = {
   solution: string
   photo: string
   description: string
-  createdAt?: Date | string
   userId: string
   isPaid?: boolean
   price?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: string | null
   highlighted?: boolean
-  upvotes?: number
-  downvotes?: number
-  editedAt?: Date | string | null
-  rejectedAt?: Date | string | null
-  acceptedAt?: Date | string | null
   status?: $Enums.IdeaStatus
   categoryId: string
-  purchase?: Prisma.PurchaseUncheckedCreateNestedManyWithoutIdeaInput
+  createdAt?: Date | string
+  downvotes?: number
+  upvotes?: number
+  acceptedAt?: Date | string | null
+  editedAt?: Date | string | null
+  rejectedAt?: Date | string | null
   comments?: Prisma.CommentsUncheckedCreateNestedManyWithoutIdeaInput
+  purchase?: Prisma.PurchaseUncheckedCreateNestedManyWithoutIdeaInput
   watchList?: Prisma.WatchListUncheckedCreateNestedManyWithoutIdeaInput
 }
 
@@ -1474,22 +1474,22 @@ export type IdeaUpdateWithoutVoteInput = {
   solution?: Prisma.StringFieldUpdateOperationsInput | string
   photo?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   isPaid?: Prisma.BoolFieldUpdateOperationsInput | boolean
   price?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   highlighted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   downvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   editedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
-  purchase?: Prisma.PurchaseUpdateManyWithoutIdeaNestedInput
   comments?: Prisma.CommentsUpdateManyWithoutIdeaNestedInput
-  user?: Prisma.UserUpdateOneRequiredWithoutIdeaNestedInput
-  watchList?: Prisma.WatchListUpdateManyWithoutIdeaNestedInput
   category?: Prisma.CategoryUpdateOneRequiredWithoutIdeasNestedInput
+  user?: Prisma.UserUpdateOneRequiredWithoutIdeaNestedInput
+  purchase?: Prisma.PurchaseUpdateManyWithoutIdeaNestedInput
+  watchList?: Prisma.WatchListUpdateManyWithoutIdeaNestedInput
 }
 
 export type IdeaUncheckedUpdateWithoutVoteInput = {
@@ -1499,21 +1499,21 @@ export type IdeaUncheckedUpdateWithoutVoteInput = {
   solution?: Prisma.StringFieldUpdateOperationsInput | string
   photo?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   isPaid?: Prisma.BoolFieldUpdateOperationsInput | boolean
   price?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   highlighted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
-  downvotes?: Prisma.IntFieldUpdateOperationsInput | number
-  editedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
   categoryId?: Prisma.StringFieldUpdateOperationsInput | string
-  purchase?: Prisma.PurchaseUncheckedUpdateManyWithoutIdeaNestedInput
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  downvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  editedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   comments?: Prisma.CommentsUncheckedUpdateManyWithoutIdeaNestedInput
+  purchase?: Prisma.PurchaseUncheckedUpdateManyWithoutIdeaNestedInput
   watchList?: Prisma.WatchListUncheckedUpdateManyWithoutIdeaNestedInput
 }
 
@@ -1524,18 +1524,18 @@ export type IdeaCreateManyCategoryInput = {
   solution: string
   photo: string
   description: string
-  createdAt?: Date | string
   userId: string
   isPaid?: boolean
   price?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: string | null
   highlighted?: boolean
-  upvotes?: number
+  status?: $Enums.IdeaStatus
+  createdAt?: Date | string
   downvotes?: number
+  upvotes?: number
+  acceptedAt?: Date | string | null
   editedAt?: Date | string | null
   rejectedAt?: Date | string | null
-  acceptedAt?: Date | string | null
-  status?: $Enums.IdeaStatus
 }
 
 export type IdeaUpdateWithoutCategoryInput = {
@@ -1545,21 +1545,21 @@ export type IdeaUpdateWithoutCategoryInput = {
   solution?: Prisma.StringFieldUpdateOperationsInput | string
   photo?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   isPaid?: Prisma.BoolFieldUpdateOperationsInput | boolean
   price?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   highlighted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   downvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   editedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
-  vote?: Prisma.VoteUpdateManyWithoutIdeaNestedInput
-  purchase?: Prisma.PurchaseUpdateManyWithoutIdeaNestedInput
   comments?: Prisma.CommentsUpdateManyWithoutIdeaNestedInput
   user?: Prisma.UserUpdateOneRequiredWithoutIdeaNestedInput
+  purchase?: Prisma.PurchaseUpdateManyWithoutIdeaNestedInput
+  vote?: Prisma.VoteUpdateManyWithoutIdeaNestedInput
   watchList?: Prisma.WatchListUpdateManyWithoutIdeaNestedInput
 }
 
@@ -1570,21 +1570,21 @@ export type IdeaUncheckedUpdateWithoutCategoryInput = {
   solution?: Prisma.StringFieldUpdateOperationsInput | string
   photo?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   isPaid?: Prisma.BoolFieldUpdateOperationsInput | boolean
   price?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   highlighted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   downvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   editedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
-  vote?: Prisma.VoteUncheckedUpdateManyWithoutIdeaNestedInput
-  purchase?: Prisma.PurchaseUncheckedUpdateManyWithoutIdeaNestedInput
   comments?: Prisma.CommentsUncheckedUpdateManyWithoutIdeaNestedInput
+  purchase?: Prisma.PurchaseUncheckedUpdateManyWithoutIdeaNestedInput
+  vote?: Prisma.VoteUncheckedUpdateManyWithoutIdeaNestedInput
   watchList?: Prisma.WatchListUncheckedUpdateManyWithoutIdeaNestedInput
 }
 
@@ -1595,18 +1595,18 @@ export type IdeaUncheckedUpdateManyWithoutCategoryInput = {
   solution?: Prisma.StringFieldUpdateOperationsInput | string
   photo?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   isPaid?: Prisma.BoolFieldUpdateOperationsInput | boolean
   price?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   highlighted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   downvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   editedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
 }
 
 export type IdeaCreateManyUserInput = {
@@ -1616,18 +1616,18 @@ export type IdeaCreateManyUserInput = {
   solution: string
   photo: string
   description: string
-  createdAt?: Date | string
   isPaid?: boolean
   price?: runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: string | null
   highlighted?: boolean
-  upvotes?: number
-  downvotes?: number
-  editedAt?: Date | string | null
-  rejectedAt?: Date | string | null
-  acceptedAt?: Date | string | null
   status?: $Enums.IdeaStatus
   categoryId: string
+  createdAt?: Date | string
+  downvotes?: number
+  upvotes?: number
+  acceptedAt?: Date | string | null
+  editedAt?: Date | string | null
+  rejectedAt?: Date | string | null
 }
 
 export type IdeaUpdateWithoutUserInput = {
@@ -1637,22 +1637,22 @@ export type IdeaUpdateWithoutUserInput = {
   solution?: Prisma.StringFieldUpdateOperationsInput | string
   photo?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   isPaid?: Prisma.BoolFieldUpdateOperationsInput | boolean
   price?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   highlighted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   downvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   editedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
-  vote?: Prisma.VoteUpdateManyWithoutIdeaNestedInput
-  purchase?: Prisma.PurchaseUpdateManyWithoutIdeaNestedInput
   comments?: Prisma.CommentsUpdateManyWithoutIdeaNestedInput
-  watchList?: Prisma.WatchListUpdateManyWithoutIdeaNestedInput
   category?: Prisma.CategoryUpdateOneRequiredWithoutIdeasNestedInput
+  purchase?: Prisma.PurchaseUpdateManyWithoutIdeaNestedInput
+  vote?: Prisma.VoteUpdateManyWithoutIdeaNestedInput
+  watchList?: Prisma.WatchListUpdateManyWithoutIdeaNestedInput
 }
 
 export type IdeaUncheckedUpdateWithoutUserInput = {
@@ -1662,21 +1662,21 @@ export type IdeaUncheckedUpdateWithoutUserInput = {
   solution?: Prisma.StringFieldUpdateOperationsInput | string
   photo?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   isPaid?: Prisma.BoolFieldUpdateOperationsInput | boolean
   price?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   highlighted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
-  downvotes?: Prisma.IntFieldUpdateOperationsInput | number
-  editedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
   categoryId?: Prisma.StringFieldUpdateOperationsInput | string
-  vote?: Prisma.VoteUncheckedUpdateManyWithoutIdeaNestedInput
-  purchase?: Prisma.PurchaseUncheckedUpdateManyWithoutIdeaNestedInput
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  downvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  editedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   comments?: Prisma.CommentsUncheckedUpdateManyWithoutIdeaNestedInput
+  purchase?: Prisma.PurchaseUncheckedUpdateManyWithoutIdeaNestedInput
+  vote?: Prisma.VoteUncheckedUpdateManyWithoutIdeaNestedInput
   watchList?: Prisma.WatchListUncheckedUpdateManyWithoutIdeaNestedInput
 }
 
@@ -1687,18 +1687,18 @@ export type IdeaUncheckedUpdateManyWithoutUserInput = {
   solution?: Prisma.StringFieldUpdateOperationsInput | string
   photo?: Prisma.StringFieldUpdateOperationsInput | string
   description?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   isPaid?: Prisma.BoolFieldUpdateOperationsInput | boolean
   price?: Prisma.NullableDecimalFieldUpdateOperationsInput | runtime.Decimal | runtime.DecimalJsLike | number | string | null
   feedback?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   highlighted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
-  downvotes?: Prisma.IntFieldUpdateOperationsInput | number
-  editedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   status?: Prisma.EnumIdeaStatusFieldUpdateOperationsInput | $Enums.IdeaStatus
   categoryId?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  downvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  upvotes?: Prisma.IntFieldUpdateOperationsInput | number
+  acceptedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  editedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  rejectedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
 }
 
 
@@ -1707,16 +1707,16 @@ export type IdeaUncheckedUpdateManyWithoutUserInput = {
  */
 
 export type IdeaCountOutputType = {
-  vote: number
-  purchase: number
   comments: number
+  purchase: number
+  vote: number
   watchList: number
 }
 
 export type IdeaCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  vote?: boolean | IdeaCountOutputTypeCountVoteArgs
-  purchase?: boolean | IdeaCountOutputTypeCountPurchaseArgs
   comments?: boolean | IdeaCountOutputTypeCountCommentsArgs
+  purchase?: boolean | IdeaCountOutputTypeCountPurchaseArgs
+  vote?: boolean | IdeaCountOutputTypeCountVoteArgs
   watchList?: boolean | IdeaCountOutputTypeCountWatchListArgs
 }
 
@@ -1733,8 +1733,8 @@ export type IdeaCountOutputTypeDefaultArgs<ExtArgs extends runtime.Types.Extensi
 /**
  * IdeaCountOutputType without action
  */
-export type IdeaCountOutputTypeCountVoteArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.VoteWhereInput
+export type IdeaCountOutputTypeCountCommentsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.CommentsWhereInput
 }
 
 /**
@@ -1747,8 +1747,8 @@ export type IdeaCountOutputTypeCountPurchaseArgs<ExtArgs extends runtime.Types.E
 /**
  * IdeaCountOutputType without action
  */
-export type IdeaCountOutputTypeCountCommentsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.CommentsWhereInput
+export type IdeaCountOutputTypeCountVoteArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.VoteWhereInput
 }
 
 /**
@@ -1766,25 +1766,25 @@ export type IdeaSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = r
   solution?: boolean
   photo?: boolean
   description?: boolean
-  createdAt?: boolean
   userId?: boolean
   isPaid?: boolean
   price?: boolean
   feedback?: boolean
   highlighted?: boolean
-  upvotes?: boolean
-  downvotes?: boolean
-  editedAt?: boolean
-  rejectedAt?: boolean
-  acceptedAt?: boolean
   status?: boolean
   categoryId?: boolean
-  vote?: boolean | Prisma.Idea$voteArgs<ExtArgs>
-  purchase?: boolean | Prisma.Idea$purchaseArgs<ExtArgs>
+  createdAt?: boolean
+  downvotes?: boolean
+  upvotes?: boolean
+  acceptedAt?: boolean
+  editedAt?: boolean
+  rejectedAt?: boolean
   comments?: boolean | Prisma.Idea$commentsArgs<ExtArgs>
-  user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
-  watchList?: boolean | Prisma.Idea$watchListArgs<ExtArgs>
   category?: boolean | Prisma.CategoryDefaultArgs<ExtArgs>
+  user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
+  purchase?: boolean | Prisma.Idea$purchaseArgs<ExtArgs>
+  vote?: boolean | Prisma.Idea$voteArgs<ExtArgs>
+  watchList?: boolean | Prisma.Idea$watchListArgs<ExtArgs>
   _count?: boolean | Prisma.IdeaCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["idea"]>
 
@@ -1795,21 +1795,21 @@ export type IdeaSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensio
   solution?: boolean
   photo?: boolean
   description?: boolean
-  createdAt?: boolean
   userId?: boolean
   isPaid?: boolean
   price?: boolean
   feedback?: boolean
   highlighted?: boolean
-  upvotes?: boolean
-  downvotes?: boolean
-  editedAt?: boolean
-  rejectedAt?: boolean
-  acceptedAt?: boolean
   status?: boolean
   categoryId?: boolean
-  user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
+  createdAt?: boolean
+  downvotes?: boolean
+  upvotes?: boolean
+  acceptedAt?: boolean
+  editedAt?: boolean
+  rejectedAt?: boolean
   category?: boolean | Prisma.CategoryDefaultArgs<ExtArgs>
+  user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["idea"]>
 
 export type IdeaSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
@@ -1819,21 +1819,21 @@ export type IdeaSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensio
   solution?: boolean
   photo?: boolean
   description?: boolean
-  createdAt?: boolean
   userId?: boolean
   isPaid?: boolean
   price?: boolean
   feedback?: boolean
   highlighted?: boolean
-  upvotes?: boolean
-  downvotes?: boolean
-  editedAt?: boolean
-  rejectedAt?: boolean
-  acceptedAt?: boolean
   status?: boolean
   categoryId?: boolean
-  user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
+  createdAt?: boolean
+  downvotes?: boolean
+  upvotes?: boolean
+  acceptedAt?: boolean
+  editedAt?: boolean
+  rejectedAt?: boolean
   category?: boolean | Prisma.CategoryDefaultArgs<ExtArgs>
+  user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["idea"]>
 
 export type IdeaSelectScalar = {
@@ -1843,49 +1843,49 @@ export type IdeaSelectScalar = {
   solution?: boolean
   photo?: boolean
   description?: boolean
-  createdAt?: boolean
   userId?: boolean
   isPaid?: boolean
   price?: boolean
   feedback?: boolean
   highlighted?: boolean
-  upvotes?: boolean
-  downvotes?: boolean
-  editedAt?: boolean
-  rejectedAt?: boolean
-  acceptedAt?: boolean
   status?: boolean
   categoryId?: boolean
+  createdAt?: boolean
+  downvotes?: boolean
+  upvotes?: boolean
+  acceptedAt?: boolean
+  editedAt?: boolean
+  rejectedAt?: boolean
 }
 
-export type IdeaOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "title" | "problem" | "solution" | "photo" | "description" | "createdAt" | "userId" | "isPaid" | "price" | "feedback" | "highlighted" | "upvotes" | "downvotes" | "editedAt" | "rejectedAt" | "acceptedAt" | "status" | "categoryId", ExtArgs["result"]["idea"]>
+export type IdeaOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "title" | "problem" | "solution" | "photo" | "description" | "userId" | "isPaid" | "price" | "feedback" | "highlighted" | "status" | "categoryId" | "createdAt" | "downvotes" | "upvotes" | "acceptedAt" | "editedAt" | "rejectedAt", ExtArgs["result"]["idea"]>
 export type IdeaInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  vote?: boolean | Prisma.Idea$voteArgs<ExtArgs>
-  purchase?: boolean | Prisma.Idea$purchaseArgs<ExtArgs>
   comments?: boolean | Prisma.Idea$commentsArgs<ExtArgs>
-  user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
-  watchList?: boolean | Prisma.Idea$watchListArgs<ExtArgs>
   category?: boolean | Prisma.CategoryDefaultArgs<ExtArgs>
+  user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
+  purchase?: boolean | Prisma.Idea$purchaseArgs<ExtArgs>
+  vote?: boolean | Prisma.Idea$voteArgs<ExtArgs>
+  watchList?: boolean | Prisma.Idea$watchListArgs<ExtArgs>
   _count?: boolean | Prisma.IdeaCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type IdeaIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
   category?: boolean | Prisma.CategoryDefaultArgs<ExtArgs>
+  user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
 }
 export type IdeaIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
   category?: boolean | Prisma.CategoryDefaultArgs<ExtArgs>
+  user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
 }
 
 export type $IdeaPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "Idea"
   objects: {
-    vote: Prisma.$VotePayload<ExtArgs>[]
-    purchase: Prisma.$PurchasePayload<ExtArgs>[]
     comments: Prisma.$CommentsPayload<ExtArgs>[]
-    user: Prisma.$UserPayload<ExtArgs>
-    watchList: Prisma.$WatchListPayload<ExtArgs>[]
     category: Prisma.$CategoryPayload<ExtArgs>
+    user: Prisma.$UserPayload<ExtArgs>
+    purchase: Prisma.$PurchasePayload<ExtArgs>[]
+    vote: Prisma.$VotePayload<ExtArgs>[]
+    watchList: Prisma.$WatchListPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
@@ -1894,19 +1894,19 @@ export type $IdeaPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs =
     solution: string
     photo: string
     description: string
-    createdAt: Date
     userId: string
     isPaid: boolean
     price: runtime.Decimal | null
     feedback: string | null
     highlighted: boolean
-    upvotes: number
-    downvotes: number
-    editedAt: Date | null
-    rejectedAt: Date | null
-    acceptedAt: Date | null
     status: $Enums.IdeaStatus
     categoryId: string
+    createdAt: Date
+    downvotes: number
+    upvotes: number
+    acceptedAt: Date | null
+    editedAt: Date | null
+    rejectedAt: Date | null
   }, ExtArgs["result"]["idea"]>
   composites: {}
 }
@@ -2301,12 +2301,12 @@ readonly fields: IdeaFieldRefs;
  */
 export interface Prisma__IdeaClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
-  vote<T extends Prisma.Idea$voteArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Idea$voteArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$VotePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  purchase<T extends Prisma.Idea$purchaseArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Idea$purchaseArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$PurchasePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   comments<T extends Prisma.Idea$commentsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Idea$commentsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$CommentsPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  user<T extends Prisma.UserDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.UserDefaultArgs<ExtArgs>>): Prisma.Prisma__UserClient<runtime.Types.Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-  watchList<T extends Prisma.Idea$watchListArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Idea$watchListArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$WatchListPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   category<T extends Prisma.CategoryDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.CategoryDefaultArgs<ExtArgs>>): Prisma.Prisma__CategoryClient<runtime.Types.Result.GetResult<Prisma.$CategoryPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+  user<T extends Prisma.UserDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.UserDefaultArgs<ExtArgs>>): Prisma.Prisma__UserClient<runtime.Types.Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+  purchase<T extends Prisma.Idea$purchaseArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Idea$purchaseArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$PurchasePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  vote<T extends Prisma.Idea$voteArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Idea$voteArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$VotePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  watchList<T extends Prisma.Idea$watchListArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Idea$watchListArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$WatchListPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -2342,19 +2342,19 @@ export interface IdeaFieldRefs {
   readonly solution: Prisma.FieldRef<"Idea", 'String'>
   readonly photo: Prisma.FieldRef<"Idea", 'String'>
   readonly description: Prisma.FieldRef<"Idea", 'String'>
-  readonly createdAt: Prisma.FieldRef<"Idea", 'DateTime'>
   readonly userId: Prisma.FieldRef<"Idea", 'String'>
   readonly isPaid: Prisma.FieldRef<"Idea", 'Boolean'>
   readonly price: Prisma.FieldRef<"Idea", 'Decimal'>
   readonly feedback: Prisma.FieldRef<"Idea", 'String'>
   readonly highlighted: Prisma.FieldRef<"Idea", 'Boolean'>
-  readonly upvotes: Prisma.FieldRef<"Idea", 'Int'>
-  readonly downvotes: Prisma.FieldRef<"Idea", 'Int'>
-  readonly editedAt: Prisma.FieldRef<"Idea", 'DateTime'>
-  readonly rejectedAt: Prisma.FieldRef<"Idea", 'DateTime'>
-  readonly acceptedAt: Prisma.FieldRef<"Idea", 'DateTime'>
   readonly status: Prisma.FieldRef<"Idea", 'IdeaStatus'>
   readonly categoryId: Prisma.FieldRef<"Idea", 'String'>
+  readonly createdAt: Prisma.FieldRef<"Idea", 'DateTime'>
+  readonly downvotes: Prisma.FieldRef<"Idea", 'Int'>
+  readonly upvotes: Prisma.FieldRef<"Idea", 'Int'>
+  readonly acceptedAt: Prisma.FieldRef<"Idea", 'DateTime'>
+  readonly editedAt: Prisma.FieldRef<"Idea", 'DateTime'>
+  readonly rejectedAt: Prisma.FieldRef<"Idea", 'DateTime'>
 }
     
 
@@ -2756,27 +2756,27 @@ export type IdeaDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.Internal
 }
 
 /**
- * Idea.vote
+ * Idea.comments
  */
-export type Idea$voteArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Idea$commentsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Vote
+   * Select specific fields to fetch from the Comments
    */
-  select?: Prisma.VoteSelect<ExtArgs> | null
+  select?: Prisma.CommentsSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Vote
+   * Omit specific fields from the Comments
    */
-  omit?: Prisma.VoteOmit<ExtArgs> | null
+  omit?: Prisma.CommentsOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.VoteInclude<ExtArgs> | null
-  where?: Prisma.VoteWhereInput
-  orderBy?: Prisma.VoteOrderByWithRelationInput | Prisma.VoteOrderByWithRelationInput[]
-  cursor?: Prisma.VoteWhereUniqueInput
+  include?: Prisma.CommentsInclude<ExtArgs> | null
+  where?: Prisma.CommentsWhereInput
+  orderBy?: Prisma.CommentsOrderByWithRelationInput | Prisma.CommentsOrderByWithRelationInput[]
+  cursor?: Prisma.CommentsWhereUniqueInput
   take?: number
   skip?: number
-  distinct?: Prisma.VoteScalarFieldEnum | Prisma.VoteScalarFieldEnum[]
+  distinct?: Prisma.CommentsScalarFieldEnum | Prisma.CommentsScalarFieldEnum[]
 }
 
 /**
@@ -2804,27 +2804,27 @@ export type Idea$purchaseArgs<ExtArgs extends runtime.Types.Extensions.InternalA
 }
 
 /**
- * Idea.comments
+ * Idea.vote
  */
-export type Idea$commentsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type Idea$voteArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Comments
+   * Select specific fields to fetch from the Vote
    */
-  select?: Prisma.CommentsSelect<ExtArgs> | null
+  select?: Prisma.VoteSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Comments
+   * Omit specific fields from the Vote
    */
-  omit?: Prisma.CommentsOmit<ExtArgs> | null
+  omit?: Prisma.VoteOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.CommentsInclude<ExtArgs> | null
-  where?: Prisma.CommentsWhereInput
-  orderBy?: Prisma.CommentsOrderByWithRelationInput | Prisma.CommentsOrderByWithRelationInput[]
-  cursor?: Prisma.CommentsWhereUniqueInput
+  include?: Prisma.VoteInclude<ExtArgs> | null
+  where?: Prisma.VoteWhereInput
+  orderBy?: Prisma.VoteOrderByWithRelationInput | Prisma.VoteOrderByWithRelationInput[]
+  cursor?: Prisma.VoteWhereUniqueInput
   take?: number
   skip?: number
-  distinct?: Prisma.CommentsScalarFieldEnum | Prisma.CommentsScalarFieldEnum[]
+  distinct?: Prisma.VoteScalarFieldEnum | Prisma.VoteScalarFieldEnum[]
 }
 
 /**

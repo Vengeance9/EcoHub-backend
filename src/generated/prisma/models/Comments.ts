@@ -198,9 +198,9 @@ export type CommentsWhereInput = {
   isDeleted?: Prisma.BoolFilter<"Comments"> | boolean
   ideaId?: Prisma.StringFilter<"Comments"> | string
   userId?: Prisma.StringFilter<"Comments"> | string
+  idea?: Prisma.XOR<Prisma.IdeaScalarRelationFilter, Prisma.IdeaWhereInput>
   parent?: Prisma.XOR<Prisma.CommentsNullableScalarRelationFilter, Prisma.CommentsWhereInput> | null
   replies?: Prisma.CommentsListRelationFilter
-  idea?: Prisma.XOR<Prisma.IdeaScalarRelationFilter, Prisma.IdeaWhereInput>
   user?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>
 }
 
@@ -212,9 +212,9 @@ export type CommentsOrderByWithRelationInput = {
   isDeleted?: Prisma.SortOrder
   ideaId?: Prisma.SortOrder
   userId?: Prisma.SortOrder
+  idea?: Prisma.IdeaOrderByWithRelationInput
   parent?: Prisma.CommentsOrderByWithRelationInput
   replies?: Prisma.CommentsOrderByRelationAggregateInput
-  idea?: Prisma.IdeaOrderByWithRelationInput
   user?: Prisma.UserOrderByWithRelationInput
 }
 
@@ -229,9 +229,9 @@ export type CommentsWhereUniqueInput = Prisma.AtLeast<{
   isDeleted?: Prisma.BoolFilter<"Comments"> | boolean
   ideaId?: Prisma.StringFilter<"Comments"> | string
   userId?: Prisma.StringFilter<"Comments"> | string
+  idea?: Prisma.XOR<Prisma.IdeaScalarRelationFilter, Prisma.IdeaWhereInput>
   parent?: Prisma.XOR<Prisma.CommentsNullableScalarRelationFilter, Prisma.CommentsWhereInput> | null
   replies?: Prisma.CommentsListRelationFilter
-  idea?: Prisma.XOR<Prisma.IdeaScalarRelationFilter, Prisma.IdeaWhereInput>
   user?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>
 }, "id">
 
@@ -266,9 +266,9 @@ export type CommentsCreateInput = {
   comment: string
   createdAt?: Date | string
   isDeleted?: boolean
+  idea: Prisma.IdeaCreateNestedOneWithoutCommentsInput
   parent?: Prisma.CommentsCreateNestedOneWithoutRepliesInput
   replies?: Prisma.CommentsCreateNestedManyWithoutParentInput
-  idea: Prisma.IdeaCreateNestedOneWithoutCommentsInput
   user: Prisma.UserCreateNestedOneWithoutCommentInput
 }
 
@@ -288,9 +288,9 @@ export type CommentsUpdateInput = {
   comment?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   isDeleted?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  idea?: Prisma.IdeaUpdateOneRequiredWithoutCommentsNestedInput
   parent?: Prisma.CommentsUpdateOneWithoutRepliesNestedInput
   replies?: Prisma.CommentsUpdateManyWithoutParentNestedInput
-  idea?: Prisma.IdeaUpdateOneRequiredWithoutCommentsNestedInput
   user?: Prisma.UserUpdateOneRequiredWithoutCommentNestedInput
 }
 
@@ -524,8 +524,8 @@ export type CommentsCreateWithoutRepliesInput = {
   comment: string
   createdAt?: Date | string
   isDeleted?: boolean
-  parent?: Prisma.CommentsCreateNestedOneWithoutRepliesInput
   idea: Prisma.IdeaCreateNestedOneWithoutCommentsInput
+  parent?: Prisma.CommentsCreateNestedOneWithoutRepliesInput
   user: Prisma.UserCreateNestedOneWithoutCommentInput
 }
 
@@ -549,8 +549,8 @@ export type CommentsCreateWithoutParentInput = {
   comment: string
   createdAt?: Date | string
   isDeleted?: boolean
-  replies?: Prisma.CommentsCreateNestedManyWithoutParentInput
   idea: Prisma.IdeaCreateNestedOneWithoutCommentsInput
+  replies?: Prisma.CommentsCreateNestedManyWithoutParentInput
   user: Prisma.UserCreateNestedOneWithoutCommentInput
 }
 
@@ -590,8 +590,8 @@ export type CommentsUpdateWithoutRepliesInput = {
   comment?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   isDeleted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  parent?: Prisma.CommentsUpdateOneWithoutRepliesNestedInput
   idea?: Prisma.IdeaUpdateOneRequiredWithoutCommentsNestedInput
+  parent?: Prisma.CommentsUpdateOneWithoutRepliesNestedInput
   user?: Prisma.UserUpdateOneRequiredWithoutCommentNestedInput
 }
 
@@ -685,9 +685,9 @@ export type CommentsCreateWithoutUserInput = {
   comment: string
   createdAt?: Date | string
   isDeleted?: boolean
+  idea: Prisma.IdeaCreateNestedOneWithoutCommentsInput
   parent?: Prisma.CommentsCreateNestedOneWithoutRepliesInput
   replies?: Prisma.CommentsCreateNestedManyWithoutParentInput
-  idea: Prisma.IdeaCreateNestedOneWithoutCommentsInput
 }
 
 export type CommentsUncheckedCreateWithoutUserInput = {
@@ -740,8 +740,8 @@ export type CommentsUpdateWithoutParentInput = {
   comment?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   isDeleted?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  replies?: Prisma.CommentsUpdateManyWithoutParentNestedInput
   idea?: Prisma.IdeaUpdateOneRequiredWithoutCommentsNestedInput
+  replies?: Prisma.CommentsUpdateManyWithoutParentNestedInput
   user?: Prisma.UserUpdateOneRequiredWithoutCommentNestedInput
 }
 
@@ -816,9 +816,9 @@ export type CommentsUpdateWithoutUserInput = {
   comment?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   isDeleted?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  idea?: Prisma.IdeaUpdateOneRequiredWithoutCommentsNestedInput
   parent?: Prisma.CommentsUpdateOneWithoutRepliesNestedInput
   replies?: Prisma.CommentsUpdateManyWithoutParentNestedInput
-  idea?: Prisma.IdeaUpdateOneRequiredWithoutCommentsNestedInput
 }
 
 export type CommentsUncheckedUpdateWithoutUserInput = {
@@ -879,9 +879,9 @@ export type CommentsSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs
   isDeleted?: boolean
   ideaId?: boolean
   userId?: boolean
+  idea?: boolean | Prisma.IdeaDefaultArgs<ExtArgs>
   parent?: boolean | Prisma.Comments$parentArgs<ExtArgs>
   replies?: boolean | Prisma.Comments$repliesArgs<ExtArgs>
-  idea?: boolean | Prisma.IdeaDefaultArgs<ExtArgs>
   user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
   _count?: boolean | Prisma.CommentsCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["comments"]>
@@ -894,8 +894,8 @@ export type CommentsSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Exte
   isDeleted?: boolean
   ideaId?: boolean
   userId?: boolean
-  parent?: boolean | Prisma.Comments$parentArgs<ExtArgs>
   idea?: boolean | Prisma.IdeaDefaultArgs<ExtArgs>
+  parent?: boolean | Prisma.Comments$parentArgs<ExtArgs>
   user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["comments"]>
 
@@ -907,8 +907,8 @@ export type CommentsSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Exte
   isDeleted?: boolean
   ideaId?: boolean
   userId?: boolean
-  parent?: boolean | Prisma.Comments$parentArgs<ExtArgs>
   idea?: boolean | Prisma.IdeaDefaultArgs<ExtArgs>
+  parent?: boolean | Prisma.Comments$parentArgs<ExtArgs>
   user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["comments"]>
 
@@ -924,29 +924,29 @@ export type CommentsSelectScalar = {
 
 export type CommentsOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "comment" | "parentId" | "createdAt" | "isDeleted" | "ideaId" | "userId", ExtArgs["result"]["comments"]>
 export type CommentsInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  idea?: boolean | Prisma.IdeaDefaultArgs<ExtArgs>
   parent?: boolean | Prisma.Comments$parentArgs<ExtArgs>
   replies?: boolean | Prisma.Comments$repliesArgs<ExtArgs>
-  idea?: boolean | Prisma.IdeaDefaultArgs<ExtArgs>
   user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
   _count?: boolean | Prisma.CommentsCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type CommentsIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  parent?: boolean | Prisma.Comments$parentArgs<ExtArgs>
   idea?: boolean | Prisma.IdeaDefaultArgs<ExtArgs>
+  parent?: boolean | Prisma.Comments$parentArgs<ExtArgs>
   user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
 }
 export type CommentsIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  parent?: boolean | Prisma.Comments$parentArgs<ExtArgs>
   idea?: boolean | Prisma.IdeaDefaultArgs<ExtArgs>
+  parent?: boolean | Prisma.Comments$parentArgs<ExtArgs>
   user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
 }
 
 export type $CommentsPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "Comments"
   objects: {
+    idea: Prisma.$IdeaPayload<ExtArgs>
     parent: Prisma.$CommentsPayload<ExtArgs> | null
     replies: Prisma.$CommentsPayload<ExtArgs>[]
-    idea: Prisma.$IdeaPayload<ExtArgs>
     user: Prisma.$UserPayload<ExtArgs>
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
@@ -1351,9 +1351,9 @@ readonly fields: CommentsFieldRefs;
  */
 export interface Prisma__CommentsClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
+  idea<T extends Prisma.IdeaDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.IdeaDefaultArgs<ExtArgs>>): Prisma.Prisma__IdeaClient<runtime.Types.Result.GetResult<Prisma.$IdeaPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
   parent<T extends Prisma.Comments$parentArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Comments$parentArgs<ExtArgs>>): Prisma.Prisma__CommentsClient<runtime.Types.Result.GetResult<Prisma.$CommentsPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
   replies<T extends Prisma.Comments$repliesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Comments$repliesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$CommentsPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  idea<T extends Prisma.IdeaDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.IdeaDefaultArgs<ExtArgs>>): Prisma.Prisma__IdeaClient<runtime.Types.Result.GetResult<Prisma.$IdeaPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
   user<T extends Prisma.UserDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.UserDefaultArgs<ExtArgs>>): Prisma.Prisma__UserClient<runtime.Types.Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.

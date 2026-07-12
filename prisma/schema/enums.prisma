@@ -1,28 +1,28 @@
-enum Role{
-    USER
-    ADMIN
+enum Role {
+  USER
+  ADMIN
 }
 
-enum UserStatus{
-    ACTIVE
-    INACTIVE
-    BLOCKED
-    DELETED
+enum UserStatus {
+  ACTIVE
+  INACTIVE
+  BLOCKED
+  DELETED
 }
 
-enum IdeaStatus{
-    DRAFT
-    UNDERREVIEW
-    ACCEPTED
-    REJECTED
+enum IdeaStatus {
+  DRAFT
+  UNDERREVIEW
+  ACCEPTED
+  REJECTED
 }
 
-enum VoteType{
-    UPVOTE
-    DOWNVOTE
+enum VoteType {
+  UPVOTE
+  DOWNVOTE
 }
 
-enum PaymentStatus{
+enum PaymentStatus {
   PAID
   UNPAID
   PENDING

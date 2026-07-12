@@ -9,6 +9,9 @@ router.post('/create-category',auth(Role.ADMIN),AdminController.createCategory)
 router.post('/delete-category/:categoryId',auth(Role.ADMIN),AdminController.deleteCategory)
 
 router.get('/view-members',auth(Role.ADMIN),AdminController.ViewMembers)
+
+router.get("/user-analytics", auth(Role.ADMIN), AdminController.getUserAnalytics);
+
 router.post('/activate-user/:userId',auth(Role.ADMIN),AdminController.activateUser)
 router.patch("/highlight-idea/:ideaId",auth(Role.ADMIN),AdminController.highlightIdea);
 router.post('/block-user/:userId',auth(Role.ADMIN),AdminController.blockUser)
