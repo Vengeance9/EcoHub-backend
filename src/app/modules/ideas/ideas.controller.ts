@@ -119,4 +119,20 @@ const isSaved = catchAsync(
         sendResponse(res,{statusCode:200,success:true,message:"Watchlist fetched successfully",data:result}) 
     }
 )
-export const IdeaController = { isSaved,addToWatchList,getWatchList,removeFromWatchList,getAllIdeas,createIdeas,updateIdeas,getCategories,getIdeaById,getIdeasByUserId,getUserIdeaInfo,canViewPage }
+
+const getTopContributers = catchAsync(
+    async(req:Request,res:Response)=>{
+        const result = await ideaServices.getTopContributers()
+        sendResponse(res,{statusCode:200,success:true,message:"Top contributers fetched successfully",data:result})
+    }
+    
+)
+
+const getUserStats = catchAsync(
+    async(req:Request,res:Response)=>{
+        const userId = req.user.userId
+        const result = await ideaServices.getUserStats(userId as string)
+        sendResponse(res,{statusCode:200,success:true,message:"User stats fetched successfully",data:result})
+    }
+)
+export const IdeaController = {getUserStats,getTopContributers, isSaved,addToWatchList,getWatchList,removeFromWatchList,getAllIdeas,createIdeas,updateIdeas,getCategories,getIdeaById,getIdeasByUserId,getUserIdeaInfo,canViewPage }

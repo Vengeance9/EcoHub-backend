@@ -15,10 +15,15 @@ router.get('/getCategories',IdeaController.getCategories)
 router.get("/user", auth(Role.USER), IdeaController.getIdeasByUserId);
 router.post('/save-idea',auth(Role.USER,Role.ADMIN),IdeaController.addToWatchList)
 router.get('/getUserIdeaInfo',auth(Role.USER,Role.ADMIN),IdeaController.getUserIdeaInfo)
+router.get("/top-contributers", IdeaController.getTopContributers);
+router.get('/userStats',auth(Role.USER,Role.ADMIN),IdeaController.getUserStats)
 router.get('/:ideaId',IdeaController.getIdeaById)
 router.get('/isSaved/:ideaId',auth(Role.USER,Role.ADMIN),IdeaController.isSaved)
 router.get('/canView/:ideaId',auth(Role.USER,Role.ADMIN),IdeaController.canViewPage)
 router.patch('/update-idea/:ideaId',auth(Role.USER,Role.ADMIN),upload.single("photo"),IdeaController.updateIdeas)
+
+
+
 
 
 

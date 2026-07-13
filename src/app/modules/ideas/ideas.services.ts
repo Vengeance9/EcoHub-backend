@@ -408,8 +408,90 @@ const isSaved = async(userId:string,ideaId:string)=>{
   return false
 }
 
+const getTopContributers = async()=>{
+  const result = await prisma.idea.groupBy({
+    by: ["userId"],
+    where:{
+      status:IdeaStatus.ACCEPTED
+    },
+    _count: {
+      userId: true,
+    },
+    orderBy: {
+      _count: {
+        userId: "desc",
+      },
+    },
+    take:3
+  });
+
+  const users = await Promise.all(
+    result.map(async(c)=>{
+      const user = await prisma.user.findFirst({
+        where:{
+          id:c.userId
+        },
+        select:{
+          name:true,
+          image:true
+        }
+      })
+      return {
+        ...user,
+        totalIdeas:c._count.userId
+      }
+    })
+  )
+  return users
+}
+
+const getUserStats = async(userId:string)=>{
+  const acceptedIdeas = await prisma.idea.count({
+    where:{
+      userId:userId,
+      status:IdeaStatus.ACCEPTED
+    }
+  })
+  const rejectedIdeas = await prisma.idea.count({
+    where:{
+      userId:userId,
+      status:IdeaStatus.REJECTED
+    }
+  })
+  const underReviewIdeas = await prisma.idea.count({
+    where:{
+      userId:userId,
+      status:IdeaStatus.UNDERREVIEW
+    }
+  })
+
+  const paidIdeas = await prisma.idea.count({
+    where:{
+        userId:userId,
+        isPaid:true
+      },
+  })
+  const FreeIdeas = await prisma.idea.count({
+    where:{
+        userId:userId,
+        isPaid:false
+      },
+    }
+  )
+
+  return{
+    acceptedIdeas,
+    rejectedIdeas,
+    underReviewIdeas,
+    paidIdeas,
+    FreeIdeas
+  }
+}
+
 
 export const ideaServices = {
+  getUserStats,
+  getTopContributers,
   isSaved,
   addToWatchList,
   getWatchList,
